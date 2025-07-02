@@ -1,0 +1,53 @@
+.json-display {
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(203, 213, 225, 0.5);
+  overflow: hidden;
+}
+
+.json-display h3 {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #475569 0%, #334155 100%);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.json-content {
+  padding: 1.25rem;
+  margin: 0;
+  overflow-x: auto;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: none;
+  font-family: 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #334155;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.json-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.json-content::-webkit-scrollbar-track {
+  background: rgba(203, 213, 225, 0.3);
+  border-radius: 4px;
+}
+
+.json-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+  border-radius: 4px;
+}
+
+.json-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+}
