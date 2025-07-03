@@ -1,0 +1,1285 @@
+{
+  "document_info": {
+    "total_paragraphs": 255,
+    "file_path": "/opt/word/大论文提取测试/论文.docx",
+    "extracted_at": "2025-07-03T22:37:10.017220",
+    "preview_length": 50
+  },
+  "paragraphs": [
+    {
+      "paragraph_number": 1,
+      "preview_text": "西安电子科技大学",
+      "full_length": 8
+    },
+    {
+      "paragraph_number": 2,
+      "preview_text": "学位论文独创性（或创新性）声明",
+      "full_length": 15
+    },
+    {
+      "paragraph_number": 3,
+      "preview_text": "秉承学校严谨的学风和优良的科学道德，本人声明所呈交的论文是我个人在导师指导下进行的研究工作及取得的研...",
+      "full_length": 181
+    },
+    {
+      "paragraph_number": 4,
+      "preview_text": "学位论文若有不实之处，本人承担一切法律责任。",
+      "full_length": 22
+    },
+    {
+      "paragraph_number": 5,
+      "preview_text": "本人签名：                            日    期：",
+      "full_length": 40
+    },
+    {
+      "paragraph_number": 6,
+      "preview_text": "西安电子科技大学",
+      "full_length": 8
+    },
+    {
+      "paragraph_number": 7,
+      "preview_text": "关于论文使用授权的说明",
+      "full_length": 11
+    },
+    {
+      "paragraph_number": 8,
+      "preview_text": "本人完全了解西安电子科技大学有关保留和使用学位论文的规定，即：研究生在校攻读学位期间论文工作的知识产...",
+      "full_length": 230
+    },
+    {
+      "paragraph_number": 9,
+      "preview_text": "本人保证遵守上述规定。",
+      "full_length": 11
+    },
+    {
+      "paragraph_number": 10,
+      "preview_text": "（保密的论文在解密后遵守此规定）",
+      "full_length": 16
+    },
+    {
+      "paragraph_number": 11,
+      "preview_text": "本人签名：                            导师签名：",
+      "full_length": 38
+    },
+    {
+      "paragraph_number": 12,
+      "preview_text": "日    期：                            日    期：",
+      "full_length": 42
+    },
+    {
+      "paragraph_number": 13,
+      "preview_text": "摘要",
+      "full_length": 2
+    },
+    {
+      "paragraph_number": 14,
+      "preview_text": "随着电磁环境的日益复杂，各种复杂多变的干扰对无线通信系统的正常运行构成了严峻挑战。在通信抗干扰体系中...",
+      "full_length": 286
+    },
+    {
+      "paragraph_number": 15,
+      "preview_text": "针对现有通信干扰识别方法对未知干扰识别性能较差的问题，本文提出了一种基于超球面空间嵌入的通信干扰信号...",
+      "full_length": 301
+    },
+    {
+      "paragraph_number": 16,
+      "preview_text": "针对现有通信干扰抑制方法抑制效果较差和计算复杂度较高的问题，本文提出了一种基于状态空间模型的通信干扰...",
+      "full_length": 294
+    },
+    {
+      "paragraph_number": 17,
+      "preview_text": "针对现有通信跳频决策方法跳频成功率低和收敛速度慢等问题，本文提出了一种结合遗传算法与深度强化学习的跳...",
+      "full_length": 304
+    },
+    {
+      "paragraph_number": 18,
+      "preview_text": "关 键 词：通信干扰， 开集识别， 干扰抑制， 跳频决策， 深度学习",
+      "full_length": 34
+    },
+    {
+      "paragraph_number": 19,
+      "preview_text": "ABSTRACT",
+      "full_length": 8
+    },
+    {
+      "paragraph_number": 20,
+      "preview_text": "With the increasing complexity of electromagnetic ...",
+      "full_length": 1247
+    },
+    {
+      "paragraph_number": 21,
+      "preview_text": "To address the poor recognition performance of exi...",
+      "full_length": 986
+    },
+    {
+      "paragraph_number": 22,
+      "preview_text": "To solve the issues of poor suppression effectiven...",
+      "full_length": 1121
+    },
+    {
+      "paragraph_number": 23,
+      "preview_text": "To address low success rate and slow convergence i...",
+      "full_length": 1001
+    },
+    {
+      "paragraph_number": 24,
+      "preview_text": "Keywords: Communication Interference, Open Set Rec...",
+      "full_length": 127
+    },
+    {
+      "paragraph_number": 25,
+      "preview_text": "插图索引",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 26,
+      "preview_text": "图1.1\t本文研究内容整体框架\t7",
+      "full_length": 17
+    },
+    {
+      "paragraph_number": 27,
+      "preview_text": "图2.1\t单音干扰\t12",
+      "full_length": 12
+    },
+    {
+      "paragraph_number": 28,
+      "preview_text": "图2.2\t多音干扰\t12",
+      "full_length": 12
+    },
+    {
+      "paragraph_number": 29,
+      "preview_text": "图2.3\t线性调频干扰\t13",
+      "full_length": 14
+    },
+    {
+      "paragraph_number": 30,
+      "preview_text": "图2.4\t噪声调频干扰\t13",
+      "full_length": 14
+    },
+    {
+      "paragraph_number": 31,
+      "preview_text": "图2.5\t部分频带噪声干扰\t14",
+      "full_length": 16
+    },
+    {
+      "paragraph_number": 32,
+      "preview_text": "图2.6\t正弦调频干扰\t15",
+      "full_length": 14
+    },
+    {
+      "paragraph_number": 33,
+      "preview_text": "图2.7\tBPSK调制干扰\t15",
+      "full_length": 16
+    },
+    {
+      "paragraph_number": 34,
+      "preview_text": "图2.8\t深度学习算法工作流程\t16",
+      "full_length": 18
+    },
+    {
+      "paragraph_number": 35,
+      "preview_text": "图2.9\tResidual Block\t17",
+      "full_length": 22
+    },
+    {
+      "paragraph_number": 36,
+      "preview_text": "图2.10\t状态空间模型\t18",
+      "full_length": 15
+    },
+    {
+      "paragraph_number": 37,
+      "preview_text": "图2.11\t状态空间模型三种形态示意图\t19",
+      "full_length": 22
+    },
+    {
+      "paragraph_number": 38,
+      "preview_text": "图2.12\t强化学习基本框架\t21",
+      "full_length": 17
+    },
+    {
+      "paragraph_number": 39,
+      "preview_text": "图3.1\t开集识别与闭集识别对比\t24",
+      "full_length": 19
+    },
+    {
+      "paragraph_number": 40,
+      "preview_text": "图3.2\t通信干扰信号开集识别流程图\t25",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 41,
+      "preview_text": "图3.3\t损失函数示意图\t28",
+      "full_length": 15
+    },
+    {
+      "paragraph_number": 42,
+      "preview_text": "图3.4\tWeibull分布拟合过程\t31",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 43,
+      "preview_text": "图3.5\t测试过程\t34",
+      "full_length": 12
+    },
+    {
+      "paragraph_number": 44,
+      "preview_text": "图3.6\t损失函数中与对性能的影响\t37",
+      "full_length": 20
+    },
+    {
+      "paragraph_number": 45,
+      "preview_text": "图3.7\t辅助判别中阈值对性能的影响\t38",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 46,
+      "preview_text": "图3.8\t不同干扰类别识别性能随JNR变化曲线\t39",
+      "full_length": 26
+    },
+    {
+      "paragraph_number": 47,
+      "preview_text": "图3.9\t不同JNR下的混淆矩阵\t39",
+      "full_length": 19
+    },
+    {
+      "paragraph_number": 48,
+      "preview_text": "图3.10\t不同算法识别性能随JNR变化曲线\t40",
+      "full_length": 25
+    },
+    {
+      "paragraph_number": 49,
+      "preview_text": "图3.11\t嵌入空间可视化\t41",
+      "full_length": 16
+    },
+    {
+      "paragraph_number": 50,
+      "preview_text": "图3.12\t不同算法识别性能随开放度变化曲线\t42",
+      "full_length": 25
+    },
+    {
+      "paragraph_number": 51,
+      "preview_text": "图4.1\t通信干扰信号模型\t45",
+      "full_length": 16
+    },
+    {
+      "paragraph_number": 52,
+      "preview_text": "图4.2\t干扰信号抑制模型架构\t46",
+      "full_length": 18
+    },
+    {
+      "paragraph_number": 53,
+      "preview_text": "图4.3\t编码器网络结构\t47",
+      "full_length": 15
+    },
+    {
+      "paragraph_number": 54,
+      "preview_text": "图4.4\t干扰抑制器结构\t49",
+      "full_length": 15
+    },
+    {
+      "paragraph_number": 55,
+      "preview_text": "图4.5\t分割处理\t50",
+      "full_length": 12
+    },
+    {
+      "paragraph_number": 56,
+      "preview_text": "图4.6\tDP Block结构\t51",
+      "full_length": 18
+    },
+    {
+      "paragraph_number": 57,
+      "preview_text": "图4.7\tS5 Block结构\t51",
+      "full_length": 18
+    },
+    {
+      "paragraph_number": 58,
+      "preview_text": "图4.8\tS5 Layer结构\t52",
+      "full_length": 18
+    },
+    {
+      "paragraph_number": 59,
+      "preview_text": "图4.9\t重叠相加处理\t53",
+      "full_length": 14
+    },
+    {
+      "paragraph_number": 60,
+      "preview_text": "图4.10\t仿真通信链路\t54",
+      "full_length": 15
+    },
+    {
+      "paragraph_number": 61,
+      "preview_text": "图4.11\tBER随堆叠层数变化曲线\t56",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 62,
+      "preview_text": "图4.12\t各阶段信号时域波形图\t56",
+      "full_length": 19
+    },
+    {
+      "paragraph_number": 63,
+      "preview_text": "图4.13\t不同干扰下BER随SNR或JSR变化曲线\t57",
+      "full_length": 29
+    },
+    {
+      "paragraph_number": 64,
+      "preview_text": "图4.14\tBER随从重叠度变化曲线\t58",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 65,
+      "preview_text": "图4.15\t不同编码器下BER随JSR变化曲线\t59",
+      "full_length": 26
+    },
+    {
+      "paragraph_number": 66,
+      "preview_text": "图4.16\t不同时序建模方法下BER随JSR变化曲线\t59",
+      "full_length": 29
+    },
+    {
+      "paragraph_number": 67,
+      "preview_text": "图5.1\t智能跳频抗干扰系统\t64",
+      "full_length": 17
+    },
+    {
+      "paragraph_number": 68,
+      "preview_text": "图5.2\t遗传算子计算示意\t69",
+      "full_length": 16
+    },
+    {
+      "paragraph_number": 69,
+      "preview_text": "图5.3\t智能跳频决策算法流程\t71",
+      "full_length": 18
+    },
+    {
+      "paragraph_number": 70,
+      "preview_text": "图5.4\t收敛回合数随种群个数变化曲线\t74",
+      "full_length": 22
+    },
+    {
+      "paragraph_number": 71,
+      "preview_text": "图5.5\t梳状干扰下最优通信信道选择\t75",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 72,
+      "preview_text": "图5.6\t梳状干扰下总奖励曲线\t75",
+      "full_length": 18
+    },
+    {
+      "paragraph_number": 73,
+      "preview_text": "图5.7\t跟踪干扰下最优通信信道选择\t76",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 74,
+      "preview_text": "图5.8\t跟踪干扰下总奖励曲线\t76",
+      "full_length": 18
+    },
+    {
+      "paragraph_number": 75,
+      "preview_text": "图5.9\t线性调频干扰下最优通信信道选择\t77",
+      "full_length": 23
+    },
+    {
+      "paragraph_number": 76,
+      "preview_text": "图5.10\t线性调频干扰下总奖励曲线\t77",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 77,
+      "preview_text": "图5.11\t线性调频下传统DNQ算法信道选择\t78",
+      "full_length": 25
+    },
+    {
+      "paragraph_number": 78,
+      "preview_text": "图5.12\t动态复合干扰下传统DQN算法信道选择\t78",
+      "full_length": 27
+    },
+    {
+      "paragraph_number": 79,
+      "preview_text": "图5.13\t动态复合干扰下本文算法信道选择\t79",
+      "full_length": 24
+    },
+    {
+      "paragraph_number": 80,
+      "preview_text": "图5.14\t动态复合干扰下总奖励曲线\t79",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 81,
+      "preview_text": "图5.15\t不同算法收敛回合数随信道个数变化曲线\t80",
+      "full_length": 27
+    },
+    {
+      "paragraph_number": 82,
+      "preview_text": "表格索引",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 83,
+      "preview_text": "表3.1\t基于ResNet的编码器网络结构\t26",
+      "full_length": 24
+    },
+    {
+      "paragraph_number": 84,
+      "preview_text": "表3.2\t投影层网络结构\t27",
+      "full_length": 15
+    },
+    {
+      "paragraph_number": 85,
+      "preview_text": "表3.3\tOpenMax分类层网络结构\t30",
+      "full_length": 22
+    },
+    {
+      "paragraph_number": 86,
+      "preview_text": "表3.4\t干扰仿真参数\t36",
+      "full_length": 14
+    },
+    {
+      "paragraph_number": 87,
+      "preview_text": "表4.1\t编码器网络结构\t48",
+      "full_length": 15
+    },
+    {
+      "paragraph_number": 88,
+      "preview_text": "表4.2\t解码器网络结构\t53",
+      "full_length": 15
+    },
+    {
+      "paragraph_number": 89,
+      "preview_text": "表4.3\t不同算法性能对比\t60",
+      "full_length": 16
+    },
+    {
+      "paragraph_number": 90,
+      "preview_text": "表5.1\t不同算法性能对比\t81",
+      "full_length": 16
+    },
+    {
+      "paragraph_number": 91,
+      "preview_text": "符号对照表",
+      "full_length": 5
+    },
+    {
+      "paragraph_number": 92,
+      "preview_text": "符号\t符号名称",
+      "full_length": 7
+    },
+    {
+      "paragraph_number": 93,
+      "preview_text": "指数运算",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 94,
+      "preview_text": "最大值",
+      "full_length": 3
+    },
+    {
+      "paragraph_number": 95,
+      "preview_text": "2范数运算",
+      "full_length": 5
+    },
+    {
+      "paragraph_number": 96,
+      "preview_text": "转置",
+      "full_length": 2
+    },
+    {
+      "paragraph_number": 97,
+      "preview_text": "对数运算",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 98,
+      "preview_text": "任取一个",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 99,
+      "preview_text": "均值运算",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 100,
+      "preview_text": "自然对数运算",
+      "full_length": 6
+    },
+    {
+      "paragraph_number": 101,
+      "preview_text": "数据归一化",
+      "full_length": 5
+    },
+    {
+      "paragraph_number": 102,
+      "preview_text": "对角矩阵",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 103,
+      "preview_text": "共轭",
+      "full_length": 2
+    },
+    {
+      "paragraph_number": 104,
+      "preview_text": "向量点积运算",
+      "full_length": 6
+    },
+    {
+      "paragraph_number": 105,
+      "preview_text": "数学期望",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 106,
+      "preview_text": "绝对值运算",
+      "full_length": 5
+    },
+    {
+      "paragraph_number": 107,
+      "preview_text": "缩略语对照表",
+      "full_length": 6
+    },
+    {
+      "paragraph_number": 108,
+      "preview_text": "缩略语\t英文全称\t中文对照",
+      "full_length": 13
+    },
+    {
+      "paragraph_number": 109,
+      "preview_text": "AKS\tAccuracy on Known Samples\t已知样本识别准确率",
+      "full_length": 39
+    },
+    {
+      "paragraph_number": 110,
+      "preview_text": "AV\tActivation Vector\t激活向量",
+      "full_length": 25
+    },
+    {
+      "paragraph_number": 111,
+      "preview_text": "AUS\tAccuracy on Unknown Samples\t未知样本识别准确率",
+      "full_length": 41
+    },
+    {
+      "paragraph_number": 112,
+      "preview_text": "BER\tBit Error Rate\t误比特率",
+      "full_length": 23
+    },
+    {
+      "paragraph_number": 113,
+      "preview_text": "BPSKJ\tBinary Phase Shift Key Jamming\t二进制相移键控干扰",
+      "full_length": 46
+    },
+    {
+      "paragraph_number": 114,
+      "preview_text": "BRL\tBatch Reinforcement Learning\t批量强化学习",
+      "full_length": 39
+    },
+    {
+      "paragraph_number": 115,
+      "preview_text": "BSS\tBlind Source Separation\t盲源分离",
+      "full_length": 32
+    },
+    {
+      "paragraph_number": 116,
+      "preview_text": "CFH\tCognitive Frequency Hopping\t认知跳频",
+      "full_length": 36
+    },
+    {
+      "paragraph_number": 117,
+      "preview_text": "CPN\tConvolutional Prototype Network\t卷积原型网络",
+      "full_length": 42
+    },
+    {
+      "paragraph_number": 118,
+      "preview_text": "CR\tCognitive Radio\t认知无线电",
+      "full_length": 24
+    },
+    {
+      "paragraph_number": 119,
+      "preview_text": "CNN\tConvolutional Neural Network\t卷积神经网络",
+      "full_length": 39
+    },
+    {
+      "paragraph_number": 120,
+      "preview_text": "DL\tDeep Learning\t深度学习",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 121,
+      "preview_text": "DPLR\tDiagonal Plus Low-Rank\t共轭对角加低秩",
+      "full_length": 35
+    },
+    {
+      "paragraph_number": 122,
+      "preview_text": "DPRNN\tDual-Path Recurrent Neural Network\t双通道循环神经网络",
+      "full_length": 50
+    },
+    {
+      "paragraph_number": 123,
+      "preview_text": "DQN\tDeep Q-Network\t深度Q网络",
+      "full_length": 24
+    },
+    {
+      "paragraph_number": 124,
+      "preview_text": "EMA\tExponential Moving Average\t指数移动平均",
+      "full_length": 37
+    },
+    {
+      "paragraph_number": 125,
+      "preview_text": "EVT\tExtreme Value Theory\t极值理论",
+      "full_length": 29
+    },
+    {
+      "paragraph_number": 126,
+      "preview_text": "FH\tFrequency Hopping\t跳频通信",
+      "full_length": 25
+    },
+    {
+      "paragraph_number": 127,
+      "preview_text": "GA\tGenetic Algorithm\t遗传算法",
+      "full_length": 25
+    },
+    {
+      "paragraph_number": 128,
+      "preview_text": "GAN\tGenerative Adversarial Networks\t生成对抗网络",
+      "full_length": 42
+    },
+    {
+      "paragraph_number": 129,
+      "preview_text": "HiPPO\tHigh-Order Polynomial Projection\t高阶多项式投影算子",
+      "full_length": 48
+    },
+    {
+      "paragraph_number": 130,
+      "preview_text": "Operators",
+      "full_length": 9
+    },
+    {
+      "paragraph_number": 131,
+      "preview_text": "HMM\tHidden Markov Model\t隐藏马尔可夫模型",
+      "full_length": 32
+    },
+    {
+      "paragraph_number": 132,
+      "preview_text": "ICA\tIndependent Component Analysis\t独立分量分析",
+      "full_length": 41
+    },
+    {
+      "paragraph_number": 133,
+      "preview_text": "LFMJ\tLinear Frequency Modulation\t线性调频干扰",
+      "full_length": 39
+    },
+    {
+      "paragraph_number": 134,
+      "preview_text": "Jamming",
+      "full_length": 7
+    },
+    {
+      "paragraph_number": 135,
+      "preview_text": "MDP\tMarkov Decision Process\t马尔可夫决策过程",
+      "full_length": 36
+    },
+    {
+      "paragraph_number": 136,
+      "preview_text": "MAV\tMean Activation Vector\t均值激活向量",
+      "full_length": 33
+    },
+    {
+      "paragraph_number": 137,
+      "preview_text": "MTJ\tMulti-Tone Jamming\t多音干扰",
+      "full_length": 27
+    },
+    {
+      "paragraph_number": 138,
+      "preview_text": "MIMO\tMultiple Input Multiple Output\t多输入多输出",
+      "full_length": 42
+    },
+    {
+      "paragraph_number": 139,
+      "preview_text": "NA\tNormalized Accuracy\t归一化识别准确率",
+      "full_length": 31
+    },
+    {
+      "paragraph_number": 140,
+      "preview_text": "NFMJ\tNoise Frequency Modulation Jamming\t噪声调频干扰",
+      "full_length": 46
+    },
+    {
+      "paragraph_number": 141,
+      "preview_text": "NPLR\tNormal Plus Low-Rank\t正规矩阵加低秩",
+      "full_length": 33
+    },
+    {
+      "paragraph_number": 142,
+      "preview_text": "OSR\tOpen Space Recognition\t开集识别",
+      "full_length": 31
+    },
+    {
+      "paragraph_number": 143,
+      "preview_text": "PCA\tPrincipal Component Analysis\t主成分分析",
+      "full_length": 38
+    },
+    {
+      "paragraph_number": 144,
+      "preview_text": "PHY\tPhysical Layer\t物理层",
+      "full_length": 22
+    },
+    {
+      "paragraph_number": 145,
+      "preview_text": "PBNJ\tPartial Band Noise Jamming\t部分频带噪声干扰",
+      "full_length": 40
+    },
+    {
+      "paragraph_number": 146,
+      "preview_text": "PSO\tParticle Swarm Optimization\t粒子群优化",
+      "full_length": 37
+    },
+    {
+      "paragraph_number": 147,
+      "preview_text": "RL\tReinforcement Learning\t强化学习",
+      "full_length": 30
+    },
+    {
+      "paragraph_number": 148,
+      "preview_text": "RNN\tRecurrent Neural Network\t循环神经网络",
+      "full_length": 35
+    },
+    {
+      "paragraph_number": 149,
+      "preview_text": "ResNet\tResidual Networks\t残差网络",
+      "full_length": 29
+    },
+    {
+      "paragraph_number": 150,
+      "preview_text": "S4\tStructured State Space for\t结构化状态空间模型",
+      "full_length": 39
+    },
+    {
+      "paragraph_number": 151,
+      "preview_text": "Sequence Modeling",
+      "full_length": 17
+    },
+    {
+      "paragraph_number": 152,
+      "preview_text": "SCA\tSparse Component Analysis\t稀疏分量分析",
+      "full_length": 36
+    },
+    {
+      "paragraph_number": 153,
+      "preview_text": "SFMJ\tSin Frequency Modulation Jamming\t正弦调频干扰",
+      "full_length": 44
+    },
+    {
+      "paragraph_number": 154,
+      "preview_text": "SISO\tSingle Input Single Output\t单输入单输出",
+      "full_length": 38
+    },
+    {
+      "paragraph_number": 155,
+      "preview_text": "SI-SNR\tScale-Invariant Signal-to-Noise Ratio\t尺度不变信...",
+      "full_length": 52
+    },
+    {
+      "paragraph_number": 156,
+      "preview_text": "SSM\tState-Space Models\t状态空间模型",
+      "full_length": 29
+    },
+    {
+      "paragraph_number": 157,
+      "preview_text": "STFT\tShort-Time Fourier Transform\t短时傅里叶变换",
+      "full_length": 41
+    },
+    {
+      "paragraph_number": 158,
+      "preview_text": "STJ\tSingle Tone Jamming\t单音干扰",
+      "full_length": 28
+    },
+    {
+      "paragraph_number": 159,
+      "preview_text": "VAE\tVariational Autoencoder\t变分自编码器",
+      "full_length": 34
+    },
+    {
+      "paragraph_number": 160,
+      "preview_text": "vMF\tvon Mises-Fisher\t冯·米塞斯-费希尔分布",
+      "full_length": 32
+    },
+    {
+      "paragraph_number": 161,
+      "preview_text": "绪论",
+      "full_length": 2
+    },
+    {
+      "paragraph_number": 162,
+      "preview_text": "研究背景及意义",
+      "full_length": 7
+    },
+    {
+      "paragraph_number": 163,
+      "preview_text": "现代通信技术已深入军事、民用、航天等多个领域，其稳定性和安全性直接影响通信的可靠性。然而，随着电磁环...",
+      "full_length": 292
+    },
+    {
+      "paragraph_number": 164,
+      "preview_text": "无线通信抗干扰技术的发展经历了从单一信号处理方法到多模态抗干扰策略的演进。早期的抗干扰技术主要依靠滤...",
+      "full_length": 202
+    },
+    {
+      "paragraph_number": 165,
+      "preview_text": "电磁环境感知是实现高效抗干扰的前提条件，它涉及干扰信号的识别与参数估计等。由于实际电磁环境具有不可预...",
+      "full_length": 195
+    },
+    {
+      "paragraph_number": 166,
+      "preview_text": "电磁环境感知为抗干扰提供了基础支持，通过对干扰信号的识别和信号参数的估计，使通信系统能够掌握当前电磁...",
+      "full_length": 139
+    },
+    {
+      "paragraph_number": 167,
+      "preview_text": "在干扰抑制方面，传统的方法主要依赖信号处理技术，如自适应滤波、波束赋形、干涉抵消等方式，这些方法在静...",
+      "full_length": 193
+    },
+    {
+      "paragraph_number": 168,
+      "preview_text": "在跳频决策方面，面对多源干扰和高动态场景，通信系统还需要具备快速、智能的信道切换能力，以确保数据传输...",
+      "full_length": 209
+    },
+    {
+      "paragraph_number": 169,
+      "preview_text": "在未来智能化通信的发展趋势下，无线通信抗干扰技术的发展不仅关系到战场电子对抗的胜负，也直接影响到民用...",
+      "full_length": 251
+    },
+    {
+      "paragraph_number": 170,
+      "preview_text": "国内外研究现状",
+      "full_length": 7
+    },
+    {
+      "paragraph_number": 171,
+      "preview_text": "通信干扰信号识别研究现状",
+      "full_length": 12
+    },
+    {
+      "paragraph_number": 172,
+      "preview_text": "传统的干扰信号识别方法通常依赖于对信号特征的提取和后续的模式匹配。研究者通常先利用时域、频域或时频域...",
+      "full_length": 633
+    },
+    {
+      "paragraph_number": 173,
+      "preview_text": "（1）基于深度学习的闭集识别研究现状",
+      "full_length": 18
+    },
+    {
+      "paragraph_number": 174,
+      "preview_text": "由于卷积神经网络（Convolutional Neural Network，CNN）的卷积核设计理念...",
+      "full_length": 445
+    },
+    {
+      "paragraph_number": 175,
+      "preview_text": "（2）基于深度学习的开集识别研究现状",
+      "full_length": 18
+    },
+    {
+      "paragraph_number": 176,
+      "preview_text": "虽然基于深度学习的方法在一定程度上解决了传统方法的问题，但同时也带来了开放集风险：当测试阶段出现新类...",
+      "full_length": 140
+    },
+    {
+      "paragraph_number": 177,
+      "preview_text": "国内外研究者将开集识别（Open Space Recognition，OSR）的方法归类为判别式和生...",
+      "full_length": 159
+    },
+    {
+      "paragraph_number": 178,
+      "preview_text": "1）判别式方法研究现状",
+      "full_length": 11
+    },
+    {
+      "paragraph_number": 179,
+      "preview_text": "文献[14]首次构建了深度学习领域的开集识别方法，提出了一种开放集深度学习网络，通过OpenMax层...",
+      "full_length": 584
+    },
+    {
+      "paragraph_number": 180,
+      "preview_text": "以上都是图像识别或文本识别领域的判别式开集识别方法，而对于信号识别中的判别式开集识别，研究者们也开展...",
+      "full_length": 232
+    },
+    {
+      "paragraph_number": 181,
+      "preview_text": "2）生成式方法研究现状",
+      "full_length": 11
+    },
+    {
+      "paragraph_number": 182,
+      "preview_text": "文献[23]提出了一种结合生成对抗网络（Generative Adversarial Network...",
+      "full_length": 317
+    },
+    {
+      "paragraph_number": 183,
+      "preview_text": "以上都是图像识别或文本识别领域的生成式开集识别方法，而对于信号识别中的生成式开集识别，研究者们也开展...",
+      "full_length": 280
+    },
+    {
+      "paragraph_number": 184,
+      "preview_text": "通信抗干扰技术研究现状",
+      "full_length": 11
+    },
+    {
+      "paragraph_number": 185,
+      "preview_text": "在无线通信系统中，抗干扰技术主要用于增强系统在复杂电磁环境中的稳定性和可靠性。在实际应用中，干扰抑制...",
+      "full_length": 240
+    },
+    {
+      "paragraph_number": 186,
+      "preview_text": "通信干扰模型与基础理论",
+      "full_length": 11
+    },
+    {
+      "paragraph_number": 187,
+      "preview_text": "引言",
+      "full_length": 2
+    },
+    {
+      "paragraph_number": 188,
+      "preview_text": "在复杂的电磁环境下，通信系统面临着多种形式的干扰威胁，如何有效提升抗干扰能力是当前通信技术研究的关键...",
+      "full_length": 194
+    },
+    {
+      "paragraph_number": 189,
+      "preview_text": "通信干扰信号模型",
+      "full_length": 8
+    },
+    {
+      "paragraph_number": 190,
+      "preview_text": "假设通信系统接收到的信号为，则可以表示为：",
+      "full_length": 21
+    },
+    {
+      "paragraph_number": 191,
+      "preview_text": "其中，为发射端的通信信号，与分别为发射端载波频率与初始相位，为通信信号对应的信道脉冲响应，为信道中的...",
+      "full_length": 109
+    },
+    {
+      "paragraph_number": 192,
+      "preview_text": "本文研究对象主要是单干扰场景下的典型压制式干扰信号，包括单音干扰、多音干扰、线性扫频调制干扰、噪声调...",
+      "full_length": 80
+    },
+    {
+      "paragraph_number": 193,
+      "preview_text": "对于干扰信号的时频域表征问题，本文采用短时傅里叶变换，短时傅里叶变换（Short-Time Four...",
+      "full_length": 213
+    },
+    {
+      "paragraph_number": 194,
+      "preview_text": "其中，是源信号，是窗函数。",
+      "full_length": 13
+    },
+    {
+      "paragraph_number": 195,
+      "preview_text": "（1）单音干扰",
+      "full_length": 7
+    },
+    {
+      "paragraph_number": 196,
+      "preview_text": "单音干扰（Single Tone Jamming，STJ）是一个持续的单频率连续波信号，其频率通常保...",
+      "full_length": 62
+    },
+    {
+      "paragraph_number": 197,
+      "preview_text": "其中，为的幅度，为频率，为初始相位，在内均匀分布，其时域图、频域图与时频图如图2.1所示。",
+      "full_length": 45
+    },
+    {
+      "paragraph_number": 198,
+      "preview_text": "单音干扰",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 199,
+      "preview_text": "（2）多音干扰",
+      "full_length": 7
+    },
+    {
+      "paragraph_number": 200,
+      "preview_text": "多音干扰（Multi-Tone Jamming，MTJ），又称梳状干扰，由多个频率成分组成，每个频率...",
+      "full_length": 66
+    },
+    {
+      "paragraph_number": 201,
+      "preview_text": "其中，为每个频率成分的幅度，为每个频率成分的频率，为每个频率成分的初始相位，多音干扰的时域图、频域图...",
+      "full_length": 62
+    },
+    {
+      "paragraph_number": 202,
+      "preview_text": "多音干扰",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 203,
+      "preview_text": "（3）线性调频干扰",
+      "full_length": 9
+    },
+    {
+      "paragraph_number": 204,
+      "preview_text": "线性调频干扰（Linear Frequency Modulation Jamming，LFMJ），又...",
+      "full_length": 106
+    },
+    {
+      "paragraph_number": 205,
+      "preview_text": "其中，为幅度，为起始频率，为扫频速率，为初始相位，为信号持续的时间，线性调频干扰的时域图、频域图与时...",
+      "full_length": 60
+    },
+    {
+      "paragraph_number": 206,
+      "preview_text": "线性调频干扰",
+      "full_length": 6
+    },
+    {
+      "paragraph_number": 207,
+      "preview_text": "（4）噪声调频干扰",
+      "full_length": 9
+    },
+    {
+      "paragraph_number": 208,
+      "preview_text": "噪声调频干扰（Noise Frequency Modulation Jamming，NFMJ）的瞬时...",
+      "full_length": 73
+    },
+    {
+      "paragraph_number": 209,
+      "preview_text": "噪声调频干扰",
+      "full_length": 6
+    },
+    {
+      "paragraph_number": 210,
+      "preview_text": "其中，为幅度，为载波频率，为调频指数，为均值为0、方差为的高斯白噪声，噪声调频干扰的有效带宽由调频指...",
+      "full_length": 85
+    },
+    {
+      "paragraph_number": 211,
+      "preview_text": "（5）部分频带噪声干扰",
+      "full_length": 11
+    },
+    {
+      "paragraph_number": 212,
+      "preview_text": "部分频带噪声干扰（Partial Band Noise Jamming，PBNJ）是一种通过在目标通...",
+      "full_length": 124
+    },
+    {
+      "paragraph_number": 213,
+      "preview_text": "其中，为均值为0，方差为的高斯噪声，该高斯噪声为高斯白噪声通过低通滤波得到的带通噪声，为载频，为初始...",
+      "full_length": 81
+    },
+    {
+      "paragraph_number": 214,
+      "preview_text": "部分频带噪声干扰",
+      "full_length": 8
+    },
+    {
+      "paragraph_number": 215,
+      "preview_text": "（6）正弦调频干扰",
+      "full_length": 9
+    },
+    {
+      "paragraph_number": 216,
+      "preview_text": "正弦调频干扰（Sin Frequency Modulation Jamming，SFMJ）是一种通过...",
+      "full_length": 127
+    },
+    {
+      "paragraph_number": 217,
+      "preview_text": "其中，为幅度，为干扰的载频，为调频系数，为基带信号频率，为随机相位，在内均匀分部。正弦调频干扰的时域...",
+      "full_length": 67
+    },
+    {
+      "paragraph_number": 218,
+      "preview_text": "正弦调频干扰",
+      "full_length": 6
+    },
+    {
+      "paragraph_number": 219,
+      "preview_text": "（7）二进制相移键控干扰",
+      "full_length": 12
+    },
+    {
+      "paragraph_number": 220,
+      "preview_text": "二进制相移键控干扰（Binary Phase Shift Key Jamming，BPSKJ）是一种...",
+      "full_length": 84
+    },
+    {
+      "paragraph_number": 221,
+      "preview_text": "其中，为振幅，为载波频率，为调制相位，或，为初始相位。二进制相移键控干扰的时域图、频域图与时频图如图...",
+      "full_length": 56
+    },
+    {
+      "paragraph_number": 222,
+      "preview_text": "BPSK调制干扰",
+      "full_length": 8
+    },
+    {
+      "paragraph_number": 223,
+      "preview_text": "参考文献",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 224,
+      "preview_text": "刘瑞华, 张艳婷, 马赞. 基于时频图学习的北斗卫星导航系统干扰类型识别[J]. 中国民航大学学报,...",
+      "full_length": 71
+    },
+    {
+      "paragraph_number": 225,
+      "preview_text": "吴婧琪. 雷达有源干扰识别与抑制方法研究[D]. 大连海事大学, 2024.002403.",
+      "full_length": 45
+    },
+    {
+      "paragraph_number": 226,
+      "preview_text": "HECHT-NIELSEN R. Theory of the backpropagation neu...",
+      "full_length": 126
+    },
+    {
+      "paragraph_number": 227,
+      "preview_text": "KRIZHEVSKY A, SUTSKEVER I, HINTON G E. ImageNet cl...",
+      "full_length": 153
+    },
+    {
+      "paragraph_number": 228,
+      "preview_text": "SILVER D, SCHRITTWIESER J, SIMONYAN K, et al. Mast...",
+      "full_length": 132
+    },
+    {
+      "paragraph_number": 229,
+      "preview_text": "徐国进. 典型通信干扰信号识别技术研究[D]. 电子科技大学, 2018.",
+      "full_length": 37
+    },
+    {
+      "paragraph_number": 230,
+      "preview_text": "UJAN S, NAVIDI N. An Efficient Radio Frequency Int...",
+      "full_length": 134
+    },
+    {
+      "paragraph_number": 231,
+      "preview_text": "HE K, ZHANG X, REN S, et al. Deep Residual Learnin...",
+      "full_length": 184
+    },
+    {
+      "paragraph_number": 232,
+      "preview_text": "SIMONYAN K, ZISSERMAN A. Very deep convolutional n...",
+      "full_length": 133
+    },
+    {
+      "paragraph_number": 233,
+      "preview_text": "SZEGEDY C, WEI LIU, YANGQING JIA, et al. Going dee...",
+      "full_length": 175
+    },
+    {
+      "paragraph_number": 234,
+      "preview_text": "王豪. 轻量化神经网络的通信干扰智能识别技术研究[D]. 电子科技大学, 2024.",
+      "full_length": 42
+    },
+    {
+      "paragraph_number": 235,
+      "preview_text": "LECUN Y, BOTTOU L, BENGIO Y, et al. Gradient-based...",
+      "full_length": 145
+    },
+    {
+      "paragraph_number": 236,
+      "preview_text": "致谢",
+      "full_length": 2
+    },
+    {
+      "paragraph_number": 237,
+      "preview_text": "三年求学时光悄然流逝，回望这段旅程，既有探索知识的充实，也有攻克难题的欣喜。值此毕业之际，谨向所有给...",
+      "full_length": 76
+    },
+    {
+      "paragraph_number": 238,
+      "preview_text": "首先，衷心感谢我的导师刘明骞教授。您以严谨的治学态度为我树立科研标杆，以渊博的学识为我拓宽学术视野。...",
+      "full_length": 165
+    },
+    {
+      "paragraph_number": 239,
+      "preview_text": "其次，感谢实验室的张俊林老师在学术研究和工程项目中给予我的指导和帮助，您的专业建议让我在科研道路上少...",
+      "full_length": 209
+    },
+    {
+      "paragraph_number": 240,
+      "preview_text": "最后，深深感谢我的父母和家人。感谢你们二十多年来在物质和精神上的全力支持，让我能够心无旁骛地追求学业...",
+      "full_length": 119
+    },
+    {
+      "paragraph_number": 241,
+      "preview_text": "此外，感谢参与论文评审和答辩的各位专家老师，感谢你们提出的宝贵意见，让我的研究更加完善。",
+      "full_length": 44
+    },
+    {
+      "paragraph_number": 242,
+      "preview_text": "毕业不是终点，而是新的起点，我将带着这段时光的收获与感动，继续勇敢前行。",
+      "full_length": 36
+    },
+    {
+      "paragraph_number": 243,
+      "preview_text": "作者简介",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 244,
+      "preview_text": "基本情况",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 245,
+      "preview_text": "张耕田，男，陕西咸阳人，1999年8月出生，西安电子科技大学通信工程学院信息与通信工程专业2022级...",
+      "full_length": 56
+    },
+    {
+      "paragraph_number": 246,
+      "preview_text": "教育背景",
+      "full_length": 4
+    },
+    {
+      "paragraph_number": 247,
+      "preview_text": "2017.09～2021.06\t长安大学，本科，专业：通信工程",
+      "full_length": 31
+    },
+    {
+      "paragraph_number": 248,
+      "preview_text": "2022.08～2025.06\t西安电子科技大学，硕士研究生，专业：信息与通信工程",
+      "full_length": 41
+    },
+    {
+      "paragraph_number": 249,
+      "preview_text": "攻读硕士学位期间的研究成果",
+      "full_length": 13
+    },
+    {
+      "paragraph_number": 250,
+      "preview_text": "申请（授权）专利",
+      "full_length": 8
+    },
+    {
+      "paragraph_number": 251,
+      "preview_text": "刘明骞, 张耕田. 专利名称: 一种通信干扰信号开集识别方法、系统、设备及介质, 中国, 20251...",
+      "full_length": 71
+    },
+    {
+      "paragraph_number": 252,
+      "preview_text": "刘明骞, 张耕田等. 软件著作权名称: 通信威胁智能精准感知技术应用软件V1.0, 2024SR03...",
+      "full_length": 68
+    },
+    {
+      "paragraph_number": 253,
+      "preview_text": "参与科研项目及获奖",
+      "full_length": 9
+    },
+    {
+      "paragraph_number": 254,
+      "preview_text": "国家自然科学基金重点项目：复杂电磁空间信号作用机理与融合表征理论和方法研究，2023.01-2027...",
+      "full_length": 59
+    },
+    {
+      "paragraph_number": 255,
+      "preview_text": "陕西省杰出青年科学基金项目：电磁频谱态势认知，2024.01-2026.12，项目在研。",
+      "full_length": 44
+    }
+  ]
+}
