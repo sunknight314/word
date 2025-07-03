@@ -39,10 +39,35 @@ const Step2SourceParse: React.FC<Step2Props> = ({ fileId, filename, onParseSucce
         </button>
         
         {parseData && (
-          <JsonDisplay 
-            data={parseData} 
-            title="源文件解析结果" 
-          />
+          <div>
+            {/* 显示处理状态 */}
+            <div className="result-status">
+              {parseData.success ? (
+                <span className="success-indicator">✅ 段落分析成功</span>
+              ) : (
+                <span className="error-indicator">❌ 段落分析失败: {parseData.error}</span>
+              )}
+              {parseData.processing_info?.model_config && (
+                <span className="model-info">
+                  (模型: {parseData.processing_info.model_config})
+                </span>
+              )}
+            </div>
+            
+            {/* 显示段落分析JSON */}
+            {parseData.paragraph_analysis_json && (
+              <JsonDisplay 
+                data={parseData.paragraph_analysis_json} 
+                title="📋 段落类型分析结果 (JSON)" 
+              />
+            )}
+            
+            {/* 显示完整解析结果 */}
+            <JsonDisplay 
+              data={parseData} 
+              title="📄 完整源文件解析结果" 
+            />
+          </div>
         )}
       </div>
     </div>

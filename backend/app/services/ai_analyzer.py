@@ -1,19 +1,19 @@
 """
-大模型分析服务
+AI段落分析服务 - 重构后的统一架构
 """
 
-import json
-import httpx
 import os
+import json
 from datetime import datetime
-from typing import Dict, List, Any, Optional
-from app.services.ai_prompts import get_analysis_prompt
+from typing import Dict, List, Any, Tuple
+from .ai_client_base import AIClientBase
+from .document_processor import DocumentProcessor
 
 
-class AIAnalyzer:
-    """大模型分析服务类"""
+class AIAnalyzer(AIClientBase):
+    """AI段落分析服务类"""
     
-    def __init__(self, api_base_url: str = None, api_key: str = None, model: str = None):
+    def __init__(self, api_base_url: str = None, api_key: str = None, model: str = None, model_config: str = None):
         """
         初始化AI分析器
         
@@ -21,24 +21,71 @@ class AIAnalyzer:
             api_base_url: API基础URL
             api_key: API密钥
             model: 模型名称
+            model_config: 模型配置名称
         """
-        # 使用硅基流动的配置
-        self.api_base_url = api_base_url or "https://api.siliconflow.cn/v1"
-        self.api_key = api_key or "sk-ennjwzgywmisvlgqcumcojemtajhzmcowpmoothwmlklrzcn"
-        self.model = model or "deepseek-ai/DeepSeek-V2.5"
+        # 初始化基类
+        super().__init__(api_base_url, api_key, model, model_config)
         
-        # HTTP客户端配置
-        self.timeout = 60.0  # 增加超时时间
-        self.max_retries = 3
+        # 初始化文档处理器
+        self.document_processor = DocumentProcessor()
         
         # 结果保存配置
         self.save_results = True
         self.results_dir = "ai_analysis_results"
         self._ensure_results_dir()
     
+    def get_prompts(self, input_data: List[Dict]) -> Tuple[str, str]:
+        """
+        获取段落分析的系统和用户提示词
+        
+        Args:
+            input_data: 段落数据列表
+            
+        Returns:
+            (system_prompt, user_prompt) 元组
+        """
+        from .ai_prompts import get_paragraph_analysis_prompt
+        return get_paragraph_analysis_prompt(input_data)
+    
+    async def process_ai_response(self, ai_response: str) -> Dict[str, Any]:
+        """
+        处理AI响应，解析段落分析结果
+        
+        Args:
+            ai_response: AI原始响应
+            
+        Returns:
+            处理后的分析结果
+        """
+        try:
+            print("🔍 开始提取段落分析JSON...")
+            json_content = self.extract_json_from_content(ai_response)
+            print(f"📋 提取的JSON长度: {len(json_content)} 字符")
+            
+            analysis_result = json.loads(json_content)
+            print("✅ 段落分析JSON解析成功")
+            
+            return {
+                "success": True,
+                "analysis_result": analysis_result.get("analysis_result", []),
+                "raw_response": ai_response
+            }
+            
+        except json.JSONDecodeError as e:
+            print(f"❌ 段落分析JSON解析失败: {str(e)}")
+            if 'json_content' in locals():
+                print(f"🔍 尝试解析的内容: {json_content}")
+            else:
+                print("🔍 json_content变量未定义")
+            return {
+                "success": False,
+                "error": f"JSON解析失败: {str(e)}",
+                "raw_response": ai_response
+            }
+    
     async def analyze_paragraphs(self, paragraphs_data: List[Dict]) -> Dict[str, Any]:
         """
-        分析段落类型（支持分批处理大文档）
+        分析段落类型（一次性处理）
         
         Args:
             paragraphs_data: 段落数据列表，包含paragraph_number和preview_text
@@ -47,11 +94,10 @@ class AIAnalyzer:
             分析结果字典
         """
         try:
-            # 如果段落数超过10个，进行分批处理
-            if len(paragraphs_data) > 10:
-                result = await self._analyze_paragraphs_in_batches(paragraphs_data)
-            else:
-                result = await self._analyze_single_batch(paragraphs_data)
+            print(f"📄 开始分析 {len(paragraphs_data)} 个段落...")
+            
+            # 直接使用AI分析，一次性处理
+            result = await self.analyze(paragraphs_data)
             
             # 保存分析结果
             if self.save_results and result.get("success"):
@@ -73,151 +119,6 @@ class AIAnalyzer:
                 self._save_analysis_result(error_result, paragraphs_data, is_error=True)
             
             return error_result
-    
-    async def _analyze_single_batch(self, paragraphs_data: List[Dict]) -> Dict[str, Any]:
-        """
-        分析单批段落
-        """
-        # 生成prompt
-        prompt = get_analysis_prompt(paragraphs_data)
-        
-        # 调用大模型API
-        response = await self._call_ai_api(prompt)
-        
-        # 解析响应
-        analysis_result = self._parse_ai_response(response)
-        
-        return {
-            "success": True,
-            "result": analysis_result,
-            "total_paragraphs": len(paragraphs_data)
-        }
-    
-    async def _analyze_paragraphs_in_batches(self, paragraphs_data: List[Dict]) -> Dict[str, Any]:
-        """
-        分批处理大文档
-        """
-        batch_size = 8  # 每批处理8个段落
-        all_results = []
-        
-        print(f"📦 文档较大，分批处理: {len(paragraphs_data)}个段落，每批{batch_size}个")
-        
-        for i in range(0, len(paragraphs_data), batch_size):
-            batch = paragraphs_data[i:i + batch_size]
-            batch_num = i // batch_size + 1
-            total_batches = (len(paragraphs_data) + batch_size - 1) // batch_size
-            
-            print(f"  📄 处理第{batch_num}批 (共{total_batches}批): 段落{batch[0]['paragraph_number']}-{batch[-1]['paragraph_number']}")
-            
-            try:
-                batch_result = await self._analyze_single_batch(batch)
-                
-                if batch_result["success"]:
-                    batch_analysis = batch_result["result"]["analysis_result"]
-                    all_results.extend(batch_analysis)
-                    print(f"  ✅ 第{batch_num}批完成")
-                else:
-                    print(f"  ❌ 第{batch_num}批失败: {batch_result['error'][:100]}...")
-                    # 如果某批失败，可以继续处理其他批次
-                    
-            except Exception as e:
-                print(f"  💥 第{batch_num}批异常: {str(e)[:100]}...")
-                continue
-        
-        return {
-            "success": True,
-            "result": {
-                "analysis_result": all_results
-            },
-            "total_paragraphs": len(paragraphs_data),
-            "processed_paragraphs": len(all_results)
-        }
-    
-    async def _call_ai_api(self, prompt: str) -> str:
-        """
-        调用大模型API
-        
-        Args:
-            prompt: 分析prompt
-            
-        Returns:
-            API响应文本
-        """
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json"
-        }
-        
-        payload = {
-            "model": self.model,
-            "messages": [
-                {
-                    "role": "system", 
-                    "content": "你是一个专业的文档格式分析专家，专门负责分析Word文档段落类型。请严格按照JSON格式输出分析结果。"
-                },
-                {
-                    "role": "user", 
-                    "content": prompt
-                }
-            ],
-            "temperature": 0.1,  # 低温度确保稳定输出
-            "max_tokens": 3000,
-            "response_format": {"type": "json_object"}  # 启用JSON模式
-        }
-        
-        async with httpx.AsyncClient(timeout=self.timeout) as client:
-            response = await client.post(
-                f"{self.api_base_url}/chat/completions",
-                headers=headers,
-                json=payload
-            )
-            
-            if response.status_code != 200:
-                raise Exception(f"API调用失败: {response.status_code} - {response.text}")
-            
-            result = response.json()
-            return result["choices"][0]["message"]["content"]
-    
-    def _parse_ai_response(self, response_text: str) -> Dict[str, Any]:
-        """
-        解析大模型响应
-        
-        Args:
-            response_text: API响应文本
-            
-        Returns:
-            解析后的结果字典
-        """
-        try:
-            # 尝试直接解析JSON
-            if response_text.strip().startswith("{"):
-                return json.loads(response_text)
-            
-            # 尝试从markdown代码块中提取JSON
-            if "```json" in response_text:
-                start = response_text.find("```json") + 7
-                end = response_text.find("```", start)
-                json_text = response_text[start:end].strip()
-                return json.loads(json_text)
-            
-            # 尝试从```代码块中提取JSON
-            if "```" in response_text:
-                start = response_text.find("```") + 3
-                end = response_text.find("```", start)
-                json_text = response_text[start:end].strip()
-                return json.loads(json_text)
-            
-            # 如果都失败，返回原始文本
-            return {
-                "error": "无法解析响应",
-                "raw_response": response_text
-            }
-            
-        except json.JSONDecodeError as e:
-            return {
-                "error": f"JSON解析失败: {str(e)}",
-                "raw_response": response_text
-            }
     
     def create_mock_analysis(self, paragraphs_data: List[Dict]) -> Dict[str, Any]:
         """
@@ -304,17 +205,8 @@ class AIAnalyzer:
                     "total_paragraphs": len(paragraphs_data),
                     "paragraphs": paragraphs_data
                 },
-                "analysis_result": result,
-                "metadata": {
-                    "api_base_url": self.api_base_url,
-                    "model_name": self.model,
-                    "batch_processing": len(paragraphs_data) > 10
-                }
+                "analysis_result": result
             }
-            
-            # 如果是成功结果，添加统计信息
-            if not is_error and result.get("success"):
-                save_data["statistics"] = self._generate_result_statistics(result)
             
             # 保存到文件
             with open(filepath, 'w', encoding='utf-8') as f:
@@ -324,87 +216,3 @@ class AIAnalyzer:
             
         except Exception as e:
             print(f"⚠️ 保存AI分析结果失败: {str(e)}")
-    
-    def _generate_result_statistics(self, result: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        生成分析结果统计信息
-        
-        Args:
-            result: 分析结果
-            
-        Returns:
-            统计信息字典
-        """
-        try:
-            analysis_result = result.get("result", {}).get("analysis_result", [])
-            
-            if not analysis_result:
-                return {}
-            
-            # 统计段落类型分布
-            type_count = {}
-            confidence_scores = []
-            
-            for item in analysis_result:
-                para_type = item.get("type", "unknown")
-                confidence = item.get("confidence", 0)
-                
-                type_count[para_type] = type_count.get(para_type, 0) + 1
-                confidence_scores.append(confidence)
-            
-            # 计算统计信息
-            avg_confidence = sum(confidence_scores) / len(confidence_scores) if confidence_scores else 0
-            
-            return {
-                "type_distribution": type_count,
-                "total_analyzed": len(analysis_result),
-                "average_confidence": round(avg_confidence, 3),
-                "min_confidence": min(confidence_scores) if confidence_scores else 0,
-                "max_confidence": max(confidence_scores) if confidence_scores else 0,
-                "most_common_type": max(type_count.items(), key=lambda x: x[1])[0] if type_count else "unknown"
-            }
-            
-        except Exception as e:
-            return {"error": f"统计生成失败: {str(e)}"}
-    
-    def get_saved_results_list(self) -> List[str]:
-        """
-        获取已保存的分析结果文件列表
-        
-        Returns:
-            文件名列表
-        """
-        try:
-            if not os.path.exists(self.results_dir):
-                return []
-            
-            files = [f for f in os.listdir(self.results_dir) if f.endswith('.json')]
-            files.sort(reverse=True)  # 按时间倒序排列
-            return files
-            
-        except Exception as e:
-            print(f"⚠️ 获取结果文件列表失败: {str(e)}")
-            return []
-    
-    def load_saved_result(self, filename: str) -> Optional[Dict[str, Any]]:
-        """
-        加载已保存的分析结果
-        
-        Args:
-            filename: 文件名
-            
-        Returns:
-            分析结果数据，如果失败返回None
-        """
-        try:
-            filepath = os.path.join(self.results_dir, filename)
-            
-            if not os.path.exists(filepath):
-                return None
-            
-            with open(filepath, 'r', encoding='utf-8') as f:
-                return json.load(f)
-                
-        except Exception as e:
-            print(f"⚠️ 加载结果文件失败: {str(e)}")
-            return None

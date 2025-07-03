@@ -70,3 +70,31 @@
 .status-info p {
   margin: 0.25rem 0;
 }
+
+/* 结果状态显示 */
+.result-status {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.success-indicator {
+  color: #059669;
+  font-weight: 600;
+}
+
+.error-indicator {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.model-info {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-left: auto;
+}

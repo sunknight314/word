@@ -27,7 +27,7 @@ interface FormatData {
 }
 
 interface FormatFileSectionProps {
-  onComplete: (fileId: string, parseData: FormatData) => void;
+  onComplete?: (fileId: string, parseData: FormatData) => void;
 }
 
 const FormatFileSection: React.FC<FormatFileSectionProps> = ({ onComplete }) => {
@@ -35,8 +35,8 @@ const FormatFileSection: React.FC<FormatFileSectionProps> = ({ onComplete }) => 
   const [uploading, setUploading] = useState(false);
   const [fileId, setFileId] = useState<string>('');
   const [filename, setFilename] = useState<string>('');
-  const [parseData, setParseData] = useState<FormatData | null>(null);
-  const [parsing, setParsing] = useState(false);
+  const [aiGenerating, setAiGenerating] = useState(false);
+  const [formatConfig, setFormatConfig] = useState<any>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
@@ -45,7 +45,7 @@ const FormatFileSection: React.FC<FormatFileSectionProps> = ({ onComplete }) => 
       // 重置状态
       setFileId('');
       setFilename('');
-      setParseData(null);
+      setFormatConfig(null);
     }
   };
 
@@ -71,17 +71,18 @@ const FormatFileSection: React.FC<FormatFileSectionProps> = ({ onComplete }) => 
     setUploading(false);
   };
 
-  const handleParse = async () => {
-    setParsing(true);
+  const handleAIGenerate = async () => {
+    setAiGenerating(true);
     try {
-      const response = await fetch(`/api/parse/format/${fileId}`);
+      const response = await fetch(`/api/generate/format-config/${fileId}`, {
+        method: 'POST',
+      });
       const result = await response.json();
-      setParseData(result);
-      onComplete(fileId, result);
+      setFormatConfig(result);
     } catch (error) {
-      console.error('解析失败:', error);
+      console.error('AI生成格式配置失败:', error);
     }
-    setParsing(false);
+    setAiGenerating(false);
   };
 
   return (
@@ -113,80 +114,59 @@ const FormatFileSection: React.FC<FormatFileSectionProps> = ({ onComplete }) => 
         {fileId && (
           <div className="parse-area">
             <p className="uploaded-file">已上传: {filename}</p>
-            <button
-              onClick={handleParse}
-              disabled={parsing}
-              className="action-button"
-            >
-              {parsing ? '解析中...' : '解析格式要求文件'}
-            </button>
-          </div>
-        )}
-
-        {parseData && (
-          <div className="result-area">
-            {/* 显示格式分析摘要 */}
-            {parseData.analysis_summary && (
-              <div className="analysis-summary">
-                <h4>📋 格式分析摘要</h4>
-                <div className="summary-grid">
-                  <div className="summary-item">
-                    <span className="label">样式总数：</span>
-                    <span className="value">{parseData.analysis_summary.total_styles}</span>
-                  </div>
-                  <div className="summary-item">
-                    <span className="label">格式复杂度：</span>
-                    <span className="value">{parseData.analysis_summary.format_complexity}</span>
-                  </div>
-                  <div className="summary-item">
-                    <span className="label">纸张信息：</span>
-                    <span className="value">{parseData.analysis_summary.paper_info.size} - {parseData.analysis_summary.paper_info.orientation}</span>
-                  </div>
-                </div>
-                
-                {/* 主要字体 */}
-                <div className="font-info">
-                  <h5>主要字体：</h5>
-                  <div className="font-list">
-                    {parseData.analysis_summary.main_fonts.map((font: string, index: number) => (
-                      <span key={index} className="font-tag">{font}</span>
-                    ))}
-                  </div>
-                </div>
-                
-                {/* 格式特征 */}
-                <div className="features-info">
-                  <h5>格式特征：</h5>
-                  <div className="features-list">
-                    {parseData.analysis_summary.format_features.map((feature: string, index: number) => (
-                      <span key={index} className="feature-tag">{feature}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-            
-            {/* 显示优化建议 */}
-            {parseData.recommendations && parseData.recommendations.length > 0 && (
-              <div className="recommendations">
-                <h4>💡 格式优化建议</h4>
-                <ul className="recommendation-list">
-                  {parseData.recommendations.map((rec: string, index: number) => (
-                    <li key={index} className="recommendation-item">{rec}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            
-            <JsonDisplay 
-              data={parseData} 
-              title="完整格式解析结果 (JSON)" 
-            />
-            <div className="completion-indicator">
-              ✅ 格式要求文件解析完成
+            <div className="button-group">
+              <button
+                onClick={handleAIGenerate}
+                disabled={aiGenerating}
+                className="action-button ai-button"
+              >
+                {aiGenerating ? 'AI生成中...' : 'AI生成格式配置'}
+              </button>
             </div>
           </div>
         )}
+
+        {/* AI生成的格式配置显示 */}
+        {formatConfig && (
+          <div className="ai-config-area">
+            <h4>🤖 AI生成的格式配置</h4>
+            {formatConfig.success ? (
+              <div className="ai-success">
+                <div className="config-status">
+                  ✅ AI生成成功
+                  {formatConfig.ai_info?.model && (
+                    <span className="model-info">
+                      (模型: {formatConfig.ai_info.model.model || 'DeepSeek-V2.5'})
+                    </span>
+                  )}
+                </div>
+                <JsonDisplay 
+                  data={formatConfig.format_config} 
+                  title="生成的format_config.json" 
+                />
+                {formatConfig.document_info && (
+                  <div className="document-summary">
+                    <p><strong>文档信息:</strong> {formatConfig.document_info.total_paragraphs} 段落, {formatConfig.document_info.total_length} 字符</p>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="ai-error">
+                <div className="error-status">
+                  ❌ AI生成失败: {formatConfig.error}
+                  {formatConfig.fallback && <span className="fallback-note">(已使用默认配置)</span>}
+                </div>
+                {formatConfig.format_config && (
+                  <JsonDisplay 
+                    data={formatConfig.format_config} 
+                    title="默认格式配置" 
+                  />
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
       </div>
     </div>
   );

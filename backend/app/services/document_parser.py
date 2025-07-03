@@ -1,70 +1,35 @@
-from docx import Document
+"""
+文档解析服务 - 重构后的统一架构
+"""
+
 import json
-from typing import List, Dict, Any
+from typing import Dict, Any
 import os
-from app.services.ai_analyzer import AIAnalyzer
+from .ai_analyzer import AIAnalyzer
+from .document_processor import DocumentProcessor
 
 
 class DocumentParser:
-    def __init__(self):
-        self.ai_analyzer = AIAnalyzer()
+    """文档解析服务类"""
     
-    def extract_paragraphs_info(self, file_path: str) -> Dict[str, Any]:
+    def __init__(self):
+        """初始化文档解析器"""
+        self.ai_analyzer = AIAnalyzer()
+        self.document_processor = DocumentProcessor()
+    
+    def extract_paragraphs_info(self, file_path: str, preview_length: int = 20) -> Dict[str, Any]:
         """
-        提取Word文档中每段的前20个字符
+        提取Word文档中每段的预览信息（使用新的文档处理器）
         
         Args:
             file_path: Word文档文件路径
+            preview_length: 预览字符长度
             
         Returns:
             包含段落信息的字典
         """
-        if not os.path.exists(file_path):
-            raise FileNotFoundError(f"文件不存在: {file_path}")
-        
-        try:
-            # 打开Word文档
-            doc = Document(file_path)
-            
-            paragraphs_info = []
-            paragraph_count = 0
-            
-            for paragraph in doc.paragraphs:
-                # 获取段落文本
-                paragraph_text = paragraph.text.strip()
-                
-                # 跳过空段落
-                if not paragraph_text:
-                    continue
-                    
-                paragraph_count += 1
-                
-                # 提取前20个字符
-                preview_text = paragraph_text[:20]
-                
-                # 构建段落信息
-                paragraph_info = {
-                    "paragraph_number": paragraph_count,
-                    "preview_text": preview_text,
-                    "full_text_length": len(paragraph_text),
-                    "is_complete": len(paragraph_text) <= 20
-                }
-                
-                paragraphs_info.append(paragraph_info)
-            
-            # 构建最终结果
-            result = {
-                "document_info": {
-                    "total_paragraphs": paragraph_count,
-                    "file_path": file_path
-                },
-                "paragraphs": paragraphs_info
-            }
-            
-            return result
-            
-        except Exception as e:
-            raise Exception(f"解析文档失败: {str(e)}")
+        # 使用新的文档处理器
+        return self.document_processor.extract_paragraphs_preview(file_path, preview_length)
     
     def save_paragraphs_to_json(self, file_path: str, output_path: str = None) -> str:
         """
@@ -120,7 +85,7 @@ class DocumentParser:
             # 使用真实API调用
             ai_result = await self.ai_analyzer.analyze_paragraphs(paragraphs_for_ai)
             if ai_result["success"]:
-                ai_analysis = ai_result["result"]
+                ai_analysis = {"analysis_result": ai_result["analysis_result"]}
             else:
                 raise Exception(f"AI分析失败: {ai_result['error']}")
         

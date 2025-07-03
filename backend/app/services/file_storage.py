@@ -6,9 +6,10 @@ import aiofiles
 
 
 class FileStorage:
-    def __init__(self, upload_dir: str = "/tmp/uploads"):
-        self.upload_dir = upload_dir
-        os.makedirs(upload_dir, exist_ok=True)
+    def __init__(self, upload_dir: str = "uploads"):
+        # 使用项目目录下的uploads文件夹
+        self.upload_dir = os.path.join(os.getcwd(), upload_dir)
+        os.makedirs(self.upload_dir, exist_ok=True)
     
     async def save_uploaded_file(self, file: UploadFile, file_type: str = "source") -> dict:
         """

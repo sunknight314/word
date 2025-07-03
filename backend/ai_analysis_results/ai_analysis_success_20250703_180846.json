@@ -1,0 +1,369 @@
+{
+  "timestamp": "2025-07-03T18:08:46.576402",
+  "model": "deepseek-ai/DeepSeek-V2.5",
+  "status": "success",
+  "input_data": {
+    "total_paragraphs": 29,
+    "paragraphs": [
+      {
+        "paragraph_number": 1,
+        "preview_text": "Word文档格式优化项目测试文档",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 2,
+        "preview_text": "第一章 项目概述",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 3,
+        "preview_text": "本项目是一个基于人工智能的Word文档格...",
+        "full_length": 2083
+      },
+      {
+        "paragraph_number": 4,
+        "preview_text": "传统的文档格式调整需要大量的手工操作，效...",
+        "full_length": 29
+      },
+      {
+        "paragraph_number": 5,
+        "preview_text": "1.1 项目背景",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 6,
+        "preview_text": "在现代办公环境中，文档格式的统一性对于提...",
+        "full_length": 37
+      },
+      {
+        "paragraph_number": 7,
+        "preview_text": "然而，不同用户的文档编写习惯差异很大，导...",
+        "full_length": 31
+      },
+      {
+        "paragraph_number": 8,
+        "preview_text": "1.2 解决方案",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 9,
+        "preview_text": "本项目采用深度学习技术，自动识别文档中的...",
+        "full_length": 37
+      },
+      {
+        "paragraph_number": 10,
+        "preview_text": "通过智能算法分析格式要求，实现一键式的格...",
+        "full_length": 24
+      },
+      {
+        "paragraph_number": 11,
+        "preview_text": "第二章 技术架构",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 12,
+        "preview_text": "系统采用前后端分离的架构设计，前端使用R...",
+        "full_length": 39
+      },
+      {
+        "paragraph_number": 13,
+        "preview_text": "2.1 前端设计",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 14,
+        "preview_text": "前端界面简洁易用，支持拖拽上传文件，实时...",
+        "full_length": 27
+      },
+      {
+        "paragraph_number": 15,
+        "preview_text": "用户可以同时上传源文档和格式要求文档，系...",
+        "full_length": 31
+      },
+      {
+        "paragraph_number": 16,
+        "preview_text": "2.2 后端服务",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 17,
+        "preview_text": "后端提供RESTful API接口，支持...",
+        "full_length": 37
+      },
+      {
+        "paragraph_number": 18,
+        "preview_text": "核心处理模块采用python-docx库...",
+        "full_length": 35
+      },
+      {
+        "paragraph_number": 19,
+        "preview_text": "第三章 实现细节",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 20,
+        "preview_text": "本章详细介绍系统的具体实现方法和关键技术...",
+        "full_length": 22
+      },
+      {
+        "paragraph_number": 21,
+        "preview_text": "3.1 文档解析",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 22,
+        "preview_text": "系统首先提取源文档中每个段落的前20个字...",
+        "full_length": 26
+      },
+      {
+        "paragraph_number": 23,
+        "preview_text": "然后调用大语言模型API对这些特征进行分...",
+        "full_length": 34
+      },
+      {
+        "paragraph_number": 24,
+        "preview_text": "3.2 格式应用",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 25,
+        "preview_text": "基于识别结果和格式要求，系统自动调整字体...",
+        "full_length": 32
+      },
+      {
+        "paragraph_number": 26,
+        "preview_text": "最终生成符合要求的优化后文档供用户下载。",
+        "full_length": 20
+      },
+      {
+        "paragraph_number": 27,
+        "preview_text": "结论",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 28,
+        "preview_text": "本项目通过人工智能技术有效解决了Word...",
+        "full_length": 30
+      },
+      {
+        "paragraph_number": 29,
+        "preview_text": "经过测试验证，系统能够准确识别文档结构并...",
+        "full_length": 27
+      }
+    ]
+  },
+  "analysis_result": {
+    "success": true,
+    "analysis_result": [
+      {
+        "paragraph_number": 1,
+        "preview_text": "Word文档格式优化项目测试文档",
+        "type": "title",
+        "confidence": 0.95,
+        "reason": "段落较短且位于文档开头，通常为标题"
+      },
+      {
+        "paragraph_number": 2,
+        "preview_text": "第一章 项目概述",
+        "type": "heading1",
+        "confidence": 0.95,
+        "reason": "包含'第一章'，符合一级标题格式"
+      },
+      {
+        "paragraph_number": 3,
+        "preview_text": "本项目是一个基于人工智能的Word文档格...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，内容为正文描述"
+      },
+      {
+        "paragraph_number": 4,
+        "preview_text": "传统的文档格式调整需要大量的手工操作，效...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，内容为正文描述"
+      },
+      {
+        "paragraph_number": 5,
+        "preview_text": "1.1 项目背景",
+        "type": "heading2",
+        "confidence": 0.95,
+        "reason": "包含'1.1'，符合二级标题格式"
+      },
+      {
+        "paragraph_number": 6,
+        "preview_text": "在现代办公环境中，文档格式的统一性对于提...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，内容为正文描述"
+      },
+      {
+        "paragraph_number": 7,
+        "preview_text": "然而，不同用户的文档编写习惯差异很大，导...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，内容为正文描述"
+      },
+      {
+        "paragraph_number": 8,
+        "preview_text": "1.2 解决方案",
+        "type": "heading2",
+        "confidence": 0.95,
+        "reason": "包含'1.2'，符合二级标题格式"
+      },
+      {
+        "paragraph_number": 9,
+        "preview_text": "本项目采用深度学习技术，自动识别文档中的...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，内容为正文描述"
+      },
+      {
+        "paragraph_number": 10,
+        "preview_text": "通过智能算法分析格式要求，实现一键式的格...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，内容为正文描述"
+      },
+      {
+        "paragraph_number": 11,
+        "preview_text": "第二章 技术架构",
+        "type": "heading1",
+        "confidence": 0.95,
+        "reason": "段落以'第X章'开头，符合一级标题格式"
+      },
+      {
+        "paragraph_number": 12,
+        "preview_text": "系统采用前后端分离的架构设计，前端使用R...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，描述具体内容，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 13,
+        "preview_text": "2.1 前端设计",
+        "type": "heading2",
+        "confidence": 0.95,
+        "reason": "段落以'X.X'开头，符合二级标题格式"
+      },
+      {
+        "paragraph_number": 14,
+        "preview_text": "前端界面简洁易用，支持拖拽上传文件，实时...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，描述具体内容，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 15,
+        "preview_text": "用户可以同时上传源文档和格式要求文档，系...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，描述具体内容，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 16,
+        "preview_text": "2.2 后端服务",
+        "type": "heading2",
+        "confidence": 0.95,
+        "reason": "段落以'X.X'开头，符合二级标题格式"
+      },
+      {
+        "paragraph_number": 17,
+        "preview_text": "后端提供RESTful API接口，支持...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，描述具体内容，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 18,
+        "preview_text": "核心处理模块采用python-docx库...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，描述具体内容，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 19,
+        "preview_text": "第三章 实现细节",
+        "type": "heading1",
+        "confidence": 0.95,
+        "reason": "段落以'第X章'开头，符合一级标题格式"
+      },
+      {
+        "paragraph_number": 20,
+        "preview_text": "本章详细介绍系统的具体实现方法和关键技术...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，描述具体内容，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 21,
+        "preview_text": "3.1 文档解析",
+        "type": "heading2",
+        "confidence": 0.95,
+        "reason": "段落以数字编号3.1开头，符合二级标题格式"
+      },
+      {
+        "paragraph_number": 22,
+        "preview_text": "系统首先提取源文档中每个段落的前20个字...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，内容为描述性文字，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 23,
+        "preview_text": "然后调用大语言模型API对这些特征进行分...",
+        "type": "paragraph",
+        "confidence": 0.85,
+        "reason": "段落较长，内容为描述性文字，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 24,
+        "preview_text": "3.2 格式应用",
+        "type": "heading2",
+        "confidence": 0.95,
+        "reason": "段落以数字编号3.2开头，符合二级标题格式"
+      },
+      {
+        "paragraph_number": 25,
+        "preview_text": "基于识别结果和格式要求，系统自动调整字体...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，内容为描述性文字，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 26,
+        "preview_text": "最终生成符合要求的优化后文档供用户下载。",
+        "type": "paragraph",
+        "confidence": 0.85,
+        "reason": "段落较长，内容为描述性文字，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 27,
+        "preview_text": "结论",
+        "type": "heading1",
+        "confidence": 0.95,
+        "reason": "段落为'结论'，通常作为一级标题使用"
+      },
+      {
+        "paragraph_number": 28,
+        "preview_text": "本项目通过人工智能技术有效解决了Word...",
+        "type": "paragraph",
+        "confidence": 0.9,
+        "reason": "段落较长，内容为描述性文字，符合正文段落特征"
+      },
+      {
+        "paragraph_number": 29,
+        "preview_text": "经过测试验证，系统能够准确识别文档结构并...",
+        "type": "paragraph",
+        "confidence": 0.85,
+        "reason": "段落较长，内容为描述性文字，符合正文段落特征"
+      }
+    ],
+    "batch_info": {
+      "total_batches": 3,
+      "successful_batches": 3,
+      "failed_batches": [],
+      "total_paragraphs": 29
+    }
+  }
+}

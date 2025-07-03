@@ -1,0 +1,50 @@
+{
+  "models": {
+    "deepseek_v2.5": {
+      "name": "DeepSeek-V2.5",
+      "api_base_url": "https://api.siliconflow.cn/v1",
+      "api_key": "sk-ennjwzgywmisvlgqcumcojemtajhzmcowpmoothwmlklrzcn",
+      "model": "deepseek-ai/DeepSeek-V2.5",
+      "description": "高性价比模型，适合日常分析任务",
+      "max_tokens": 4000,
+      "best_for": ["paragraph_analysis", "format_generation"]
+    },
+    "deepseek_v3": {
+      "name": "DeepSeek-V3",
+      "api_base_url": "https://api.siliconflow.cn/v1",
+      "api_key": "sk-ennjwzgywmisvlgqcumcojemtajhzmcowpmoothwmlklrzcn",
+      "model": "deepseek-ai/DeepSeek-V3",
+      "description": "高性价比模型，适合日常分析任务",
+      "max_tokens": 8192,
+      "best_for": ["paragraph_analysis", "format_generation"]
+    },
+    "claude_sonnet": {
+      "name": "Claude-3-Sonnet",
+      "api_base_url": "https://api.anthropic.com",
+      "api_key": "your_claude_api_key_here",
+      "model": "claude-3-sonnet-20240229",
+      "description": "长文本理解能力强，适合预处理任务",
+      "max_tokens": 20000,
+      "best_for": ["long_text_preprocessing", "complex_analysis"]
+    },
+    "gpt4": {
+      "name": "GPT-4",
+      "api_base_url": "https://api.openai.com/v1",
+      "api_key": "your_openai_api_key_here", 
+      "model": "gpt-4",
+      "description": "高质量模型，准确率优先",
+      "max_tokens": 8000,
+      "best_for": ["high_quality_analysis", "complex_reasoning"]
+    },
+    "qwen": {
+      "name": "Qwen-Max",
+      "api_base_url": "https://api.siliconflow.cn/v1",
+      "api_key": "sk-ennjwzgywmisvlgqcumcojemtajhzmcowpmoothwmlklrzcn",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "description": "中文理解能力强",
+      "max_tokens": 6000,
+      "best_for": ["chinese_text_analysis", "format_generation"]
+    }
+  },
+  "default_model": "deepseek"
+}
