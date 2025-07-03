@@ -2,12 +2,14 @@ from fastapi import APIRouter, UploadFile, File, HTTPException
 from typing import List, Dict, Any
 from app.services.file_storage import FileStorage
 from app.services.document_parser import DocumentParser
+from app.services.format_analyzer import FormatAnalyzer
 
 router = APIRouter()
 
 # 初始化服务
 file_storage = FileStorage()
 document_parser = DocumentParser()
+format_analyzer = FormatAnalyzer()
 
 # 步骤1：上传源文件
 @router.post("/upload/source")
@@ -50,27 +52,40 @@ async def parse_source_file(file_id: str):
 # 步骤3：上传格式要求文件
 @router.post("/upload/format")
 async def upload_format_file(file: UploadFile = File(..., description="格式要求文档")):
-    return {
-        "file_id": "format_456",
-        "filename": file.filename,
-        "message": "格式要求文件上传成功"
-    }
+    try:
+        # 检查文件类型
+        if not file.filename.lower().endswith(('.docx', '.doc')):
+            raise HTTPException(status_code=400, detail="只支持.docx和.doc格式的文件")
+        
+        # 保存文件
+        file_info = await file_storage.save_uploaded_file(file, "format")
+        
+        return {
+            "file_id": file_info["file_id"],
+            "filename": file_info["original_filename"],
+            "message": "格式要求文件上传成功"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"上传失败: {str(e)}")
 
 # 步骤4：解析格式要求文件
 @router.get("/parse/format/{file_id}")
 async def parse_format_file(file_id: str):
-    # 模拟返回解析结果
-    mock_result = {
-        "file_id": file_id,
-        "format_requirements": {
-            "font_family": "Times New Roman",
-            "font_size": 14,
-            "line_spacing": 2.0,
-            "margins": {"top": 2.5, "bottom": 2.5, "left": 2.5, "right": 2.5},
-            "header_footer": True
-        }
-    }
-    return mock_result
+    try:
+        # 获取文件路径
+        file_path = file_storage.get_file_path(file_id)
+        if not file_path:
+            raise HTTPException(status_code=404, detail="格式文件不存在")
+        
+        # 使用格式分析器提取样式信息
+        result = await format_analyzer.analyze_format_document(file_path, use_ai=False)
+        result["file_id"] = file_id
+        
+        return result
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="格式文件不存在")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"格式分析失败: {str(e)}")
 
 # 步骤5：执行格式转换
 @router.post("/process")

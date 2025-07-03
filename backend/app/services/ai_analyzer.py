@@ -4,6 +4,8 @@
 
 import json
 import httpx
+import os
+from datetime import datetime
 from typing import Dict, List, Any, Optional
 from app.services.ai_prompts import get_analysis_prompt
 
@@ -28,6 +30,11 @@ class AIAnalyzer:
         # HTTP客户端配置
         self.timeout = 60.0  # 增加超时时间
         self.max_retries = 3
+        
+        # 结果保存配置
+        self.save_results = True
+        self.results_dir = "ai_analysis_results"
+        self._ensure_results_dir()
     
     async def analyze_paragraphs(self, paragraphs_data: List[Dict]) -> Dict[str, Any]:
         """
@@ -42,18 +49,30 @@ class AIAnalyzer:
         try:
             # 如果段落数超过10个，进行分批处理
             if len(paragraphs_data) > 10:
-                return await self._analyze_paragraphs_in_batches(paragraphs_data)
+                result = await self._analyze_paragraphs_in_batches(paragraphs_data)
             else:
-                return await self._analyze_single_batch(paragraphs_data)
+                result = await self._analyze_single_batch(paragraphs_data)
+            
+            # 保存分析结果
+            if self.save_results and result.get("success"):
+                self._save_analysis_result(result, paragraphs_data)
+            
+            return result
             
         except Exception as e:
             import traceback
             error_detail = f"{str(e)}\n{traceback.format_exc()}"
-            return {
+            error_result = {
                 "success": False,
                 "error": error_detail,
                 "total_paragraphs": len(paragraphs_data)
             }
+            
+            # 即使失败也保存错误信息
+            if self.save_results:
+                self._save_analysis_result(error_result, paragraphs_data, is_error=True)
+            
+            return error_result
     
     async def _analyze_single_batch(self, paragraphs_data: List[Dict]) -> Dict[str, Any]:
         """
@@ -253,3 +272,139 @@ class AIAnalyzer:
         return {
             "analysis_result": analysis_result
         }
+    
+    def _ensure_results_dir(self):
+        """确保结果保存目录存在"""
+        if not os.path.exists(self.results_dir):
+            os.makedirs(self.results_dir)
+            print(f"📁 创建AI分析结果目录: {self.results_dir}")
+    
+    def _save_analysis_result(self, result: Dict[str, Any], paragraphs_data: List[Dict], is_error: bool = False):
+        """
+        保存AI分析结果到JSON文件
+        
+        Args:
+            result: 分析结果
+            paragraphs_data: 原始段落数据
+            is_error: 是否为错误结果
+        """
+        try:
+            # 生成文件名
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            status = "error" if is_error else "success"
+            filename = f"ai_analysis_{status}_{timestamp}.json"
+            filepath = os.path.join(self.results_dir, filename)
+            
+            # 准备保存的数据
+            save_data = {
+                "timestamp": datetime.now().isoformat(),
+                "model": self.model,
+                "status": status,
+                "input_data": {
+                    "total_paragraphs": len(paragraphs_data),
+                    "paragraphs": paragraphs_data
+                },
+                "analysis_result": result,
+                "metadata": {
+                    "api_base_url": self.api_base_url,
+                    "model_name": self.model,
+                    "batch_processing": len(paragraphs_data) > 10
+                }
+            }
+            
+            # 如果是成功结果，添加统计信息
+            if not is_error and result.get("success"):
+                save_data["statistics"] = self._generate_result_statistics(result)
+            
+            # 保存到文件
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(save_data, f, ensure_ascii=False, indent=2)
+            
+            print(f"💾 AI分析结果已保存: {filepath}")
+            
+        except Exception as e:
+            print(f"⚠️ 保存AI分析结果失败: {str(e)}")
+    
+    def _generate_result_statistics(self, result: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        生成分析结果统计信息
+        
+        Args:
+            result: 分析结果
+            
+        Returns:
+            统计信息字典
+        """
+        try:
+            analysis_result = result.get("result", {}).get("analysis_result", [])
+            
+            if not analysis_result:
+                return {}
+            
+            # 统计段落类型分布
+            type_count = {}
+            confidence_scores = []
+            
+            for item in analysis_result:
+                para_type = item.get("type", "unknown")
+                confidence = item.get("confidence", 0)
+                
+                type_count[para_type] = type_count.get(para_type, 0) + 1
+                confidence_scores.append(confidence)
+            
+            # 计算统计信息
+            avg_confidence = sum(confidence_scores) / len(confidence_scores) if confidence_scores else 0
+            
+            return {
+                "type_distribution": type_count,
+                "total_analyzed": len(analysis_result),
+                "average_confidence": round(avg_confidence, 3),
+                "min_confidence": min(confidence_scores) if confidence_scores else 0,
+                "max_confidence": max(confidence_scores) if confidence_scores else 0,
+                "most_common_type": max(type_count.items(), key=lambda x: x[1])[0] if type_count else "unknown"
+            }
+            
+        except Exception as e:
+            return {"error": f"统计生成失败: {str(e)}"}
+    
+    def get_saved_results_list(self) -> List[str]:
+        """
+        获取已保存的分析结果文件列表
+        
+        Returns:
+            文件名列表
+        """
+        try:
+            if not os.path.exists(self.results_dir):
+                return []
+            
+            files = [f for f in os.listdir(self.results_dir) if f.endswith('.json')]
+            files.sort(reverse=True)  # 按时间倒序排列
+            return files
+            
+        except Exception as e:
+            print(f"⚠️ 获取结果文件列表失败: {str(e)}")
+            return []
+    
+    def load_saved_result(self, filename: str) -> Optional[Dict[str, Any]]:
+        """
+        加载已保存的分析结果
+        
+        Args:
+            filename: 文件名
+            
+        Returns:
+            分析结果数据，如果失败返回None
+        """
+        try:
+            filepath = os.path.join(self.results_dir, filename)
+            
+            if not os.path.exists(filepath):
+                return None
+            
+            with open(filepath, 'r', encoding='utf-8') as f:
+                return json.load(f)
+                
+        except Exception as e:
+            print(f"⚠️ 加载结果文件失败: {str(e)}")
+            return None

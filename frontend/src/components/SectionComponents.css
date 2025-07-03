@@ -281,3 +281,60 @@
   font-weight: 600;
   font-size: 0.9rem;
 }
+
+/* 格式分析特有样式 */
+.font-info, .features-info {
+  margin-top: 15px;
+}
+
+.font-info h5, .features-info h5 {
+  margin: 0 0 10px 0;
+  color: #0c4a6e;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.font-list, .features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.font-tag, .feature-tag {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.recommendations {
+  margin-top: 20px;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+  border-radius: 12px;
+  border: 1px solid #fb923c;
+  box-shadow: 0 2px 10px rgba(251, 146, 60, 0.2);
+}
+
+.recommendations h4 {
+  margin: 0 0 1rem 0;
+  color: #ea580c;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.recommendation-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.recommendation-item {
+  margin-bottom: 10px;
+  color: #9a3412;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
