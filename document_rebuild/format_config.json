@@ -1,0 +1,178 @@
+{
+  "document_info": {
+    "title": "Word文档格式优化项目",
+    "author": "系统自动生成",
+    "description": "基于AI分析的文档格式配置"
+  },
+  "page_settings": {
+    "margins": {
+      "top": "2.54cm",
+      "bottom": "2.54cm", 
+      "left": "3.17cm",
+      "right": "3.17cm"
+    },
+    "orientation": "portrait",
+    "size": "A4"
+  },
+  "styles": {
+    "title": {
+      "name": "CustomTitle",
+      "font": {
+        "chinese": "黑体",
+        "english": "Times New Roman",
+        "size": "22pt",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "20pt",
+        "space_before": "0pt",
+        "space_after": "24pt",
+        "first_line_indent": "0pt",
+        "left_indent": "0pt",
+        "right_indent": "0pt",
+        "hanging_indent": "0pt"
+      },
+      "outline_level": null
+    },
+    "heading1": {
+      "name": "CustomHeading1", 
+      "font": {
+        "chinese": "黑体",
+        "english": "Times New Roman",
+        "size": "16pt",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "20pt",
+        "space_before": "24pt",
+        "space_after": "18pt",
+        "first_line_indent": "0pt",
+        "left_indent": "0pt",
+        "right_indent": "0pt",
+        "hanging_indent": "0pt"
+      },
+      "outline_level": 0
+    },
+    "heading2": {
+      "name": "CustomHeading2",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman", 
+        "size": "15pt",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "left",
+        "line_spacing": "20pt",
+        "space_before": "18pt",
+        "space_after": "12pt",
+        "first_line_indent": "0pt",
+        "left_indent": "0pt",
+        "right_indent": "0pt",
+        "hanging_indent": "0pt"
+      },
+      "outline_level": 1
+    },
+    "heading3": {
+      "name": "CustomHeading3",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "14pt", 
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "left",
+        "line_spacing": "20pt",
+        "space_before": "12pt",
+        "space_after": "6pt",
+        "first_line_indent": "28pt",
+        "left_indent": "0pt",
+        "right_indent": "0pt",
+        "hanging_indent": "0pt"
+      },
+      "outline_level": 2
+    },
+    "paragraph": {
+      "name": "CustomBody",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "12pt",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "left",
+        "line_spacing": "20pt",
+        "space_before": "0pt",
+        "space_after": "0pt",
+        "first_line_indent": "24pt",
+        "left_indent": "0pt",
+        "right_indent": "0pt",
+        "hanging_indent": "0pt"
+      },
+      "outline_level": null
+    }
+  },
+  "toc_settings": {
+    "title": "目录",
+    "levels": "1-3",
+    "hyperlinks": true,
+    "tab_leader": "dots",
+    "page_format": "roman",
+    "page_start": 1,
+    "headers": {
+      "odd": "目录",
+      "even": "目录"
+    }
+  },
+  "page_numbering": {
+    "toc_section": {
+      "format": "upperRoman",
+      "start": 1,
+      "restart": true,
+      "template": "{page}"
+    },
+    "content_sections": {
+      "format": "decimal", 
+      "start": 1,
+      "restart_first_chapter": true,
+      "continue_others": true,
+      "template": "第 {page} 页"
+    }
+  },
+  "headers_footers": {
+    "odd_even_different": true,
+    "first_page_different": false,
+    "toc_section": {
+      "odd_header": "目录",
+      "even_header": "目录",
+      "odd_footer": "",
+      "even_footer": ""
+    },
+    "content_sections": {
+      "odd_header_template": "{chapter_title}",
+      "even_header_template": "Word文档格式优化项目",
+      "odd_footer": "",
+      "even_footer": ""
+    }
+  },
+  "section_breaks": {
+    "between_toc_and_content": "odd_page",
+    "between_chapters": "odd_page",
+    "between_sections": "continuous"
+  },
+  "document_structure": {
+    "auto_generate_toc": true,
+    "chapter_start_page": "odd",
+    "chapter_numbering": "arabic",
+    "section_numbering": "decimal"
+  }
+}
