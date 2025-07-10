@@ -25,6 +25,17 @@ class DocumentFormatter:
     def __init__(self):
         self.analysis_storage = AnalysisResultStorage()
         self.unit_converter = UnitConverter()
+    
+    def _convert_to_docx_length(self, value: str):
+        """将各种单位转换为python-docx需要的长度对象"""
+        pt_value = self.unit_converter.convert_to_pt(value)
+        if pt_value is not None:
+            return Pt(pt_value)
+        # 如果无法转换，尝试直接创建Pt对象
+        try:
+            return Pt(float(value))
+        except:
+            return Pt(0)  # 默认值
         
     def format_document(self, source_file_path: str, source_file_id: str, format_file_id: str) -> Dict[str, Any]:
         """
@@ -101,13 +112,13 @@ class DocumentFormatter:
         margins = page_settings.get("margins", {})
         for section in doc.sections:
             if margins.get("top"):
-                section.top_margin = self.unit_converter.convert_to_docx_length(margins["top"])
+                section.top_margin = self._convert_to_docx_length(margins["top"])
             if margins.get("bottom"):
-                section.bottom_margin = self.unit_converter.convert_to_docx_length(margins["bottom"])
+                section.bottom_margin = self._convert_to_docx_length(margins["bottom"])
             if margins.get("left"):
-                section.left_margin = self.unit_converter.convert_to_docx_length(margins["left"])
+                section.left_margin = self._convert_to_docx_length(margins["left"])
             if margins.get("right"):
-                section.right_margin = self.unit_converter.convert_to_docx_length(margins["right"])
+                section.right_margin = self._convert_to_docx_length(margins["right"])
                 
         logger.info(f"已应用页面设置: {page_settings}")
     
@@ -191,11 +202,11 @@ class DocumentFormatter:
         
         # 缩进
         if para_config.get("first_line_indent"):
-            para_format.first_line_indent = self.unit_converter.convert_to_docx_length(para_config["first_line_indent"])
+            para_format.first_line_indent = self._convert_to_docx_length(para_config["first_line_indent"])
         if para_config.get("left_indent"):
-            para_format.left_indent = self.unit_converter.convert_to_docx_length(para_config["left_indent"])
+            para_format.left_indent = self._convert_to_docx_length(para_config["left_indent"])
         if para_config.get("right_indent"):
-            para_format.right_indent = self.unit_converter.convert_to_docx_length(para_config["right_indent"])
+            para_format.right_indent = self._convert_to_docx_length(para_config["right_indent"])
     
     def _apply_styles_to_paragraphs(self, doc: Document, analysis_result: List[Dict], styles_config: Dict):
         """将样式应用到对应的段落"""
