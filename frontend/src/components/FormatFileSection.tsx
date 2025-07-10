@@ -81,6 +81,10 @@ const FormatFileSection: React.FC<FormatFileSectionProps> = ({ onComplete }) => 
       });
       const result = await response.json();
       setFormatConfig(result);
+      // 调用完成回调
+      if (onComplete && result.success) {
+        onComplete(fileId, result);
+      }
     } catch (error) {
       console.error('AI生成格式配置失败:', error);
     }
