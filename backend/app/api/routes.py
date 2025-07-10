@@ -1,5 +1,6 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from typing import List, Dict, Any
+from pydantic import BaseModel
 from app.services.file_storage import FileStorage
 from app.services.format_config_generator import FormatConfigGenerator
 from app.services.ai_client_base import AIClientBase
@@ -256,8 +257,12 @@ async def generate_format_config_legacy(file_id: str):
         raise HTTPException(status_code=500, detail=f"AI生成格式配置失败: {str(e)}")
 
 # 步骤5：执行格式转换
+class ProcessRequest(BaseModel):
+    source_id: str
+    format_id: str
+
 @router.post("/process")
-async def process_documents(source_id: str, format_id: str):
+async def process_documents(request: ProcessRequest):
     """
     执行文档格式转换
     
@@ -267,7 +272,7 @@ async def process_documents(source_id: str, format_id: str):
     """
     try:
         # 获取源文件路径
-        source_path = file_storage.get_file_path(source_id)
+        source_path = file_storage.get_file_path(request.source_id)
         if not source_path:
             raise HTTPException(status_code=404, detail="源文件不存在")
         
@@ -276,7 +281,7 @@ async def process_documents(source_id: str, format_id: str):
         formatter = DocumentFormatter()
         
         # 执行格式转换
-        result = formatter.format_document(source_path, source_id, format_id)
+        result = formatter.format_document(source_path, request.source_id, request.format_id)
         
         if result["success"]:
             # 生成任务ID
@@ -285,8 +290,8 @@ async def process_documents(source_id: str, format_id: str):
             
             # 保存结果信息（实际应用中应该使用数据库或缓存）
             result["task_id"] = task_id
-            result["source_id"] = source_id
-            result["format_id"] = format_id
+            result["source_id"] = request.source_id
+            result["format_id"] = request.format_id
             
             return {
                 "task_id": task_id,
