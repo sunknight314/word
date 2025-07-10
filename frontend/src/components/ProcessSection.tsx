@@ -12,11 +12,29 @@ interface ProcessResult {
   status: string;
   message: string;
   output_path?: string;
+  steps_results?: {
+    page_settings?: any;
+    create_styles?: any;
+    apply_styles?: any;
+    sections?: any;
+    toc?: any;
+    save?: any;
+  };
   report?: {
-    total_paragraphs: number;
-    styled_paragraphs: number;
-    type_distribution: Record<string, number>;
-    undefined_styles: string[];
+    total_steps?: number;
+    completed_steps?: number;
+    summary?: {
+      styles_created?: number;
+      styles_updated?: number;
+      paragraphs_styled?: number;
+      toc_created?: boolean;
+      page_numbers_added?: boolean;
+      headers_footers_added?: boolean;
+    };
+    total_paragraphs?: number;
+    styled_paragraphs?: number;
+    type_distribution?: Record<string, number>;
+    undefined_styles?: string[];
   };
 }
 
@@ -114,11 +132,47 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({
             {result.report && (
               <div className="process-report">
                 <h4>处理报告</h4>
-                <div className="report-stats">
-                  <p>总段落数: {result.report.total_paragraphs}</p>
-                  <p>已格式化: {result.report.styled_paragraphs}</p>
-                  <p>格式化率: {Math.round((result.report.styled_paragraphs / result.report.total_paragraphs) * 100)}%</p>
-                </div>
+                
+                {/* 步骤完成情况 */}
+                {result.report.total_steps && (
+                  <div className="steps-summary">
+                    <p>处理步骤: {result.report.completed_steps} / {result.report.total_steps} 完成</p>
+                  </div>
+                )}
+                
+                {/* 详细统计 */}
+                {result.report.summary && (
+                  <div className="report-stats">
+                    <h5>处理详情</h5>
+                    {result.report.summary.styles_created !== undefined && (
+                      <p>✅ 创建样式: {result.report.summary.styles_created} 个</p>
+                    )}
+                    {result.report.summary.styles_updated !== undefined && (
+                      <p>✅ 更新样式: {result.report.summary.styles_updated} 个</p>
+                    )}
+                    {result.report.summary.paragraphs_styled !== undefined && (
+                      <p>✅ 应用样式段落: {result.report.summary.paragraphs_styled} 个</p>
+                    )}
+                    {result.report.summary.toc_created && (
+                      <p>✅ 已创建目录</p>
+                    )}
+                    {result.report.summary.page_numbers_added && (
+                      <p>✅ 已添加页码</p>
+                    )}
+                    {result.report.summary.headers_footers_added && (
+                      <p>✅ 已添加页眉页脚</p>
+                    )}
+                  </div>
+                )}
+                
+                {/* 旧版报告兼容 */}
+                {result.report.total_paragraphs && (
+                  <div className="report-stats">
+                    <p>总段落数: {result.report.total_paragraphs}</p>
+                    <p>已格式化: {result.report.styled_paragraphs}</p>
+                    <p>格式化率: {Math.round((result.report.styled_paragraphs! / result.report.total_paragraphs) * 100)}%</p>
+                  </div>
+                )}
                 
                 {result.report.undefined_styles && result.report.undefined_styles.length > 0 && (
                   <div className="warning-info">

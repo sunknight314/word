@@ -234,27 +234,6 @@ async def view_format_config(file_id: str):
             status_code=500
         )
 
-# 步骤4.2：AI生成格式配置 (兼容旧版本)
-@router.post("/generate/format-config/legacy/{file_id}")
-async def generate_format_config_legacy(file_id: str):
-    """
-    使用AI从格式要求文档生成format_config.json配置 (旧版本)
-    """
-    try:
-        # 获取文件路径
-        file_path = file_storage.get_file_path(file_id)
-        if not file_path:
-            raise HTTPException(status_code=404, detail="格式文件不存在")
-        
-        # 使用旧版AI生成格式配置
-        result = await format_config_generator.process_format_document(file_path)
-        result["file_id"] = file_id
-        
-        return result
-    except FileNotFoundError:
-        raise HTTPException(status_code=404, detail="格式文件不存在")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"AI生成格式配置失败: {str(e)}")
 
 # 步骤5：执行格式转换
 class ProcessRequest(BaseModel):
@@ -277,8 +256,8 @@ async def process_documents(request: ProcessRequest):
             raise HTTPException(status_code=404, detail="源文件不存在")
         
         # 初始化格式转换服务
-        from app.services.document_formatter import DocumentFormatter
-        formatter = DocumentFormatter()
+        from app.services.document_formatter_v2 import DocumentFormatterV2
+        formatter = DocumentFormatterV2()
         
         # 执行格式转换
         result = formatter.format_document(source_path, request.source_id, request.format_id)
