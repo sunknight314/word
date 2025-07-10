@@ -1,0 +1,7239 @@
+{
+  "timestamp": "2025-07-08T23:15:45.222361",
+  "model": "deepseek-ai/DeepSeek-V3",
+  "status": "success",
+  "input_data": {
+    "total_paragraphs": 802,
+    "paragraphs": [
+      {
+        "paragraph_number": 1,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 2,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 3,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 4,
+        "preview_text": "西安电子科技大学",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 5,
+        "preview_text": "学位论文独创性（或创新性）声明",
+        "full_length": 15
+      },
+      {
+        "paragraph_number": 6,
+        "preview_text": "秉承学校严谨的学风和优良的科学道德，本人...",
+        "full_length": 181
+      },
+      {
+        "paragraph_number": 7,
+        "preview_text": "学位论文若有不实之处，本人承担一切法律责...",
+        "full_length": 22
+      },
+      {
+        "paragraph_number": 8,
+        "preview_text": "本人签名：               ...",
+        "full_length": 40
+      },
+      {
+        "paragraph_number": 9,
+        "preview_text": "西安电子科技大学",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 10,
+        "preview_text": "关于论文使用授权的说明",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 11,
+        "preview_text": "本人完全了解西安电子科技大学有关保留和使...",
+        "full_length": 230
+      },
+      {
+        "paragraph_number": 12,
+        "preview_text": "本人保证遵守上述规定。",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 13,
+        "preview_text": "（保密的论文在解密后遵守此规定）",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 14,
+        "preview_text": "本人签名：               ...",
+        "full_length": 38
+      },
+      {
+        "paragraph_number": 15,
+        "preview_text": "日    期：             ...",
+        "full_length": 42
+      },
+      {
+        "paragraph_number": 16,
+        "preview_text": "摘要",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 17,
+        "preview_text": "随着电磁环境的日益复杂，各种复杂多变的干...",
+        "full_length": 286
+      },
+      {
+        "paragraph_number": 18,
+        "preview_text": "针对现有通信干扰识别方法对未知干扰识别性...",
+        "full_length": 301
+      },
+      {
+        "paragraph_number": 19,
+        "preview_text": "针对现有通信干扰抑制方法抑制效果较差和计...",
+        "full_length": 294
+      },
+      {
+        "paragraph_number": 20,
+        "preview_text": "针对现有通信跳频决策方法跳频成功率低和收...",
+        "full_length": 304
+      },
+      {
+        "paragraph_number": 21,
+        "preview_text": "关 键 词：通信干扰， 开集识别， 干扰...",
+        "full_length": 34
+      },
+      {
+        "paragraph_number": 22,
+        "preview_text": "ABSTRACT",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 23,
+        "preview_text": "With the increasing ...",
+        "full_length": 1247
+      },
+      {
+        "paragraph_number": 24,
+        "preview_text": "To address the poor ...",
+        "full_length": 986
+      },
+      {
+        "paragraph_number": 25,
+        "preview_text": "To solve the issues ...",
+        "full_length": 1121
+      },
+      {
+        "paragraph_number": 26,
+        "preview_text": "To address low succe...",
+        "full_length": 1001
+      },
+      {
+        "paragraph_number": 27,
+        "preview_text": "Keywords: Communicat...",
+        "full_length": 127
+      },
+      {
+        "paragraph_number": 28,
+        "preview_text": "插图索引",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 29,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 30,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 31,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 32,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 33,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 34,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 35,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 36,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 37,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 38,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 39,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 40,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 41,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 42,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 43,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 44,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 45,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 46,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 47,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 48,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 49,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 50,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 51,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 52,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 53,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 54,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 55,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 56,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 57,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 58,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 59,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 60,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 61,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 62,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 63,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 64,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 65,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 66,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 67,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 68,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 69,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 70,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 71,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 72,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 73,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 74,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 75,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 76,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 77,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 78,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 79,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 80,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 81,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 82,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 83,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 84,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 85,
+        "preview_text": "表格索引",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 86,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 87,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 88,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 89,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 90,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 91,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 92,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 93,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 94,
+        "preview_text": "符号对照表",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 95,
+        "preview_text": "符号\t符号名称",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 96,
+        "preview_text": "指数运算",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 97,
+        "preview_text": "最大值",
+        "full_length": 3
+      },
+      {
+        "paragraph_number": 98,
+        "preview_text": "2范数运算",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 99,
+        "preview_text": "转置",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 100,
+        "preview_text": "对数运算",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 101,
+        "preview_text": "任取一个",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 102,
+        "preview_text": "均值运算",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 103,
+        "preview_text": "自然对数运算",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 104,
+        "preview_text": "数据归一化",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 105,
+        "preview_text": "对角矩阵",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 106,
+        "preview_text": "共轭",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 107,
+        "preview_text": "向量点积运算",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 108,
+        "preview_text": "数学期望",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 109,
+        "preview_text": "绝对值运算",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 110,
+        "preview_text": "缩略语对照表",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 111,
+        "preview_text": "缩略语\t英文全称\t中文对照",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 112,
+        "preview_text": "AKS\tAccuracy on Know...",
+        "full_length": 39
+      },
+      {
+        "paragraph_number": 113,
+        "preview_text": "AV\tActivation Vector...",
+        "full_length": 25
+      },
+      {
+        "paragraph_number": 114,
+        "preview_text": "AUS\tAccuracy on Unkn...",
+        "full_length": 41
+      },
+      {
+        "paragraph_number": 115,
+        "preview_text": "BER\tBit Error Rate\t误...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 116,
+        "preview_text": "BPSKJ\tBinary Phase S...",
+        "full_length": 46
+      },
+      {
+        "paragraph_number": 117,
+        "preview_text": "BRL\tBatch Reinforcem...",
+        "full_length": 39
+      },
+      {
+        "paragraph_number": 118,
+        "preview_text": "BSS\tBlind Source Sep...",
+        "full_length": 32
+      },
+      {
+        "paragraph_number": 119,
+        "preview_text": "CFH\tCognitive Freque...",
+        "full_length": 36
+      },
+      {
+        "paragraph_number": 120,
+        "preview_text": "CPN\tConvolutional Pr...",
+        "full_length": 42
+      },
+      {
+        "paragraph_number": 121,
+        "preview_text": "CR\tCognitive Radio\t认...",
+        "full_length": 24
+      },
+      {
+        "paragraph_number": 122,
+        "preview_text": "CNN\tConvolutional Ne...",
+        "full_length": 39
+      },
+      {
+        "paragraph_number": 123,
+        "preview_text": "DL\tDeep Learning\t深度学...",
+        "full_length": 21
+      },
+      {
+        "paragraph_number": 124,
+        "preview_text": "DPLR\tDiagonal Plus L...",
+        "full_length": 35
+      },
+      {
+        "paragraph_number": 125,
+        "preview_text": "DPRNN\tDual-Path Recu...",
+        "full_length": 50
+      },
+      {
+        "paragraph_number": 126,
+        "preview_text": "DQN\tDeep Q-Network\t深...",
+        "full_length": 24
+      },
+      {
+        "paragraph_number": 127,
+        "preview_text": "EMA\tExponential Movi...",
+        "full_length": 37
+      },
+      {
+        "paragraph_number": 128,
+        "preview_text": "EVT\tExtreme Value Th...",
+        "full_length": 29
+      },
+      {
+        "paragraph_number": 129,
+        "preview_text": "FH\tFrequency Hopping...",
+        "full_length": 25
+      },
+      {
+        "paragraph_number": 130,
+        "preview_text": "GA\tGenetic Algorithm...",
+        "full_length": 25
+      },
+      {
+        "paragraph_number": 131,
+        "preview_text": "GAN\tGenerative Adver...",
+        "full_length": 42
+      },
+      {
+        "paragraph_number": 132,
+        "preview_text": "HiPPO\tHigh-Order Pol...",
+        "full_length": 48
+      },
+      {
+        "paragraph_number": 133,
+        "preview_text": "Operators",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 134,
+        "preview_text": "HMM\tHidden Markov Mo...",
+        "full_length": 32
+      },
+      {
+        "paragraph_number": 135,
+        "preview_text": "ICA\tIndependent Comp...",
+        "full_length": 41
+      },
+      {
+        "paragraph_number": 136,
+        "preview_text": "LFMJ\tLinear Frequenc...",
+        "full_length": 39
+      },
+      {
+        "paragraph_number": 137,
+        "preview_text": "Jamming",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 138,
+        "preview_text": "MDP\tMarkov Decision ...",
+        "full_length": 36
+      },
+      {
+        "paragraph_number": 139,
+        "preview_text": "MAV\tMean Activation ...",
+        "full_length": 33
+      },
+      {
+        "paragraph_number": 140,
+        "preview_text": "MTJ\tMulti-Tone Jammi...",
+        "full_length": 27
+      },
+      {
+        "paragraph_number": 141,
+        "preview_text": "MIMO\tMultiple Input ...",
+        "full_length": 42
+      },
+      {
+        "paragraph_number": 142,
+        "preview_text": "NA\tNormalized Accura...",
+        "full_length": 31
+      },
+      {
+        "paragraph_number": 143,
+        "preview_text": "NFMJ\tNoise Frequency...",
+        "full_length": 46
+      },
+      {
+        "paragraph_number": 144,
+        "preview_text": "NPLR\tNormal Plus Low...",
+        "full_length": 33
+      },
+      {
+        "paragraph_number": 145,
+        "preview_text": "OSR\tOpen Space Recog...",
+        "full_length": 31
+      },
+      {
+        "paragraph_number": 146,
+        "preview_text": "PCA\tPrincipal Compon...",
+        "full_length": 38
+      },
+      {
+        "paragraph_number": 147,
+        "preview_text": "PHY\tPhysical Layer\t物...",
+        "full_length": 22
+      },
+      {
+        "paragraph_number": 148,
+        "preview_text": "PBNJ\tPartial Band No...",
+        "full_length": 40
+      },
+      {
+        "paragraph_number": 149,
+        "preview_text": "PSO\tParticle Swarm O...",
+        "full_length": 37
+      },
+      {
+        "paragraph_number": 150,
+        "preview_text": "RL\tReinforcement Lea...",
+        "full_length": 30
+      },
+      {
+        "paragraph_number": 151,
+        "preview_text": "RNN\tRecurrent Neural...",
+        "full_length": 35
+      },
+      {
+        "paragraph_number": 152,
+        "preview_text": "ResNet\tResidual Netw...",
+        "full_length": 29
+      },
+      {
+        "paragraph_number": 153,
+        "preview_text": "S4\tStructured State ...",
+        "full_length": 39
+      },
+      {
+        "paragraph_number": 154,
+        "preview_text": "Sequence Modeling",
+        "full_length": 17
+      },
+      {
+        "paragraph_number": 155,
+        "preview_text": "SCA\tSparse Component...",
+        "full_length": 36
+      },
+      {
+        "paragraph_number": 156,
+        "preview_text": "SFMJ\tSin Frequency M...",
+        "full_length": 44
+      },
+      {
+        "paragraph_number": 157,
+        "preview_text": "SISO\tSingle Input Si...",
+        "full_length": 38
+      },
+      {
+        "paragraph_number": 158,
+        "preview_text": "SI-SNR\tScale-Invaria...",
+        "full_length": 52
+      },
+      {
+        "paragraph_number": 159,
+        "preview_text": "SSM\tState-Space Mode...",
+        "full_length": 29
+      },
+      {
+        "paragraph_number": 160,
+        "preview_text": "STFT\tShort-Time Four...",
+        "full_length": 41
+      },
+      {
+        "paragraph_number": 161,
+        "preview_text": "STJ\tSingle Tone Jamm...",
+        "full_length": 28
+      },
+      {
+        "paragraph_number": 162,
+        "preview_text": "VAE\tVariational Auto...",
+        "full_length": 34
+      },
+      {
+        "paragraph_number": 163,
+        "preview_text": "vMF\tvon Mises-Fisher...",
+        "full_length": 32
+      },
+      {
+        "paragraph_number": 164,
+        "preview_text": "绪论",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 165,
+        "preview_text": "研究背景及意义",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 166,
+        "preview_text": "现代通信技术已深入军事、民用、航天等多个...",
+        "full_length": 292
+      },
+      {
+        "paragraph_number": 167,
+        "preview_text": "无线通信抗干扰技术的发展经历了从单一信号...",
+        "full_length": 202
+      },
+      {
+        "paragraph_number": 168,
+        "preview_text": "电磁环境感知是实现高效抗干扰的前提条件，...",
+        "full_length": 195
+      },
+      {
+        "paragraph_number": 169,
+        "preview_text": "电磁环境感知为抗干扰提供了基础支持，通过...",
+        "full_length": 139
+      },
+      {
+        "paragraph_number": 170,
+        "preview_text": "在干扰抑制方面，传统的方法主要依赖信号处...",
+        "full_length": 193
+      },
+      {
+        "paragraph_number": 171,
+        "preview_text": "在跳频决策方面，面对多源干扰和高动态场景...",
+        "full_length": 209
+      },
+      {
+        "paragraph_number": 172,
+        "preview_text": "在未来智能化通信的发展趋势下，无线通信抗...",
+        "full_length": 251
+      },
+      {
+        "paragraph_number": 173,
+        "preview_text": "国内外研究现状",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 174,
+        "preview_text": "通信干扰信号识别研究现状",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 175,
+        "preview_text": "传统的干扰信号识别方法通常依赖于对信号特...",
+        "full_length": 633
+      },
+      {
+        "paragraph_number": 176,
+        "preview_text": "（1）基于深度学习的闭集识别研究现状",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 177,
+        "preview_text": "由于卷积神经网络（Convolution...",
+        "full_length": 445
+      },
+      {
+        "paragraph_number": 178,
+        "preview_text": "（2）基于深度学习的开集识别研究现状",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 179,
+        "preview_text": "虽然基于深度学习的方法在一定程度上解决了...",
+        "full_length": 140
+      },
+      {
+        "paragraph_number": 180,
+        "preview_text": "国内外研究者将开集识别（Open Spa...",
+        "full_length": 159
+      },
+      {
+        "paragraph_number": 181,
+        "preview_text": "1）判别式方法研究现状",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 182,
+        "preview_text": "文献[14]首次构建了深度学习领域的开集...",
+        "full_length": 584
+      },
+      {
+        "paragraph_number": 183,
+        "preview_text": "以上都是图像识别或文本识别领域的判别式开...",
+        "full_length": 232
+      },
+      {
+        "paragraph_number": 184,
+        "preview_text": "2）生成式方法研究现状",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 185,
+        "preview_text": "文献[23]提出了一种结合生成对抗网络（...",
+        "full_length": 317
+      },
+      {
+        "paragraph_number": 186,
+        "preview_text": "以上都是图像识别或文本识别领域的生成式开...",
+        "full_length": 280
+      },
+      {
+        "paragraph_number": 187,
+        "preview_text": "通信抗干扰技术研究现状",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 188,
+        "preview_text": "在无线通信系统中，抗干扰技术主要用于增强...",
+        "full_length": 240
+      },
+      {
+        "paragraph_number": 189,
+        "preview_text": "（1）通信干扰抑制方法研究现状",
+        "full_length": 15
+      },
+      {
+        "paragraph_number": 190,
+        "preview_text": "传统干扰抑制技术通常包含物理层（Phys...",
+        "full_length": 684
+      },
+      {
+        "paragraph_number": 191,
+        "preview_text": "深度学习方法不依赖于具体模型，被认为可以...",
+        "full_length": 735
+      },
+      {
+        "paragraph_number": 192,
+        "preview_text": "（2）基于跳频决策的抗干扰技术研究现状",
+        "full_length": 19
+      },
+      {
+        "paragraph_number": 193,
+        "preview_text": "跳频是一种扩频通信技术，其基本原理是在通...",
+        "full_length": 252
+      },
+      {
+        "paragraph_number": 194,
+        "preview_text": "传统FH主要依赖固定或伪随机序列进行跳频...",
+        "full_length": 767
+      },
+      {
+        "paragraph_number": 195,
+        "preview_text": "存在的问题与挑战",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 196,
+        "preview_text": "尽管现有方法在一定场景下已经实现了通信干...",
+        "full_length": 58
+      },
+      {
+        "paragraph_number": 197,
+        "preview_text": "对于通信干扰信号识别，现有方法主要基于闭...",
+        "full_length": 122
+      },
+      {
+        "paragraph_number": 198,
+        "preview_text": "对于通信干扰抑制，传统方法存在对干扰特性...",
+        "full_length": 116
+      },
+      {
+        "paragraph_number": 199,
+        "preview_text": "对于通信跳频决策，传统跳频方案在复杂干扰...",
+        "full_length": 120
+      },
+      {
+        "paragraph_number": 200,
+        "preview_text": "论文主要研究内容",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 201,
+        "preview_text": "本文针对通信干扰信号的识别、通信干扰抑制...",
+        "full_length": 110
+      },
+      {
+        "paragraph_number": 203,
+        "preview_text": "本文研究内容整体框架",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 204,
+        "preview_text": "（1）通信干扰信号开集识别方法",
+        "full_length": 15
+      },
+      {
+        "paragraph_number": 205,
+        "preview_text": "针对现有通信干扰识别中存在的问题，本文提...",
+        "full_length": 332
+      },
+      {
+        "paragraph_number": 206,
+        "preview_text": "（2）通信干扰抑制方法",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 207,
+        "preview_text": "针对现有通信干扰抑制中存在的问题，本文提...",
+        "full_length": 249
+      },
+      {
+        "paragraph_number": 208,
+        "preview_text": "（3）基于跳频决策的抗干扰方法",
+        "full_length": 15
+      },
+      {
+        "paragraph_number": 209,
+        "preview_text": "针对现有通信跳频决策中存在的问题，本文提...",
+        "full_length": 161
+      },
+      {
+        "paragraph_number": 210,
+        "preview_text": "论文组织结构",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 211,
+        "preview_text": "本文共有六个章节，具体的组织结构如下安排...",
+        "full_length": 21
+      },
+      {
+        "paragraph_number": 212,
+        "preview_text": "第一章，绪论。本章首先阐述了本文课题的研...",
+        "full_length": 89
+      },
+      {
+        "paragraph_number": 213,
+        "preview_text": "第二章，抗干扰通信理论及基础方法。本章首...",
+        "full_length": 97
+      },
+      {
+        "paragraph_number": 214,
+        "preview_text": "第三章，通信干扰信号开集识别方法。本章首...",
+        "full_length": 136
+      },
+      {
+        "paragraph_number": 215,
+        "preview_text": "第四章，通信干扰抑制方法。本章首先对通信...",
+        "full_length": 106
+      },
+      {
+        "paragraph_number": 216,
+        "preview_text": "第五章，基于跳频决策的抗干扰方法。本章首...",
+        "full_length": 112
+      },
+      {
+        "paragraph_number": 217,
+        "preview_text": "第六章，总结与展望。本章概括总结本文所有...",
+        "full_length": 48
+      },
+      {
+        "paragraph_number": 218,
+        "preview_text": "通信干扰模型与基础理论",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 219,
+        "preview_text": "引言",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 220,
+        "preview_text": "在复杂的电磁环境下，通信系统面临着多种形...",
+        "full_length": 194
+      },
+      {
+        "paragraph_number": 221,
+        "preview_text": "通信干扰信号模型",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 222,
+        "preview_text": "假设通信系统接收到的信号为，则可以表示为...",
+        "full_length": 21
+      },
+      {
+        "paragraph_number": 224,
+        "preview_text": "其中，为发射端的通信信号，与分别为发射端...",
+        "full_length": 109
+      },
+      {
+        "paragraph_number": 225,
+        "preview_text": "本文研究对象主要是单干扰场景下的典型压制...",
+        "full_length": 80
+      },
+      {
+        "paragraph_number": 226,
+        "preview_text": "对于干扰信号的时频域表征问题，本文采用短...",
+        "full_length": 213
+      },
+      {
+        "paragraph_number": 228,
+        "preview_text": "其中，是源信号，是窗函数。",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 229,
+        "preview_text": "（1）单音干扰",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 230,
+        "preview_text": "单音干扰（Single Tone Jam...",
+        "full_length": 62
+      },
+      {
+        "paragraph_number": 232,
+        "preview_text": "其中，为的幅度，为频率，为初始相位，在内...",
+        "full_length": 45
+      },
+      {
+        "paragraph_number": 234,
+        "preview_text": "单音干扰",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 235,
+        "preview_text": "（2）多音干扰",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 236,
+        "preview_text": "多音干扰（Multi-Tone Jamm...",
+        "full_length": 66
+      },
+      {
+        "paragraph_number": 238,
+        "preview_text": "其中，为每个频率成分的幅度，为每个频率成...",
+        "full_length": 62
+      },
+      {
+        "paragraph_number": 240,
+        "preview_text": "多音干扰",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 241,
+        "preview_text": "（3）线性调频干扰",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 242,
+        "preview_text": "线性调频干扰（Linear Freque...",
+        "full_length": 106
+      },
+      {
+        "paragraph_number": 244,
+        "preview_text": "其中，为幅度，为起始频率，为扫频速率，为...",
+        "full_length": 60
+      },
+      {
+        "paragraph_number": 246,
+        "preview_text": "线性调频干扰",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 247,
+        "preview_text": "（4）噪声调频干扰",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 248,
+        "preview_text": "噪声调频干扰（Noise Frequen...",
+        "full_length": 73
+      },
+      {
+        "paragraph_number": 251,
+        "preview_text": "噪声调频干扰",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 252,
+        "preview_text": "其中，为幅度，为载波频率，为调频指数，为...",
+        "full_length": 85
+      },
+      {
+        "paragraph_number": 253,
+        "preview_text": "（5）部分频带噪声干扰",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 254,
+        "preview_text": "部分频带噪声干扰（Partial Ban...",
+        "full_length": 124
+      },
+      {
+        "paragraph_number": 256,
+        "preview_text": "其中，为均值为0，方差为的高斯噪声，该高...",
+        "full_length": 81
+      },
+      {
+        "paragraph_number": 258,
+        "preview_text": "部分频带噪声干扰",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 259,
+        "preview_text": "（6）正弦调频干扰",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 260,
+        "preview_text": "正弦调频干扰（Sin Frequency...",
+        "full_length": 127
+      },
+      {
+        "paragraph_number": 262,
+        "preview_text": "其中，为幅度，为干扰的载频，为调频系数，...",
+        "full_length": 67
+      },
+      {
+        "paragraph_number": 264,
+        "preview_text": "正弦调频干扰",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 265,
+        "preview_text": "（7）二进制相移键控干扰",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 266,
+        "preview_text": "二进制相移键控干扰（Binary Pha...",
+        "full_length": 84
+      },
+      {
+        "paragraph_number": 268,
+        "preview_text": "其中，为振幅，为载波频率，为调制相位，或...",
+        "full_length": 56
+      },
+      {
+        "paragraph_number": 270,
+        "preview_text": "BPSK调制干扰",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 271,
+        "preview_text": "深度学习与残差网络",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 272,
+        "preview_text": "深度学习是一种通过多层神经网络结构模拟大...",
+        "full_length": 137
+      },
+      {
+        "paragraph_number": 273,
+        "preview_text": "常用的深度学习模型包括卷积神经网络，用于...",
+        "full_length": 144
+      },
+      {
+        "paragraph_number": 274,
+        "preview_text": "深度学习的实现通常分为训练阶段和预测阶段...",
+        "full_length": 173
+      },
+      {
+        "paragraph_number": 276,
+        "preview_text": "深度学习算法工作流程",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 277,
+        "preview_text": "尽管深度学习在多个领域取得了突破性进展，...",
+        "full_length": 137
+      },
+      {
+        "paragraph_number": 278,
+        "preview_text": "针对这些问题，何恺明等人提出了一种基于残...",
+        "full_length": 102
+      },
+      {
+        "paragraph_number": 279,
+        "preview_text": "将堆叠的几个卷积层（Layer）称为一个...",
+        "full_length": 226
+      },
+      {
+        "paragraph_number": 281,
+        "preview_text": "这意味着如果某一层无法学习到任何有效的信...",
+        "full_length": 52
+      },
+      {
+        "paragraph_number": 282,
+        "preview_text": "构成的Block称为残差块（Residu...",
+        "full_length": 68
+      },
+      {
+        "paragraph_number": 284,
+        "preview_text": "Residual Block",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 285,
+        "preview_text": "图2.9中所指的曲线为直接映射，路径为残...",
+        "full_length": 58
+      },
+      {
+        "paragraph_number": 286,
+        "preview_text": "常用的ResNet根据层深可以分为Res...",
+        "full_length": 83
+      },
+      {
+        "paragraph_number": 287,
+        "preview_text": "状态空间模型",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 288,
+        "preview_text": "在处理时间序列或动态系统时，状态空间模型...",
+        "full_length": 194
+      },
+      {
+        "paragraph_number": 289,
+        "preview_text": "随着深度学习的发展，SSM与神经网络的结...",
+        "full_length": 121
+      },
+      {
+        "paragraph_number": 290,
+        "preview_text": "（1）结构化状态空间模型",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 291,
+        "preview_text": "在将状态空间模型引入深度学习时，研究者提...",
+        "full_length": 149
+      },
+      {
+        "paragraph_number": 293,
+        "preview_text": "状态空间模型",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 294,
+        "preview_text": "状态空间模型示意图如图2.10所示，基本...",
+        "full_length": 242
+      },
+      {
+        "paragraph_number": 296,
+        "preview_text": "其中，参数矩阵决定了隐状态随时间演化的方...",
+        "full_length": 110
+      },
+      {
+        "paragraph_number": 297,
+        "preview_text": "（2）离散域状态空间模型",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 298,
+        "preview_text": "在实际应用中，输入往往由离散的输入组成，...",
+        "full_length": 73
+      },
+      {
+        "paragraph_number": 300,
+        "preview_text": "其中，，，分别是离散域下的状态转移矩阵、...",
+        "full_length": 61
+      },
+      {
+        "paragraph_number": 303,
+        "preview_text": "其中，为离散化步长，需要注意的，模型在保...",
+        "full_length": 51
+      },
+      {
+        "paragraph_number": 304,
+        "preview_text": "离散化后，状态方程可递推求解，类似RNN...",
+        "full_length": 177
+      },
+      {
+        "paragraph_number": 306,
+        "preview_text": "状态空间模型三种形态示意图",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 307,
+        "preview_text": "1）递推形式",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 308,
+        "preview_text": "式表示的是一个从序列到序列的映射，而不再...",
+        "full_length": 111
+      },
+      {
+        "paragraph_number": 309,
+        "preview_text": "这里的递归状态记录了在时刻之前所有输入的...",
+        "full_length": 150
+      },
+      {
+        "paragraph_number": 310,
+        "preview_text": "2）卷积形式",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 311,
+        "preview_text": "由于式描述的离散SSM具有顺序计算的特性...",
+        "full_length": 62
+      },
+      {
+        "paragraph_number": 312,
+        "preview_text": "设初始状态。由于离散递归是线性的，可以通...",
+        "full_length": 48
+      },
+      {
+        "paragraph_number": 315,
+        "preview_text": "由此可见，输出和输入之间存在一个简单的闭...",
+        "full_length": 25
+      },
+      {
+        "paragraph_number": 317,
+        "preview_text": "将其向量化，得到单次卷积运算的形式，并显...",
+        "full_length": 28
+      },
+      {
+        "paragraph_number": 319,
+        "preview_text": "其中被为状态空间卷积核，，式代表的是一个...",
+        "full_length": 118
+      },
+      {
+        "paragraph_number": 320,
+        "preview_text": "（3）HIPPO矩阵",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 321,
+        "preview_text": "在长序列建模中，常见的一种困难在于早期信...",
+        "full_length": 165
+      },
+      {
+        "paragraph_number": 322,
+        "preview_text": "HiPPO提出的做法是对状态矩阵进行特殊...",
+        "full_length": 70
+      },
+      {
+        "paragraph_number": 324,
+        "preview_text": "在这个下三角结构中，一项体现了对多项式基...",
+        "full_length": 108
+      },
+      {
+        "paragraph_number": 325,
+        "preview_text": "强化学习",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 326,
+        "preview_text": "强化学习（Reinforcement L...",
+        "full_length": 143
+      },
+      {
+        "paragraph_number": 327,
+        "preview_text": "强化学习的基本框架如图2.12所示，包含...",
+        "full_length": 101
+      },
+      {
+        "paragraph_number": 329,
+        "preview_text": "强化学习基本框架",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 330,
+        "preview_text": "强化学习主要包含以下八个核心要素：",
+        "full_length": 17
+      },
+      {
+        "paragraph_number": 331,
+        "preview_text": "智能体（Agent）：智能体是决策主体，...",
+        "full_length": 56
+      },
+      {
+        "paragraph_number": 332,
+        "preview_text": "环境（Environment）：环境作为...",
+        "full_length": 68
+      },
+      {
+        "paragraph_number": 333,
+        "preview_text": "状态（State）：状态是对环境当前情境...",
+        "full_length": 53
+      },
+      {
+        "paragraph_number": 334,
+        "preview_text": "观测（Observation）：观测是智...",
+        "full_length": 62
+      },
+      {
+        "paragraph_number": 335,
+        "preview_text": "动作（Action）：智能体在当前状态下...",
+        "full_length": 53
+      },
+      {
+        "paragraph_number": 336,
+        "preview_text": "奖励（Reward）：环境对智能体特定动...",
+        "full_length": 56
+      },
+      {
+        "paragraph_number": 337,
+        "preview_text": "策略（Policy）：定义智能体在不同情...",
+        "full_length": 62
+      },
+      {
+        "paragraph_number": 338,
+        "preview_text": "目标（Target）：智能体的最终学习目...",
+        "full_length": 51
+      },
+      {
+        "paragraph_number": 339,
+        "preview_text": "智能体通过试探与试错的方式，学习如何在环...",
+        "full_length": 143
+      },
+      {
+        "paragraph_number": 340,
+        "preview_text": "强化学习的目标在于通过优化策略，使智能体...",
+        "full_length": 50
+      },
+      {
+        "paragraph_number": 342,
+        "preview_text": "强化学习策略优化的目标可以表示为：",
+        "full_length": 17
+      },
+      {
+        "paragraph_number": 344,
+        "preview_text": "本章小结",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 345,
+        "preview_text": "本章分析了不同类型的干扰信号及其数学表达...",
+        "full_length": 131
+      },
+      {
+        "paragraph_number": 346,
+        "preview_text": "通信干扰信号开集识别方法",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 347,
+        "preview_text": "引言",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 348,
+        "preview_text": "干扰认知是通信抗干扰中的第一步，而准确识...",
+        "full_length": 183
+      },
+      {
+        "paragraph_number": 349,
+        "preview_text": "现有开集识别模型主要分为判别式模型和生成...",
+        "full_length": 329
+      },
+      {
+        "paragraph_number": 350,
+        "preview_text": "通信干扰信号开集识别问题描述",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 351,
+        "preview_text": "定义为包含个训练样本的通信干扰信号训练集...",
+        "full_length": 182
+      },
+      {
+        "paragraph_number": 352,
+        "preview_text": "图3.1展示了闭集识别与开集识别在特征空...",
+        "full_length": 249
+      },
+      {
+        "paragraph_number": 353,
+        "preview_text": "开集识别与闭集识别对比",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 354,
+        "preview_text": "开集识别领域面临的核心挑战之一是开放空间...",
+        "full_length": 168
+      },
+      {
+        "paragraph_number": 356,
+        "preview_text": "其中，为分类函数，表示样本与标签之间的映...",
+        "full_length": 41
+      },
+      {
+        "paragraph_number": 357,
+        "preview_text": "在开集识别问题无法忽略开放空间风险，故对...",
+        "full_length": 106
+      },
+      {
+        "paragraph_number": 359,
+        "preview_text": "其中，为希尔伯特空间，为调节两类风险权重...",
+        "full_length": 69
+      },
+      {
+        "paragraph_number": 360,
+        "preview_text": "基于超球面空间嵌入的通信干扰开集识别方法",
+        "full_length": 20
+      },
+      {
+        "paragraph_number": 361,
+        "preview_text": "现有的通信干扰开集识别算法通常可以分为两...",
+        "full_length": 368
+      },
+      {
+        "paragraph_number": 362,
+        "preview_text": "针对现有开集识别方法的不足，本文提出了一...",
+        "full_length": 137
+      },
+      {
+        "paragraph_number": 364,
+        "preview_text": "通信干扰信号开集识别流程图",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 365,
+        "preview_text": "本文提出的算法流程如图3.2所示，由三个...",
+        "full_length": 44
+      },
+      {
+        "paragraph_number": 366,
+        "preview_text": "编码器：对接收到的信号进行STFT变化得...",
+        "full_length": 103
+      },
+      {
+        "paragraph_number": 367,
+        "preview_text": "投影层：利用超球面下的vMF分布对特征进...",
+        "full_length": 194
+      },
+      {
+        "paragraph_number": 368,
+        "preview_text": "OpenMax分类器：利用前两个模块产生...",
+        "full_length": 128
+      },
+      {
+        "paragraph_number": 369,
+        "preview_text": "下面将详细介绍这三个部分的设计思路。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 370,
+        "preview_text": "编码器",
+        "full_length": 3
+      },
+      {
+        "paragraph_number": 371,
+        "preview_text": "在通信干扰信号开集识别任务中，提取具有判...",
+        "full_length": 174
+      },
+      {
+        "paragraph_number": 372,
+        "preview_text": "基于ResNet的编码器网络结构",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 373,
+        "preview_text": "投影层及损失函数",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 374,
+        "preview_text": "在特征提取完成后，需要使用投影层将特征映...",
+        "full_length": 111
+      },
+      {
+        "paragraph_number": 376,
+        "preview_text": "这使得嵌入特征严格位于一个单位球面上，称...",
+        "full_length": 29
+      },
+      {
+        "paragraph_number": 378,
+        "preview_text": "投影层网络结构",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 379,
+        "preview_text": "嵌入空间的选择对分类和开集识别至关重要。...",
+        "full_length": 320
+      },
+      {
+        "paragraph_number": 380,
+        "preview_text": "超球面嵌入可以自然地通过vMF分布建模，...",
+        "full_length": 92
+      },
+      {
+        "paragraph_number": 382,
+        "preview_text": "其中，是具有单位范数的类中心向量，表示分...",
+        "full_length": 103
+      },
+      {
+        "paragraph_number": 383,
+        "preview_text": "在该概率模型下，一个嵌入向量被分配到类的...",
+        "full_length": 26
+      },
+      {
+        "paragraph_number": 385,
+        "preview_text": "其中，，嵌入向量与类中心向量在超球面上的...",
+        "full_length": 55
+      },
+      {
+        "paragraph_number": 386,
+        "preview_text": "前文介绍了ResNet作为编码器，并通过...",
+        "full_length": 291
+      },
+      {
+        "paragraph_number": 388,
+        "preview_text": "损失函数示意图",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 389,
+        "preview_text": "紧凑性损失的设计思路是使每个样本更可能靠...",
+        "full_length": 84
+      },
+      {
+        "paragraph_number": 391,
+        "preview_text": "其中，是训练集大小，为样本的真实类别，是...",
+        "full_length": 95
+      },
+      {
+        "paragraph_number": 393,
+        "preview_text": "其中，表示样本的超球面嵌入，为该样本所属...",
+        "full_length": 108
+      },
+      {
+        "paragraph_number": 394,
+        "preview_text": "分散性损失的设计思路是使每个类别中心更可...",
+        "full_length": 84
+      },
+      {
+        "paragraph_number": 396,
+        "preview_text": "其中为类别个数。对其取平均值后做对数运算...",
+        "full_length": 82
+      },
+      {
+        "paragraph_number": 398,
+        "preview_text": "其中，和分别代表类别和类别的类别中心向量...",
+        "full_length": 121
+      },
+      {
+        "paragraph_number": 399,
+        "preview_text": "OpenMax分类层",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 400,
+        "preview_text": "在前一节中介绍了如何利用超球面嵌入优化来...",
+        "full_length": 156
+      },
+      {
+        "paragraph_number": 401,
+        "preview_text": "传统的Softmax层由于其封闭集设计，...",
+        "full_length": 206
+      },
+      {
+        "paragraph_number": 402,
+        "preview_text": "为了解决这一问题，OpenMax通过修改...",
+        "full_length": 202
+      },
+      {
+        "paragraph_number": 403,
+        "preview_text": "OpenMax分类层网络结构",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 404,
+        "preview_text": "OpenMax分类层的网络结构如表3.3...",
+        "full_length": 173
+      },
+      {
+        "paragraph_number": 405,
+        "preview_text": "具体实现过程",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 406,
+        "preview_text": "（1）训练过程",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 407,
+        "preview_text": "训练过程的目标为：训练一个闭集识别网络模...",
+        "full_length": 79
+      },
+      {
+        "paragraph_number": 408,
+        "preview_text": "本文方法主要针对损失函数做出改进，模型训...",
+        "full_length": 78
+      },
+      {
+        "paragraph_number": 410,
+        "preview_text": "其中，为交叉熵损失，和是超参数，分别用于...",
+        "full_length": 138
+      },
+      {
+        "paragraph_number": 411,
+        "preview_text": "此外，在训练过程中，还需要不断更新类别中...",
+        "full_length": 136
+      },
+      {
+        "paragraph_number": 413,
+        "preview_text": "其中，为更新因子（通常设为0.9-0.9...",
+        "full_length": 85
+      },
+      {
+        "paragraph_number": 414,
+        "preview_text": "（2）Weibull分布拟合过程",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 415,
+        "preview_text": "利用极值理论进行Weibull分布拟合过...",
+        "full_length": 40
+      },
+      {
+        "paragraph_number": 417,
+        "preview_text": "Weibull分布拟合过程",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 418,
+        "preview_text": "第一步，将每个类的样本输入训练完成的网络...",
+        "full_length": 137
+      },
+      {
+        "paragraph_number": 420,
+        "preview_text": "其中，是经过投影层归一化后的超球面嵌入向...",
+        "full_length": 117
+      },
+      {
+        "paragraph_number": 422,
+        "preview_text": "第二步，计算每一个样本激活向量到其所属类...",
+        "full_length": 78
+      },
+      {
+        "paragraph_number": 424,
+        "preview_text": "然而，在超球面嵌入空间中，所有特征均已归...",
+        "full_length": 182
+      },
+      {
+        "paragraph_number": 426,
+        "preview_text": "由于投影层已经将嵌入特征和类别中心归一化...",
+        "full_length": 34
+      },
+      {
+        "paragraph_number": 428,
+        "preview_text": "这些距离值将用于后续的极值理论建模。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 429,
+        "preview_text": "第三步，基于极值理论拟合Weibull分...",
+        "full_length": 177
+      },
+      {
+        "paragraph_number": 430,
+        "preview_text": "Weibull分布是EVT的一种应用，被...",
+        "full_length": 77
+      },
+      {
+        "paragraph_number": 432,
+        "preview_text": "其中，、、分别为尺度参数、形状参数和位置...",
+        "full_length": 44
+      },
+      {
+        "paragraph_number": 434,
+        "preview_text": "在OpenMax方法中，Weibull分...",
+        "full_length": 97
+      },
+      {
+        "paragraph_number": 437,
+        "preview_text": "其中，在测试过程可以用于修正对应样本的S...",
+        "full_length": 28
+      },
+      {
+        "paragraph_number": 438,
+        "preview_text": "利用上一步得到的余弦距离来拟合Weibu...",
+        "full_length": 113
+      },
+      {
+        "paragraph_number": 440,
+        "preview_text": "基于经典的最大似然估计，可以估计参数尺度...",
+        "full_length": 30
+      },
+      {
+        "paragraph_number": 443,
+        "preview_text": "由式得出估计值，再代入式得到。对每一类拟...",
+        "full_length": 45
+      },
+      {
+        "paragraph_number": 444,
+        "preview_text": "（3）测试过程",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 445,
+        "preview_text": "测试过程示意图如图3.5所示，OpenM...",
+        "full_length": 105
+      },
+      {
+        "paragraph_number": 446,
+        "preview_text": "第一步，计算输入样本的激活向量。测试样本...",
+        "full_length": 53
+      },
+      {
+        "paragraph_number": 447,
+        "preview_text": "第二步，计算输入样本激活向量与拟合Wei...",
+        "full_length": 44
+      },
+      {
+        "paragraph_number": 449,
+        "preview_text": "这些距离用于估计样本的“未知性”。较小的...",
+        "full_length": 46
+      },
+      {
+        "paragraph_number": 451,
+        "preview_text": "测试过程",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 452,
+        "preview_text": "第三步，在常用的Softmax分类方法中...",
+        "full_length": 163
+      },
+      {
+        "paragraph_number": 454,
+        "preview_text": "其中，为样本对得分向量中第个得分值的修正...",
+        "full_length": 70
+      },
+      {
+        "paragraph_number": 455,
+        "preview_text": "第四步，计算未知类别的得分向量。Open...",
+        "full_length": 49
+      },
+      {
+        "paragraph_number": 458,
+        "preview_text": "其中，为被修正后的已知类的得分值，代表类...",
+        "full_length": 101
+      },
+      {
+        "paragraph_number": 459,
+        "preview_text": "第五步，计算OpenMax归一化概率。最...",
+        "full_length": 80
+      },
+      {
+        "paragraph_number": 461,
+        "preview_text": "令，即最大概率对应类别为，OpenMax...",
+        "full_length": 94
+      },
+      {
+        "paragraph_number": 462,
+        "preview_text": "其中设置阈值的目的为：虽然修正因子对类别...",
+        "full_length": 153
+      },
+      {
+        "paragraph_number": 463,
+        "preview_text": "实验与仿真分析",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 464,
+        "preview_text": "仿真设置",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 465,
+        "preview_text": "（1）仿真环境",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 466,
+        "preview_text": "本章所有实验利用16核AMD EPYC ...",
+        "full_length": 124
+      },
+      {
+        "paragraph_number": 467,
+        "preview_text": "训练过程，采用动量随机梯度下降优化器，动...",
+        "full_length": 153
+      },
+      {
+        "paragraph_number": 468,
+        "preview_text": "（2）数据集",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 469,
+        "preview_text": "本章仿真实验主要针对2.3节提到的7类典...",
+        "full_length": 187
+      },
+      {
+        "paragraph_number": 470,
+        "preview_text": "干扰仿真参数",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 471,
+        "preview_text": "干扰信号采样频率为100MHz，采样点数...",
+        "full_length": 176
+      },
+      {
+        "paragraph_number": 472,
+        "preview_text": "（3）性能指标",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 473,
+        "preview_text": "为了有效评价开集识别算法的性能，实验引入...",
+        "full_length": 29
+      },
+      {
+        "paragraph_number": 474,
+        "preview_text": "已知样本识别准确率（Accuracy o...",
+        "full_length": 137
+      },
+      {
+        "paragraph_number": 477,
+        "preview_text": "其中，TK和FK分别表示已知类样本被正确...",
+        "full_length": 61
+      },
+      {
+        "paragraph_number": 478,
+        "preview_text": "归一化识别准确率（Normalized ...",
+        "full_length": 54
+      },
+      {
+        "paragraph_number": 480,
+        "preview_text": "其中，用于衡量开集识别中已知类别和未知类...",
+        "full_length": 116
+      },
+      {
+        "paragraph_number": 481,
+        "preview_text": "仿真结果与分析",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 482,
+        "preview_text": "实验一：损失函数权重参数选择",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 483,
+        "preview_text": "损失函数中与用于控制分散性损失和紧凑性损...",
+        "full_length": 191
+      },
+      {
+        "paragraph_number": 485,
+        "preview_text": "损失函数中与对性能的影响",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 486,
+        "preview_text": "从图3.6中可以看出、时，识别性能最佳，...",
+        "full_length": 29
+      },
+      {
+        "paragraph_number": 487,
+        "preview_text": "实验二：阈值参数选择",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 488,
+        "preview_text": "为了确定在辅助判别中阈值的取值，本实验在...",
+        "full_length": 112
+      },
+      {
+        "paragraph_number": 490,
+        "preview_text": "辅助判别中阈值对性能的影响",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 491,
+        "preview_text": "从图3.7中可以看出，在时识别率不随的变...",
+        "full_length": 293
+      },
+      {
+        "paragraph_number": 492,
+        "preview_text": "实验三：开集识别性能分析",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 493,
+        "preview_text": "为了验证本文提出的通信干扰信号开集识别算...",
+        "full_length": 126
+      },
+      {
+        "paragraph_number": 494,
+        "preview_text": "图3.8中具体展示了本文算法下每种干扰信...",
+        "full_length": 442
+      },
+      {
+        "paragraph_number": 496,
+        "preview_text": "不同干扰类别识别性能随JNR变化曲线",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 497,
+        "preview_text": "不同JNR下的混淆矩阵",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 498,
+        "preview_text": "图3.9为开集识别不同JNR下混淆矩阵，...",
+        "full_length": 246
+      },
+      {
+        "paragraph_number": 499,
+        "preview_text": "实验四：不同算法性能对比分析",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 500,
+        "preview_text": "为了对比本文所提算法与其他竞争开集识别算...",
+        "full_length": 357
+      },
+      {
+        "paragraph_number": 502,
+        "preview_text": "不同算法识别性能随JNR变化曲线",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 503,
+        "preview_text": "从图3.10中可以看出，本文算法性能在J...",
+        "full_length": 209
+      },
+      {
+        "paragraph_number": 504,
+        "preview_text": "基于生成式判别方法的OpenGAN在JN...",
+        "full_length": 203
+      },
+      {
+        "paragraph_number": 505,
+        "preview_text": "CPN算法与本文类似，都采用优化特征嵌入...",
+        "full_length": 128
+      },
+      {
+        "paragraph_number": 506,
+        "preview_text": "Softmax算法由于本身不具备开集识别...",
+        "full_length": 103
+      },
+      {
+        "paragraph_number": 507,
+        "preview_text": "实验五：嵌入空间可视化分析",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 508,
+        "preview_text": "为了证明本文提出算法中基于超球面建模的v...",
+        "full_length": 130
+      },
+      {
+        "paragraph_number": 509,
+        "preview_text": "嵌入空间可视化",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 510,
+        "preview_text": "从图3.11中可以看出，采用基于超球面建...",
+        "full_length": 207
+      },
+      {
+        "paragraph_number": 511,
+        "preview_text": "实验六：开放度分析",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 512,
+        "preview_text": "为了进一步衡量本文算法在开放空间的有效性...",
+        "full_length": 173
+      },
+      {
+        "paragraph_number": 514,
+        "preview_text": "不同算法识别性能随开放度变化曲线",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 515,
+        "preview_text": "从图3.12中可以看出，随着开放度的不断...",
+        "full_length": 106
+      },
+      {
+        "paragraph_number": 516,
+        "preview_text": "本章小结",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 517,
+        "preview_text": "本章针对通信干扰信号的开集识别问题，提出...",
+        "full_length": 191
+      },
+      {
+        "paragraph_number": 518,
+        "preview_text": "实验表明，本文方法相比Softmax、O...",
+        "full_length": 174
+      },
+      {
+        "paragraph_number": 519,
+        "preview_text": "通信干扰抑制方法",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 520,
+        "preview_text": "引言",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 521,
+        "preview_text": "干扰抑制技术是通信系统在复杂电磁环境中保...",
+        "full_length": 178
+      },
+      {
+        "paragraph_number": 522,
+        "preview_text": "传统的干扰抑制方法一般存在对干扰特征先验...",
+        "full_length": 259
+      },
+      {
+        "paragraph_number": 523,
+        "preview_text": "通信干扰抑制问题描述",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 525,
+        "preview_text": "通信干扰信号模型",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 526,
+        "preview_text": "在无线通信系统中，干扰抑制是指尽可能消除...",
+        "full_length": 112
+      },
+      {
+        "paragraph_number": 528,
+        "preview_text": "其中，和是两个信号的混合权重。通信干扰抑...",
+        "full_length": 87
+      },
+      {
+        "paragraph_number": 529,
+        "preview_text": "基于状态空间模型的通信干扰抑制方法",
+        "full_length": 17
+      },
+      {
+        "paragraph_number": 530,
+        "preview_text": "针对干扰抑制问题，研究人员提出了多种抑制...",
+        "full_length": 227
+      },
+      {
+        "paragraph_number": 531,
+        "preview_text": "近年来，随着深度学习技术的快速发展，基于...",
+        "full_length": 192
+      },
+      {
+        "paragraph_number": 532,
+        "preview_text": "因此，本章提出了一种时域端到端的基于深度...",
+        "full_length": 70
+      },
+      {
+        "paragraph_number": 534,
+        "preview_text": "干扰信号抑制模型架构",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 535,
+        "preview_text": "该干扰抑制模型由编码器、干扰抑制器和解码...",
+        "full_length": 225
+      },
+      {
+        "paragraph_number": 536,
+        "preview_text": "编码器和解码器在设计中采用了多尺度特征融...",
+        "full_length": 244
+      },
+      {
+        "paragraph_number": 537,
+        "preview_text": "整个模型采用端到端的方式训练优化，使用尺...",
+        "full_length": 81
+      },
+      {
+        "paragraph_number": 538,
+        "preview_text": "下面将详细介绍这三个组成部分的构造及设计...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 539,
+        "preview_text": "编码器",
+        "full_length": 3
+      },
+      {
+        "paragraph_number": 540,
+        "preview_text": "编码器的主要作用是对混合信号进行特征提取...",
+        "full_length": 313
+      },
+      {
+        "paragraph_number": 542,
+        "preview_text": "编码器网络结构",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 543,
+        "preview_text": "基于以上分析，本算法中的编码器选择了基于...",
+        "full_length": 301
+      },
+      {
+        "paragraph_number": 544,
+        "preview_text": "编码器网络结构",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 545,
+        "preview_text": "每个Res2Net模块都有一个与后续层直...",
+        "full_length": 86
+      },
+      {
+        "paragraph_number": 546,
+        "preview_text": "如图4.3所示，Res2Net是一种改进...",
+        "full_length": 186
+      },
+      {
+        "paragraph_number": 548,
+        "preview_text": "每个conv1D（k=3）的卷积算子都有...",
+        "full_length": 132
+      },
+      {
+        "paragraph_number": 549,
+        "preview_text": "干扰抑制器",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 550,
+        "preview_text": "干扰抑制器的主要作用是从输入混合信号生成...",
+        "full_length": 314
+      },
+      {
+        "paragraph_number": 551,
+        "preview_text": "由于通信信号本质上是一种具有数千甚至数万...",
+        "full_length": 232
+      },
+      {
+        "paragraph_number": 552,
+        "preview_text": "基于这些挑战，本模型干扰抑制器的设计结合...",
+        "full_length": 232
+      },
+      {
+        "paragraph_number": 554,
+        "preview_text": "干扰抑制器结构",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 555,
+        "preview_text": "干扰抑制器结构如图4.4所示，主要分为三...",
+        "full_length": 80
+      },
+      {
+        "paragraph_number": 556,
+        "preview_text": "（1）分割（Chunking）",
+        "full_length": 15
+      },
+      {
+        "paragraph_number": 557,
+        "preview_text": "如图4.5所示，对于输入序列，其中为特征...",
+        "full_length": 119
+      },
+      {
+        "paragraph_number": 559,
+        "preview_text": "分割处理",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 560,
+        "preview_text": "（2）块处理（DP Block）",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 561,
+        "preview_text": "干扰抑制器的中间处理层由R个双路径块（D...",
+        "full_length": 130
+      },
+      {
+        "paragraph_number": 562,
+        "preview_text": "本模型采用相同结构的计算单元来进行局部和...",
+        "full_length": 473
+      },
+      {
+        "paragraph_number": 564,
+        "preview_text": "DP Block结构",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 565,
+        "preview_text": "第个DP Block的计算可以表示如下：",
+        "full_length": 20
+      },
+      {
+        "paragraph_number": 568,
+        "preview_text": "S5 Block结构",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 569,
+        "preview_text": "S5 Block内部设计如图4.7所示，...",
+        "full_length": 386
+      },
+      {
+        "paragraph_number": 570,
+        "preview_text": "由于S4只能处理单维数据，在需要处理多维...",
+        "full_length": 146
+      },
+      {
+        "paragraph_number": 572,
+        "preview_text": "其中，、、为可训练参数，为通道数，为隐状...",
+        "full_length": 106
+      },
+      {
+        "paragraph_number": 574,
+        "preview_text": "S5 Layer结构",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 575,
+        "preview_text": "为了提升在序列计算时的并行效率，经典S4...",
+        "full_length": 179
+      },
+      {
+        "paragraph_number": 577,
+        "preview_text": "其中，为对角矩阵，为低秩矩阵。S5则在S...",
+        "full_length": 141
+      },
+      {
+        "paragraph_number": 578,
+        "preview_text": "与S4的卷积方式类似，S5将递推方程转化...",
+        "full_length": 89
+      },
+      {
+        "paragraph_number": 579,
+        "preview_text": "（3）重叠相加（OverlapAdd）",
+        "full_length": 19
+      },
+      {
+        "paragraph_number": 580,
+        "preview_text": "最后一个DP Block的输出依次经过R...",
+        "full_length": 169
+      },
+      {
+        "paragraph_number": 582,
+        "preview_text": "重叠相加处理",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 583,
+        "preview_text": "解码器",
+        "full_length": 3
+      },
+      {
+        "paragraph_number": 584,
+        "preview_text": "解码器的作用就是将干扰抑制后的估计通信信...",
+        "full_length": 124
+      },
+      {
+        "paragraph_number": 585,
+        "preview_text": "解码器网络结构",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 586,
+        "preview_text": "损失函数",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 587,
+        "preview_text": "尺度不变信噪比（Scale-Invari...",
+        "full_length": 187
+      },
+      {
+        "paragraph_number": 589,
+        "preview_text": "其中，为还原出的通信信号，为原通信信号，...",
+        "full_length": 152
+      },
+      {
+        "paragraph_number": 590,
+        "preview_text": "因此，本算法损失函数采用尺度不变信噪比构...",
+        "full_length": 30
+      },
+      {
+        "paragraph_number": 592,
+        "preview_text": "为了优化神经网络的训练过程，损失函数通过...",
+        "full_length": 42
+      },
+      {
+        "paragraph_number": 593,
+        "preview_text": "实验与仿真分析",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 594,
+        "preview_text": "仿真设置",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 595,
+        "preview_text": "（1）仿真环境",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 596,
+        "preview_text": "本章所有实验使用利用16核AMD EPY...",
+        "full_length": 218
+      },
+      {
+        "paragraph_number": 597,
+        "preview_text": "（2）数据集",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 599,
+        "preview_text": "仿真通信链路",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 600,
+        "preview_text": "本章仿真实验通信信号选取BPSK信号。使...",
+        "full_length": 115
+      },
+      {
+        "paragraph_number": 601,
+        "preview_text": "通信干扰选取2.3节提到的除二进制相移键...",
+        "full_length": 186
+      },
+      {
+        "paragraph_number": 602,
+        "preview_text": "训练数据集为BPSK通信信号与六种干扰信...",
+        "full_length": 181
+      },
+      {
+        "paragraph_number": 603,
+        "preview_text": "值得说明的是，本章干信比JSR为干扰信号...",
+        "full_length": 60
+      },
+      {
+        "paragraph_number": 606,
+        "preview_text": "其中，为干扰信号功率，为通信信号功率，为...",
+        "full_length": 27
+      },
+      {
+        "paragraph_number": 607,
+        "preview_text": "（3）性能指标",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 608,
+        "preview_text": "本文研究的通信信号为数字调制信号，其传输...",
+        "full_length": 93
+      },
+      {
+        "paragraph_number": 610,
+        "preview_text": "其中，为信号解调后被传输错误的比特总数，...",
+        "full_length": 146
+      },
+      {
+        "paragraph_number": 611,
+        "preview_text": "仿真结果与分析",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 612,
+        "preview_text": "实验一：堆叠层数对性能影响",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 613,
+        "preview_text": "为了评估不同的DP Block堆叠层数对...",
+        "full_length": 121
+      },
+      {
+        "paragraph_number": 615,
+        "preview_text": "BER随堆叠层数变化曲线",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 616,
+        "preview_text": "从图4.11中可以看出，在堆叠层数较少时...",
+        "full_length": 278
+      },
+      {
+        "paragraph_number": 617,
+        "preview_text": "实验二：可视化定性分析",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 619,
+        "preview_text": "各阶段信号时域波形图",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 620,
+        "preview_text": "为了更加直观的展示本文算法的通信干扰抑制...",
+        "full_length": 103
+      },
+      {
+        "paragraph_number": 621,
+        "preview_text": "从图4.12中可以看出，接收信号由于干扰...",
+        "full_length": 77
+      },
+      {
+        "paragraph_number": 622,
+        "preview_text": "实验三：不同类型对干扰抑制性能的影响",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 623,
+        "preview_text": "为了验证本文算法对不同通信干扰信号的抑制...",
+        "full_length": 119
+      },
+      {
+        "paragraph_number": 624,
+        "preview_text": "不同干扰下BER随SNR或JSR变化曲线",
+        "full_length": 20
+      },
+      {
+        "paragraph_number": 625,
+        "preview_text": "从图4.13（a）中可以看出，当JSR固...",
+        "full_length": 363
+      },
+      {
+        "paragraph_number": 626,
+        "preview_text": "实验四：不同重叠度对干扰抑制性能的影响",
+        "full_length": 19
+      },
+      {
+        "paragraph_number": 627,
+        "preview_text": "干扰信号与通信信号的频谱重叠度对干扰抑制...",
+        "full_length": 265
+      },
+      {
+        "paragraph_number": 628,
+        "preview_text": "BER随从重叠度变化曲线",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 629,
+        "preview_text": "从图4.14中可以看出，模型对NFMJ和...",
+        "full_length": 279
+      },
+      {
+        "paragraph_number": 630,
+        "preview_text": "实验五：模块有效性实验",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 631,
+        "preview_text": "为了证明本文设计的特征提取器的有效性，本...",
+        "full_length": 135
+      },
+      {
+        "paragraph_number": 632,
+        "preview_text": "从图4.15中可以看出，利用CNN作为编...",
+        "full_length": 331
+      },
+      {
+        "paragraph_number": 634,
+        "preview_text": "不同编码器下BER随JSR变化曲线",
+        "full_length": 17
+      },
+      {
+        "paragraph_number": 635,
+        "preview_text": "为了证明本文提出模型中的时序建模方法S5...",
+        "full_length": 129
+      },
+      {
+        "paragraph_number": 637,
+        "preview_text": "不同时序建模方法下BER随JSR变化曲线",
+        "full_length": 20
+      },
+      {
+        "paragraph_number": 638,
+        "preview_text": "从图4.16中可以看出，在JSR的整个区...",
+        "full_length": 166
+      },
+      {
+        "paragraph_number": 639,
+        "preview_text": "实验六：对比实验",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 640,
+        "preview_text": "为了对比本文所提算法与其他干扰抑制算法的...",
+        "full_length": 234
+      },
+      {
+        "paragraph_number": 641,
+        "preview_text": "不同算法性能对比",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 642,
+        "preview_text": "从表4.3中可知当被干扰通信信号不做干扰...",
+        "full_length": 534
+      },
+      {
+        "paragraph_number": 643,
+        "preview_text": "本章小结",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 644,
+        "preview_text": "本章针对无线通信中的抗干扰抑制问题，首先...",
+        "full_length": 258
+      },
+      {
+        "paragraph_number": 645,
+        "preview_text": "实验结果表明，本文模型在不同干扰类型、干...",
+        "full_length": 170
+      },
+      {
+        "paragraph_number": 646,
+        "preview_text": "基于跳频决策的抗干扰方法",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 647,
+        "preview_text": "引言",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 648,
+        "preview_text": "跳频技术作为无线通信系统的抗干扰方法之一...",
+        "full_length": 188
+      },
+      {
+        "paragraph_number": 649,
+        "preview_text": "现有跳频决策方法主要包括基于规则的跳频决...",
+        "full_length": 419
+      },
+      {
+        "paragraph_number": 650,
+        "preview_text": "通信跳频决策问题描述",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 651,
+        "preview_text": "系统模型",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 652,
+        "preview_text": "如图5.1所示，智能跳频抗干扰系统由发射...",
+        "full_length": 142
+      },
+      {
+        "paragraph_number": 653,
+        "preview_text": "假设通信频带被划分为个信道，即，其中表示...",
+        "full_length": 168
+      },
+      {
+        "paragraph_number": 655,
+        "preview_text": "智能跳频抗干扰系统",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 656,
+        "preview_text": "在实际通信环境中，干扰机的行为对发射端是...",
+        "full_length": 455
+      },
+      {
+        "paragraph_number": 657,
+        "preview_text": "另外，为了全面分析干扰对通信的影响，本文...",
+        "full_length": 45
+      },
+      {
+        "paragraph_number": 658,
+        "preview_text": "三种简单干扰：1）梳状干扰：干扰机在通信...",
+        "full_length": 232
+      },
+      {
+        "paragraph_number": 659,
+        "preview_text": "动态复合干扰：动态复合干扰为以上梳状干扰...",
+        "full_length": 47
+      },
+      {
+        "paragraph_number": 660,
+        "preview_text": "问题描述",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 661,
+        "preview_text": "为提升系统的跳频决策能力，使其能够在动态...",
+        "full_length": 211
+      },
+      {
+        "paragraph_number": 662,
+        "preview_text": "（1）状态建模",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 663,
+        "preview_text": "在智能跳频通信系统中，发射方与环境交互以...",
+        "full_length": 87
+      },
+      {
+        "paragraph_number": 665,
+        "preview_text": "其中，每个频点有两种情况，0为未被干扰，...",
+        "full_length": 40
+      },
+      {
+        "paragraph_number": 666,
+        "preview_text": "（2）动作空间建模",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 667,
+        "preview_text": "发射机需要在每个时隙决定是继续在同一信道...",
+        "full_length": 142
+      },
+      {
+        "paragraph_number": 669,
+        "preview_text": "动作将直接影响系统状态从迁移至。其状态转...",
+        "full_length": 45
+      },
+      {
+        "paragraph_number": 670,
+        "preview_text": "（3）奖励建模",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 671,
+        "preview_text": "奖励建模旨在量化发射方在特定时刻做出某个...",
+        "full_length": 169
+      },
+      {
+        "paragraph_number": 672,
+        "preview_text": "定义奖励函数的设计目标为：在尽可能减少信...",
+        "full_length": 194
+      },
+      {
+        "paragraph_number": 674,
+        "preview_text": "由于跳频成功与否取决于进行跳频决策后下一...",
+        "full_length": 54
+      },
+      {
+        "paragraph_number": 675,
+        "preview_text": "（4）动作价值函数",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 676,
+        "preview_text": "在马尔可夫决策过程问题中，发射机需要做出...",
+        "full_length": 136
+      },
+      {
+        "paragraph_number": 678,
+        "preview_text": "进一步将表示为从状态开始的折扣累积奖励的...",
+        "full_length": 29
+      },
+      {
+        "paragraph_number": 680,
+        "preview_text": "其中，表示折扣因子，是任意时间步。表示发...",
+        "full_length": 52
+      },
+      {
+        "paragraph_number": 681,
+        "preview_text": "此外，定义为动作价值函数（Q函数），它表...",
+        "full_length": 47
+      },
+      {
+        "paragraph_number": 683,
+        "preview_text": "其中，是从状态开始的折扣累积奖励的期望。...",
+        "full_length": 80
+      },
+      {
+        "paragraph_number": 685,
+        "preview_text": "然后，公式中的最优函数可以写为：",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 687,
+        "preview_text": "其中，表示动作和状态相对应的函数。通过迭...",
+        "full_length": 78
+      },
+      {
+        "paragraph_number": 688,
+        "preview_text": "基于DQN算法与遗传算子的跳频决策方法",
+        "full_length": 19
+      },
+      {
+        "paragraph_number": 689,
+        "preview_text": "在强化学习任务中，尤其是高维、复杂决策问...",
+        "full_length": 153
+      },
+      {
+        "paragraph_number": 690,
+        "preview_text": "为了解决这些问题，本文提出了一种将遗传算...",
+        "full_length": 192
+      },
+      {
+        "paragraph_number": 691,
+        "preview_text": "这种融合的核心理念在于协同利用梯度方法的...",
+        "full_length": 156
+      },
+      {
+        "paragraph_number": 692,
+        "preview_text": "本文提出算法中使用的融合策略不仅解决了传...",
+        "full_length": 154
+      },
+      {
+        "paragraph_number": 693,
+        "preview_text": "DQN算法",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 694,
+        "preview_text": "DQN是一种结合了强化学习与深度学习的算...",
+        "full_length": 101
+      },
+      {
+        "paragraph_number": 695,
+        "preview_text": "传统Q学习方法通过表格存储Q值来估计动作...",
+        "full_length": 130
+      },
+      {
+        "paragraph_number": 696,
+        "preview_text": "DQN的损失函数定义为：",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 698,
+        "preview_text": "其中，目标值表示为",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 700,
+        "preview_text": "为目标网络，为目标网络的参数，用于稳定目...",
+        "full_length": 54
+      },
+      {
+        "paragraph_number": 701,
+        "preview_text": "（1）经验回放",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 702,
+        "preview_text": "DQN通过经验回放缓冲区存储交互经验，并...",
+        "full_length": 76
+      },
+      {
+        "paragraph_number": 703,
+        "preview_text": "在经验回放中，交互产生的每条数据会被存储...",
+        "full_length": 137
+      },
+      {
+        "paragraph_number": 704,
+        "preview_text": "这种机制带来了两个显著优势：首先，通过减...",
+        "full_length": 77
+      },
+      {
+        "paragraph_number": 705,
+        "preview_text": "（2）目标网络",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 706,
+        "preview_text": "目标网络是DQN中另一个重要的设计，用于...",
+        "full_length": 105
+      },
+      {
+        "paragraph_number": 707,
+        "preview_text": "在具体实现中，DQN采用两个网络：主网络...",
+        "full_length": 125
+      },
+      {
+        "paragraph_number": 708,
+        "preview_text": "可以通过以下方式理解目标网络的意义：在状...",
+        "full_length": 95
+      },
+      {
+        "paragraph_number": 709,
+        "preview_text": "遗传算子",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 710,
+        "preview_text": "在强化学习与跳频决策问题的结合中，遗传算...",
+        "full_length": 146
+      },
+      {
+        "paragraph_number": 711,
+        "preview_text": "所有策略共享相同数量的参数，以确保模型架...",
+        "full_length": 72
+      },
+      {
+        "paragraph_number": 713,
+        "preview_text": "遗传算子计算示意",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 714,
+        "preview_text": "（1）随机交叉",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 715,
+        "preview_text": "随机交叉的关键是通过交叉比率来决定子策略...",
+        "full_length": 56
+      },
+      {
+        "paragraph_number": 717,
+        "preview_text": "其中，适应度用于衡量策略的性能。",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 718,
+        "preview_text": "在随机交叉中，子策略的参数从父策略或的参...",
+        "full_length": 51
+      },
+      {
+        "paragraph_number": 720,
+        "preview_text": "其中，表示均值为1标准差为的正态分布随机...",
+        "full_length": 36
+      },
+      {
+        "paragraph_number": 721,
+        "preview_text": "（2）线性交叉",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 722,
+        "preview_text": "线性交叉的同样交叉比率确定子策略的参数，...",
+        "full_length": 35
+      },
+      {
+        "paragraph_number": 724,
+        "preview_text": "这种方法通过对父策略参数的线性组合，进一...",
+        "full_length": 46
+      },
+      {
+        "paragraph_number": 725,
+        "preview_text": "（3）随机变异",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 726,
+        "preview_text": "随机变异算子仅需一个父策略，其子策略的参...",
+        "full_length": 39
+      },
+      {
+        "paragraph_number": 728,
+        "preview_text": "这种方法强调了参数自适应扰动的效果，有助...",
+        "full_length": 32
+      },
+      {
+        "paragraph_number": 729,
+        "preview_text": "算法流程",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 730,
+        "preview_text": "算法模型如图5.3所示，模型主要由环境、...",
+        "full_length": 57
+      },
+      {
+        "paragraph_number": 731,
+        "preview_text": "（1）环境",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 732,
+        "preview_text": "通信环境是算法的核心交互对象，通信环境的...",
+        "full_length": 108
+      },
+      {
+        "paragraph_number": 734,
+        "preview_text": "智能跳频决策算法流程",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 735,
+        "preview_text": "（2）经验回放缓冲区",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 736,
+        "preview_text": "经验回放缓冲区用于存储与环境交互生成的四...",
+        "full_length": 96
+      },
+      {
+        "paragraph_number": 737,
+        "preview_text": "（3）策略种群",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 738,
+        "preview_text": "策略种群是一个包含个策略的种群，每个策略...",
+        "full_length": 125
+      },
+      {
+        "paragraph_number": 739,
+        "preview_text": "（4）策略个体",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 740,
+        "preview_text": "策略个体是每回合从策略种群按照规则选择的...",
+        "full_length": 73
+      },
+      {
+        "paragraph_number": 741,
+        "preview_text": "（5）目标策略",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 742,
+        "preview_text": "目标策略对应DQN中的目标网络，是当前网...",
+        "full_length": 91
+      },
+      {
+        "paragraph_number": 743,
+        "preview_text": "算法整体思路如下几个部分：",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 744,
+        "preview_text": "第一步，初始化操作。为大小为的策略种群中...",
+        "full_length": 107
+      },
+      {
+        "paragraph_number": 745,
+        "preview_text": "经验回放缓冲区初始化，初始化一个共享的全...",
+        "full_length": 51
+      },
+      {
+        "paragraph_number": 746,
+        "preview_text": "遗传算子初始化，定义遗传相关参数，包括交...",
+        "full_length": 58
+      },
+      {
+        "paragraph_number": 747,
+        "preview_text": "第二步，学习过程。在每一回合（Episo...",
+        "full_length": 198
+      },
+      {
+        "paragraph_number": 748,
+        "preview_text": "选定策略后这一回合中每一步根据当前策略遵...",
+        "full_length": 35
+      },
+      {
+        "paragraph_number": 750,
+        "preview_text": "每一次策略与环境交互得到当前状态、动作、...",
+        "full_length": 59
+      },
+      {
+        "paragraph_number": 751,
+        "preview_text": "每进行一步，从经验回放池中随机采样小批量...",
+        "full_length": 47
+      },
+      {
+        "paragraph_number": 753,
+        "preview_text": "根据损失函数",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 755,
+        "preview_text": "对当前网络参数执行梯度下降更新，其中是抽...",
+        "full_length": 27
+      },
+      {
+        "paragraph_number": 756,
+        "preview_text": "每隔固定步数，将当前网络的参数复制到目标...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 758,
+        "preview_text": "第三步，遗传操作。在每一轮结束时，会按照...",
+        "full_length": 186
+      },
+      {
+        "paragraph_number": 759,
+        "preview_text": "第四步，适应度更新。每一回合结束后，当前...",
+        "full_length": 40
+      },
+      {
+        "paragraph_number": 761,
+        "preview_text": "其中，是平滑权重，用以平衡历史表现与当前...",
+        "full_length": 43
+      },
+      {
+        "paragraph_number": 762,
+        "preview_text": "若在本回合同时触发了遗传操作，则对于新生...",
+        "full_length": 45
+      },
+      {
+        "paragraph_number": 764,
+        "preview_text": "训练完成后，策略种群中适应度最高的策略即...",
+        "full_length": 29
+      },
+      {
+        "paragraph_number": 765,
+        "preview_text": "实验与仿真分析",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 766,
+        "preview_text": "仿真设置",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 767,
+        "preview_text": "（1）仿真环境",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 768,
+        "preview_text": "本章所有实验使用利用16核AMD EPY...",
+        "full_length": 142
+      },
+      {
+        "paragraph_number": 769,
+        "preview_text": "通信抗干扰仿真环境由Python搭建，信...",
+        "full_length": 273
+      },
+      {
+        "paragraph_number": 770,
+        "preview_text": "（2）性能指标",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 771,
+        "preview_text": "本章聚焦于跳频信道决策问题，定义以下三种...",
+        "full_length": 25
+      },
+      {
+        "paragraph_number": 772,
+        "preview_text": "收敛回合数，用于评估算法训练时的收敛速度...",
+        "full_length": 79
+      },
+      {
+        "paragraph_number": 774,
+        "preview_text": "总奖励值，定义为每回合即时奖励的总和：",
+        "full_length": 19
+      },
+      {
+        "paragraph_number": 776,
+        "preview_text": "其中，为每回合的总时间步数，为每一步即时...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 777,
+        "preview_text": "跳频成功率，跳频成功定义为进行跳频动作执...",
+        "full_length": 108
+      },
+      {
+        "paragraph_number": 779,
+        "preview_text": "仿真结果与性能分析",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 780,
+        "preview_text": "实验一：种群个数选择",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 781,
+        "preview_text": "为了评估不同种群个数对智能跳频性能的影响...",
+        "full_length": 76
+      },
+      {
+        "paragraph_number": 783,
+        "preview_text": "收敛回合数随种群个数变化曲线",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 784,
+        "preview_text": "从图5.4中可以看出，收敛回合数随着种群...",
+        "full_length": 244
+      },
+      {
+        "paragraph_number": 785,
+        "preview_text": "实验二：不同干扰下性能分析",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 786,
+        "preview_text": "为了分析本文算法对不同干扰模式的抗干扰能...",
+        "full_length": 225
+      },
+      {
+        "paragraph_number": 787,
+        "preview_text": "梳状干扰是一种干扰几个固定频点的干扰模式...",
+        "full_length": 72
+      },
+      {
+        "paragraph_number": 789,
+        "preview_text": "梳状干扰下最优通信信道选择",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 791,
+        "preview_text": "梳状干扰下总奖励曲线",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 792,
+        "preview_text": "从图5.5中可以看出，梳状干扰固定干扰了...",
+        "full_length": 84
+      },
+      {
+        "paragraph_number": 793,
+        "preview_text": "由于传统DQN算法与本文算法经过不同回合...",
+        "full_length": 63
+      },
+      {
+        "paragraph_number": 794,
+        "preview_text": "从图5.6中可以看出，本文算法与传统DQ...",
+        "full_length": 114
+      },
+      {
+        "paragraph_number": 795,
+        "preview_text": "跟踪干扰是一种跟踪对方通信信号频率跳变实...",
+        "full_length": 92
+      },
+      {
+        "paragraph_number": 797,
+        "preview_text": "跟踪干扰下最优通信信道选择",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 799,
+        "preview_text": "跟踪干扰下总奖励曲线",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 800,
+        "preview_text": "从图5.7中可以看出，跟踪干扰信道总会是...",
+        "full_length": 97
+      },
+      {
+        "paragraph_number": 801,
+        "preview_text": "由于传统DQN算法与本文算法经过不同回合...",
+        "full_length": 63
+      },
+      {
+        "paragraph_number": 802,
+        "preview_text": "从图5.8中可以看出，本文算法与传统DQ...",
+        "full_length": 81
+      },
+      {
+        "paragraph_number": 803,
+        "preview_text": "线性调频干扰的干扰频率以恒定速度变化，反...",
+        "full_length": 102
+      },
+      {
+        "paragraph_number": 805,
+        "preview_text": "线性调频干扰下最优通信信道选择",
+        "full_length": 15
+      },
+      {
+        "paragraph_number": 807,
+        "preview_text": "线性调频干扰下总奖励曲线",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 808,
+        "preview_text": "从图5.9中可以看出，通信信道每个扫频周...",
+        "full_length": 44
+      },
+      {
+        "paragraph_number": 809,
+        "preview_text": "从图5.10中可以看出，与之前实验不同的...",
+        "full_length": 269
+      },
+      {
+        "paragraph_number": 811,
+        "preview_text": "线性调频下传统DNQ算法信道选择",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 812,
+        "preview_text": "动态复合干扰中干扰方会不断切换干扰模式，...",
+        "full_length": 159
+      },
+      {
+        "paragraph_number": 814,
+        "preview_text": "动态复合干扰下传统DQN算法信道选择",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 816,
+        "preview_text": "动态复合干扰下本文算法信道选择",
+        "full_length": 15
+      },
+      {
+        "paragraph_number": 817,
+        "preview_text": "从图5.12与图5.13中可以看出，一阶...",
+        "full_length": 221
+      },
+      {
+        "paragraph_number": 819,
+        "preview_text": "动态复合干扰下总奖励曲线",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 820,
+        "preview_text": "从图5.14总奖励曲线中可以看出，本文算...",
+        "full_length": 86
+      },
+      {
+        "paragraph_number": 821,
+        "preview_text": "实验三：不同信道数",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 822,
+        "preview_text": "为了对比本文算法与传统DQN算法在不同信...",
+        "full_length": 102
+      },
+      {
+        "paragraph_number": 823,
+        "preview_text": "不同算法收敛回合数随信道个数变化曲线",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 824,
+        "preview_text": "从图5.15中可以看出，每种干扰下的模型...",
+        "full_length": 146
+      },
+      {
+        "paragraph_number": 825,
+        "preview_text": "实验四：不同算法对比试验",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 826,
+        "preview_text": "为了对比本文所提算法与其他智能跳频算法的...",
+        "full_length": 368
+      },
+      {
+        "paragraph_number": 827,
+        "preview_text": "不同算法性能对比",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 828,
+        "preview_text": "从表5.1中可以看出，四种算法通信成功率...",
+        "full_length": 291
+      },
+      {
+        "paragraph_number": 829,
+        "preview_text": "本章小结",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 830,
+        "preview_text": "本章研究了智能跳频抗干扰决策问题，建立了...",
+        "full_length": 189
+      },
+      {
+        "paragraph_number": 831,
+        "preview_text": "实验结果表明，本文方法相比JSDFH算法...",
+        "full_length": 235
+      },
+      {
+        "paragraph_number": 832,
+        "preview_text": "总结与展望",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 833,
+        "preview_text": "全文工作总结",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 834,
+        "preview_text": "本论文围绕通信干扰识别与通信抗干扰技术展...",
+        "full_length": 93
+      },
+      {
+        "paragraph_number": 835,
+        "preview_text": "（1）针对传统方法难以识别未知干扰类型的...",
+        "full_length": 374
+      },
+      {
+        "paragraph_number": 836,
+        "preview_text": "（2）针对传统干扰抑制方法对干扰特性、先...",
+        "full_length": 295
+      },
+      {
+        "paragraph_number": 837,
+        "preview_text": "（3）针对传统跳频决策策略收敛慢、易陷入...",
+        "full_length": 388
+      },
+      {
+        "paragraph_number": 838,
+        "preview_text": "后续工作展望",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 839,
+        "preview_text": "尽管本文在干扰识别、干扰抑制及跳频决策方...",
+        "full_length": 104
+      },
+      {
+        "paragraph_number": 840,
+        "preview_text": "（1）在干扰识别方面，本文方法主要基于静...",
+        "full_length": 123
+      },
+      {
+        "paragraph_number": 841,
+        "preview_text": "（2）在干扰抑制方面，本文研究主要基于特...",
+        "full_length": 124
+      },
+      {
+        "paragraph_number": 842,
+        "preview_text": "（3）在智能跳频决策方面，本文主要针对单...",
+        "full_length": 136
+      },
+      {
+        "paragraph_number": 843,
+        "preview_text": "参考文献",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 844,
+        "preview_text": "刘瑞华, 张艳婷, 马赞. 基于时频图学...",
+        "full_length": 71
+      },
+      {
+        "paragraph_number": 845,
+        "preview_text": "吴婧琪. 雷达有源干扰识别与抑制方法研究...",
+        "full_length": 45
+      },
+      {
+        "paragraph_number": 846,
+        "preview_text": "HECHT-NIELSEN R. The...",
+        "full_length": 126
+      },
+      {
+        "paragraph_number": 847,
+        "preview_text": "KRIZHEVSKY A, SUTSKE...",
+        "full_length": 153
+      },
+      {
+        "paragraph_number": 848,
+        "preview_text": "SILVER D, SCHRITTWIE...",
+        "full_length": 132
+      },
+      {
+        "paragraph_number": 849,
+        "preview_text": "徐国进. 典型通信干扰信号识别技术研究[...",
+        "full_length": 37
+      },
+      {
+        "paragraph_number": 850,
+        "preview_text": "UJAN S, NAVIDI N. An...",
+        "full_length": 134
+      },
+      {
+        "paragraph_number": 851,
+        "preview_text": "HE K, ZHANG X, REN S...",
+        "full_length": 184
+      },
+      {
+        "paragraph_number": 852,
+        "preview_text": "SIMONYAN K, ZISSERMA...",
+        "full_length": 133
+      },
+      {
+        "paragraph_number": 853,
+        "preview_text": "SZEGEDY C, WEI LIU, ...",
+        "full_length": 175
+      },
+      {
+        "paragraph_number": 854,
+        "preview_text": "王豪. 轻量化神经网络的通信干扰智能识别...",
+        "full_length": 42
+      },
+      {
+        "paragraph_number": 855,
+        "preview_text": "LECUN Y, BOTTOU L, B...",
+        "full_length": 145
+      },
+      {
+        "paragraph_number": 856,
+        "preview_text": "WANG P, CHENG Y, PEN...",
+        "full_length": 202
+      },
+      {
+        "paragraph_number": 857,
+        "preview_text": "BENDALE A, BOULT T E...",
+        "full_length": 145
+      },
+      {
+        "paragraph_number": 858,
+        "preview_text": "BENGIO S, BENGIO Y, ...",
+        "full_length": 166
+      },
+      {
+        "paragraph_number": 859,
+        "preview_text": "陈祥维. 基于深度学习的通信干扰信号开集...",
+        "full_length": 49
+      },
+      {
+        "paragraph_number": 860,
+        "preview_text": "SHU L, XU H, LIU B. ...",
+        "full_length": 110
+      },
+      {
+        "paragraph_number": 861,
+        "preview_text": "YOSHIHASHI R, SHAO W...",
+        "full_length": 201
+      },
+      {
+        "paragraph_number": 862,
+        "preview_text": "SUN X, YANG Z, ZHANG...",
+        "full_length": 204
+      },
+      {
+        "paragraph_number": 863,
+        "preview_text": "KINGMA D P. Auto-enc...",
+        "full_length": 85
+      },
+      {
+        "paragraph_number": 864,
+        "preview_text": "唐言. 通信干扰信号开放识别方法研究[D...",
+        "full_length": 45
+      },
+      {
+        "paragraph_number": 865,
+        "preview_text": "ZHANG X, LI T, GONG ...",
+        "full_length": 165
+      },
+      {
+        "paragraph_number": 866,
+        "preview_text": "KONG S, RAMANAN D. O...",
+        "full_length": 165
+      },
+      {
+        "paragraph_number": 867,
+        "preview_text": "GOODFELLOW I, POUGET...",
+        "full_length": 139
+      },
+      {
+        "paragraph_number": 868,
+        "preview_text": "NEAL L, OLSON M, FER...",
+        "full_length": 161
+      },
+      {
+        "paragraph_number": 869,
+        "preview_text": "SCHLACHTER P, LIAO Y...",
+        "full_length": 158
+      },
+      {
+        "paragraph_number": 870,
+        "preview_text": "KARUNARATNE S, HANNA...",
+        "full_length": 170
+      },
+      {
+        "paragraph_number": 871,
+        "preview_text": "XU Y, QIN X, XU X, e...",
+        "full_length": 220
+      },
+      {
+        "paragraph_number": 872,
+        "preview_text": "GONG J, QIN X, XU X....",
+        "full_length": 203
+      },
+      {
+        "paragraph_number": 873,
+        "preview_text": "MAHAL J A, KHAWAR A,...",
+        "full_length": 181
+      },
+      {
+        "paragraph_number": 874,
+        "preview_text": "CARRICK M, REED J H,...",
+        "full_length": 188
+      },
+      {
+        "paragraph_number": 875,
+        "preview_text": "KESTEVEN M, HOBBS G,...",
+        "full_length": 168
+      },
+      {
+        "paragraph_number": 876,
+        "preview_text": "MOHAMMED J R. Interf...",
+        "full_length": 199
+      },
+      {
+        "paragraph_number": 877,
+        "preview_text": "REED J H, YUEN N M, ...",
+        "full_length": 153
+      },
+      {
+        "paragraph_number": 878,
+        "preview_text": "FABRIZIO G, FARINA A...",
+        "full_length": 166
+      },
+      {
+        "paragraph_number": 879,
+        "preview_text": "FABRIZIO G, FARINA A...",
+        "full_length": 169
+      },
+      {
+        "paragraph_number": 880,
+        "preview_text": "CAO X R, LIU R. Gene...",
+        "full_length": 125
+      },
+      {
+        "paragraph_number": 881,
+        "preview_text": "PIZURICA A, PHILIPS ...",
+        "full_length": 210
+      },
+      {
+        "paragraph_number": 882,
+        "preview_text": "CHEN Y, SHAN H, WEI ...",
+        "full_length": 239
+      },
+      {
+        "paragraph_number": 883,
+        "preview_text": "RONNEBERGER O, FISCH...",
+        "full_length": 196
+      },
+      {
+        "paragraph_number": 884,
+        "preview_text": "ZHOU Y, SAMIEE A, ZH...",
+        "full_length": 136
+      },
+      {
+        "paragraph_number": 885,
+        "preview_text": "HOCHREITER S. Long S...",
+        "full_length": 76
+      },
+      {
+        "paragraph_number": 886,
+        "preview_text": "马松, 王家豪, 张蔺等. 基于深度学习...",
+        "full_length": 74
+      },
+      {
+        "paragraph_number": 887,
+        "preview_text": "MUN J, HA S, LEE J. ...",
+        "full_length": 223
+      },
+      {
+        "paragraph_number": 888,
+        "preview_text": "VASWANI A, SHAZEER N...",
+        "full_length": 129
+      },
+      {
+        "paragraph_number": 889,
+        "preview_text": "ELMAN J L. Finding s...",
+        "full_length": 81
+      },
+      {
+        "paragraph_number": 890,
+        "preview_text": "JORDAN M I. Serial o...",
+        "full_length": 131
+      },
+      {
+        "paragraph_number": 891,
+        "preview_text": "MACARTNEY C, WEYDE T...",
+        "full_length": 112
+      },
+      {
+        "paragraph_number": 892,
+        "preview_text": "LUO Y, CHEN Z, YOSHI...",
+        "full_length": 246
+      },
+      {
+        "paragraph_number": 893,
+        "preview_text": "SUBAKAN C, RAVANELLI...",
+        "full_length": 211
+      },
+      {
+        "paragraph_number": 894,
+        "preview_text": "LIU Y, BU Y, YANG Y....",
+        "full_length": 210
+      },
+      {
+        "paragraph_number": 895,
+        "preview_text": "QI Y, LI L. An Ad Ho...",
+        "full_length": 213
+      },
+      {
+        "paragraph_number": 896,
+        "preview_text": "GEIRHOFER S, SUN J Z...",
+        "full_length": 212
+      },
+      {
+        "paragraph_number": 897,
+        "preview_text": "陈一波, 赵知劲. 基于SARSA学习的...",
+        "full_length": 66
+      },
+      {
+        "paragraph_number": 898,
+        "preview_text": "RUMMERY G A, NIRANJA...",
+        "full_length": 148
+      },
+      {
+        "paragraph_number": 899,
+        "preview_text": "冉雨, 程郁凡, 陈大勇等. 采用BP神...",
+        "full_length": 70
+      },
+      {
+        "paragraph_number": 900,
+        "preview_text": "RUMELHART D E, MCCLE...",
+        "full_length": 179
+      },
+      {
+        "paragraph_number": 901,
+        "preview_text": "KANG L, BO J, HONGWE...",
+        "full_length": 246
+      },
+      {
+        "paragraph_number": 902,
+        "preview_text": "WATKINS C J C H. Lea...",
+        "full_length": 56
+      },
+      {
+        "paragraph_number": 903,
+        "preview_text": "MNIH V. Playing atar...",
+        "full_length": 96
+      },
+      {
+        "paragraph_number": 904,
+        "preview_text": "METELLI A M, MAZZOLI...",
+        "full_length": 197
+      },
+      {
+        "paragraph_number": 905,
+        "preview_text": "RONDEAU T W. Applica...",
+        "full_length": 120
+      },
+      {
+        "paragraph_number": 906,
+        "preview_text": "YANG E, CHEN J, NIU ...",
+        "full_length": 214
+      },
+      {
+        "paragraph_number": 907,
+        "preview_text": "冉雨, 陈大勇, 程郁凡等. 基于改进人...",
+        "full_length": 72
+      },
+      {
+        "paragraph_number": 908,
+        "preview_text": "MITOLA J. Cognitive ...",
+        "full_length": 130
+      },
+      {
+        "paragraph_number": 909,
+        "preview_text": "DEVLIN J, CHANG M W,...",
+        "full_length": 303
+      },
+      {
+        "paragraph_number": 910,
+        "preview_text": "RADFORD A, NARASIMHA...",
+        "full_length": 113
+      },
+      {
+        "paragraph_number": 911,
+        "preview_text": "KALMAN R E. A New Ap...",
+        "full_length": 121
+      },
+      {
+        "paragraph_number": 912,
+        "preview_text": "GU A, GOEL K, RÉ C. ...",
+        "full_length": 127
+      },
+      {
+        "paragraph_number": 913,
+        "preview_text": "GU A, DAO T, ERMON S...",
+        "full_length": 164
+      },
+      {
+        "paragraph_number": 914,
+        "preview_text": "CARDOSO J F, SOULOUM...",
+        "full_length": 150
+      },
+      {
+        "paragraph_number": 915,
+        "preview_text": "LI Y, CICHOCKI A, AM...",
+        "full_length": 141
+      },
+      {
+        "paragraph_number": 916,
+        "preview_text": "GAO S H, CHENG M M, ...",
+        "full_length": 173
+      },
+      {
+        "paragraph_number": 917,
+        "preview_text": "MICHALEWICZ Z, LOGAN...",
+        "full_length": 232
+      },
+      {
+        "paragraph_number": 918,
+        "preview_text": "Hannon M, Feng S, Kw...",
+        "full_length": 162
+      },
+      {
+        "paragraph_number": 919,
+        "preview_text": "致谢",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 920,
+        "preview_text": "三年求学时光悄然流逝，回望这段旅程，既有...",
+        "full_length": 76
+      },
+      {
+        "paragraph_number": 921,
+        "preview_text": "首先，衷心感谢我的导师刘明骞教授。您以严...",
+        "full_length": 165
+      },
+      {
+        "paragraph_number": 922,
+        "preview_text": "其次，感谢实验室的张俊林老师在学术研究和...",
+        "full_length": 209
+      },
+      {
+        "paragraph_number": 923,
+        "preview_text": "最后，深深感谢我的父母和家人。感谢你们二...",
+        "full_length": 119
+      },
+      {
+        "paragraph_number": 924,
+        "preview_text": "此外，感谢参与论文评审和答辩的各位专家老...",
+        "full_length": 44
+      },
+      {
+        "paragraph_number": 925,
+        "preview_text": "毕业不是终点，而是新的起点，我将带着这段...",
+        "full_length": 36
+      },
+      {
+        "paragraph_number": 926,
+        "preview_text": "作者简介",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 927,
+        "preview_text": "基本情况",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 928,
+        "preview_text": "张耕田，男，陕西咸阳人，1999年8月出...",
+        "full_length": 56
+      },
+      {
+        "paragraph_number": 929,
+        "preview_text": "教育背景",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 930,
+        "preview_text": "2017.09～2021.06\t长安大学...",
+        "full_length": 31
+      },
+      {
+        "paragraph_number": 931,
+        "preview_text": "2022.08～2025.06\t西安电子...",
+        "full_length": 41
+      },
+      {
+        "paragraph_number": 932,
+        "preview_text": "攻读硕士学位期间的研究成果",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 933,
+        "preview_text": "申请（授权）专利",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 934,
+        "preview_text": "刘明骞, 张耕田. 专利名称: 一种通信...",
+        "full_length": 71
+      },
+      {
+        "paragraph_number": 935,
+        "preview_text": "刘明骞, 张耕田等. 软件著作权名称: ...",
+        "full_length": 68
+      },
+      {
+        "paragraph_number": 936,
+        "preview_text": "参与科研项目及获奖",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 937,
+        "preview_text": "国家自然科学基金重点项目：复杂电磁空间信...",
+        "full_length": 59
+      },
+      {
+        "paragraph_number": 938,
+        "preview_text": "陕西省杰出青年科学基金项目：电磁频谱态势...",
+        "full_length": 44
+      }
+    ]
+  },
+  "analysis_result": {
+    "success": true,
+    "analysis_result": [
+      {
+        "paragraph_number": 1,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 2,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 3,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 4,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 5,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 6,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 7,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 8,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 9,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 10,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 11,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 12,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 13,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 14,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 15,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 16,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 17,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 18,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 19,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 20,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 21,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 22,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 23,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 24,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 25,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 26,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 27,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 28,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 29,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 30,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 31,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 32,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 33,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 34,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 35,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 36,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 37,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 38,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 39,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 40,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 41,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 42,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 43,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 44,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 45,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 46,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 47,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 48,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 49,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 50,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 51,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 52,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 53,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 54,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 55,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 56,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 57,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 58,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 59,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 60,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 61,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 62,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 63,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 64,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 65,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 66,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 67,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 68,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 69,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 70,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 71,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 72,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 73,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 74,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 75,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 76,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 77,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 78,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 79,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 80,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 81,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 82,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 83,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 84,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 85,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 86,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 87,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 88,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 89,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 90,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 91,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 92,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 93,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 94,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 95,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 96,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 97,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 98,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 99,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 100,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 101,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 102,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 103,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 104,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 105,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 106,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 107,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 108,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 109,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 110,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 111,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 112,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 113,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 114,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 115,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 116,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 117,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 118,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 119,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 120,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 121,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 122,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 123,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 124,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 125,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 126,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 127,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 128,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 129,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 130,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 131,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 132,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 133,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 134,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 135,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 136,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 137,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 138,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 139,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 140,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 141,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 142,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 143,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 144,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 145,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 146,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 147,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 148,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 149,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 150,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 151,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 152,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 153,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 154,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 155,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 156,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 157,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 158,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 159,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 160,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 161,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 162,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 163,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 164,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 165,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 166,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 167,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 168,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 169,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 170,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 171,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 172,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 173,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 174,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 175,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 176,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 177,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 178,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 179,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 180,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 181,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 182,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 183,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 184,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 185,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 186,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 187,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 188,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 189,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 190,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 191,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 192,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 193,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 194,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 195,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 196,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 197,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 198,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 199,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 200,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 201,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 203,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 204,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 205,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 206,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 207,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 208,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 209,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 210,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 211,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 212,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 213,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 214,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 215,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 216,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 217,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 218,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 219,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 220,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 221,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 222,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 224,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 225,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 226,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 228,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 229,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 230,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 232,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 234,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 235,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 236,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 238,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 240,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 241,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 242,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 244,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 246,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 247,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 248,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 251,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 252,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 253,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 254,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 256,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 258,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 259,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 260,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 262,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 264,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 265,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 266,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 268,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 270,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 271,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 272,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 273,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 274,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 276,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 277,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 278,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 279,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 281,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 282,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 284,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 285,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 286,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 287,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 288,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 289,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 290,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 291,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 293,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 294,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 296,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 297,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 298,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 300,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 303,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 304,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 306,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 307,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 308,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 309,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 310,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 311,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 312,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 315,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 317,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 319,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 320,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 321,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 322,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 324,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 325,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 326,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 327,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 329,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 330,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 331,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 332,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 333,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 334,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 335,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 336,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 337,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 338,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 339,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 340,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 342,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 344,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 345,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 346,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 347,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 348,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 349,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 350,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 351,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 352,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 353,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 354,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 356,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 357,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 359,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 360,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 361,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 362,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 364,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 365,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 366,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 367,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 368,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 369,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 370,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 371,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 372,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 373,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 374,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 376,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 378,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 379,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 380,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 382,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 383,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 385,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 386,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 388,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 389,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 391,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 393,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 394,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 396,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 398,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 399,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 400,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 401,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 402,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 403,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 404,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 405,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 406,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 407,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 408,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 410,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 411,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 413,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 414,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 415,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 417,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 418,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 420,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 422,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 424,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 426,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 428,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 429,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 430,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 432,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 434,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 437,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 438,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 440,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 443,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 444,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 445,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 446,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 447,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 449,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 451,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 452,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 454,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 455,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 458,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 459,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 461,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 462,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 463,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 464,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 465,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 466,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 467,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 468,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 469,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 470,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 471,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 472,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 473,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 474,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 477,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 478,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 480,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 481,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 482,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 483,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 485,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 486,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 487,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 488,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 490,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 491,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 492,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 493,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 494,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 496,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 497,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 498,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 499,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 500,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 502,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 503,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 504,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 505,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 506,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 507,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 508,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 509,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 510,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 511,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 512,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 514,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 515,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 516,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 517,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 518,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 519,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 520,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 521,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 522,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 523,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 525,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 526,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 528,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 529,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 530,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 531,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 532,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 534,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 535,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 536,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 537,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 538,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 539,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 540,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 542,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 543,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 544,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 545,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 546,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 548,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 549,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 550,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 551,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 552,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 554,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 555,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 556,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 557,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 559,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 560,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 561,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 562,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 564,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 565,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 568,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 569,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 570,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 572,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 574,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 575,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 577,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 578,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 579,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 580,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 582,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 583,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 584,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 585,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 586,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 587,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 589,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 590,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 592,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 593,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 594,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 595,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 596,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 597,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 599,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 600,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 601,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 602,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 603,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 606,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 607,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 608,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 610,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 611,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 612,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 613,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 615,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 616,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 617,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 619,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 620,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 621,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 622,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 623,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 624,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 625,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 626,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 627,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 628,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 629,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 630,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 631,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 632,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 634,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 635,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 637,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 638,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 639,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 640,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 641,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 642,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 643,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 644,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 645,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 646,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 647,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 648,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 649,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 650,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 651,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 652,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 653,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 655,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 656,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 657,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 658,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 659,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 660,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 661,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 662,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 663,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 665,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 666,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 667,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 669,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 670,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 671,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 672,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 674,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 675,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 676,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 678,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 680,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 681,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 683,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 685,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 687,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 688,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 689,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 690,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 691,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 692,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 693,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 694,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 695,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 696,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 698,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 700,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 701,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 702,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 703,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 704,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 705,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 706,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 707,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 708,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 709,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 710,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 711,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 713,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 714,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 715,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 717,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 718,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 720,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 721,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 722,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 724,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 725,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 726,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 728,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 729,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 730,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 731,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 732,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 734,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 735,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 736,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 737,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 738,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 739,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 740,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 741,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 742,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 743,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 744,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 745,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 746,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 747,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 748,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 750,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 751,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 753,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 755,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 756,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 758,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 759,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 761,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 762,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 764,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 765,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 766,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 767,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 768,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 769,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 770,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 771,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 772,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 774,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 776,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 777,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 779,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 780,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 781,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 783,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 784,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 785,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 786,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 787,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 789,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 791,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 792,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 793,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 794,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 795,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 797,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 799,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 800,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 801,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 802,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 803,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 805,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 807,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 808,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 809,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 811,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 812,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 814,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 816,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 817,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 819,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 820,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 821,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 822,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 823,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 824,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 825,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 826,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 827,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 828,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 829,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 830,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 831,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 832,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 833,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 834,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 835,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 836,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 837,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 838,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 839,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 840,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 841,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 842,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 843,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 844,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 845,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 846,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 847,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 848,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 849,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 850,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 851,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 852,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 853,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 854,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 855,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 856,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 857,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 858,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 859,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 860,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 861,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 862,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 863,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 864,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 865,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 866,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 867,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 868,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 869,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 870,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 871,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 872,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 873,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 874,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 875,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 876,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 877,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 878,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 879,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 880,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 881,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 882,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 883,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 884,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 885,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 886,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 887,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 888,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 889,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 890,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 891,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 892,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 893,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 894,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 895,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 896,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 897,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 898,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 899,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 900,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 901,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 902,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 903,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 904,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 905,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 906,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 907,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 908,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 909,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 910,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 911,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 912,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 913,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 914,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 915,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 916,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 917,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 918,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 919,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 920,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 921,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 922,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 923,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 924,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 925,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 926,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 927,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 928,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 929,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 930,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 931,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 932,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 933,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 934,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 935,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 936,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 937,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 938,
+        "type": "paragraph"
+      }
+    ],
+    "total_paragraphs": 802,
+    "batch_info": {
+      "total_batches": 9,
+      "batch_size": 100,
+      "overlap_size": 10
+    }
+  }
+}

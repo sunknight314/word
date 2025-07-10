@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import JsonDisplay from './JsonDisplay';
+import FormatConfigEditor from './FormatConfigEditor';
 import './SectionComponents.css';
 
 // 格式分析摘要接口
@@ -37,6 +38,7 @@ const FormatFileSection: React.FC<FormatFileSectionProps> = ({ onComplete }) => 
   const [filename, setFilename] = useState<string>('');
   const [aiGenerating, setAiGenerating] = useState(false);
   const [formatConfig, setFormatConfig] = useState<any>(null);
+  const [showEditor, setShowEditor] = useState(false);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
@@ -140,14 +142,46 @@ const FormatFileSection: React.FC<FormatFileSectionProps> = ({ onComplete }) => 
                     </span>
                   )}
                 </div>
-                <JsonDisplay 
-                  data={formatConfig.format_config} 
-                  title="生成的format_config.json" 
-                />
-                {formatConfig.document_info && (
-                  <div className="document-summary">
-                    <p><strong>文档信息:</strong> {formatConfig.document_info.total_paragraphs} 段落, {formatConfig.document_info.total_length} 字符</p>
-                  </div>
+                
+                {/* 查看并编辑按钮 */}
+                <div className="edit-button-container">
+                  <button
+                    className="action-button edit-button"
+                    onClick={() => setShowEditor(!showEditor)}
+                  >
+                    {showEditor ? '隐藏编辑器' : '查看并编辑识别结果'}
+                  </button>
+                </div>
+                
+                {/* 编辑器组件 */}
+                {showEditor && (
+                  <FormatConfigEditor
+                    initialConfig={formatConfig.format_config}
+                    fileId={fileId}
+                    onSave={(newConfig) => {
+                      setFormatConfig({
+                        ...formatConfig,
+                        format_config: newConfig
+                      });
+                      alert('格式配置已更新');
+                    }}
+                    onCancel={() => setShowEditor(false)}
+                  />
+                )}
+                
+                {/* JSON显示（折叠） */}
+                {!showEditor && (
+                  <>
+                    <JsonDisplay 
+                      data={formatConfig.format_config} 
+                      title="生成的format_config.json" 
+                    />
+                    {formatConfig.document_info && (
+                      <div className="document-summary">
+                        <p><strong>文档信息:</strong> {formatConfig.document_info.total_paragraphs} 段落, {formatConfig.document_info.total_length} 字符</p>
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
             ) : (

@@ -85,7 +85,7 @@ class AIAnalyzer(AIClientBase):
     
     async def analyze_paragraphs(self, paragraphs_data: List[Dict]) -> Dict[str, Any]:
         """
-        分析段落类型（一次性处理）
+        分析段落类型（支持分批处理）
         
         Args:
             paragraphs_data: 段落数据列表，包含paragraph_number和preview_text
@@ -95,6 +95,11 @@ class AIAnalyzer(AIClientBase):
         """
         try:
             print(f"📄 开始分析 {len(paragraphs_data)} 个段落...")
+            
+            # 判断是否需要分批处理
+            if len(paragraphs_data) > 200:
+                print(f"📦 段落数量较多，将进行分批处理...")
+                return await self._analyze_paragraphs_in_batches(paragraphs_data)
             
             # 直接使用AI分析，一次性处理
             result = await self.analyze(paragraphs_data)
@@ -120,59 +125,96 @@ class AIAnalyzer(AIClientBase):
             
             return error_result
     
-    def create_mock_analysis(self, paragraphs_data: List[Dict]) -> Dict[str, Any]:
+    async def _analyze_paragraphs_in_batches(self, paragraphs_data: List[Dict]) -> Dict[str, Any]:
         """
-        创建模拟分析结果（用于测试）
+        分批处理段落，带重叠上下文
         
         Args:
             paragraphs_data: 段落数据列表
             
         Returns:
-            模拟的分析结果
+            合并后的分析结果
         """
-        analysis_result = []
+        batch_size = 100  # 每批大小
+        overlap_size = 10  # 重叠段落数
         
-        for para in paragraphs_data:
-            preview = para["preview_text"]
-            para_num = para["paragraph_number"]
+        batches = []
+        i = 0
+        
+        # 创建批次
+        while i < len(paragraphs_data):
+            # 计算批次的结束位置
+            end = min(i + batch_size, len(paragraphs_data))
             
-            # 简单的规则判断（模拟AI分析）
-            if "文档" in preview and para_num == 1:
-                para_type = "title"
-                confidence = 0.95
-                reason = "文档标题，位于第一段"
-            elif preview.startswith("第") and "章" in preview:
-                para_type = "heading1"
-                confidence = 0.92
-                reason = "使用'第X章'格式的一级标题"
-            elif preview.count(".") == 1 and preview[0].isdigit():
-                para_type = "heading2"
-                confidence = 0.88
-                reason = "使用'X.X'格式的二级标题"
-            elif preview.count(".") == 2 and preview[0].isdigit():
-                para_type = "heading3"
-                confidence = 0.85
-                reason = "使用'X.X.X'格式的三级标题"
-            elif len(preview) <= 15 and not preview.endswith("，"):
-                para_type = "heading4"
-                confidence = 0.75
-                reason = "短文本，可能是低级标题"
+            # 如果不是最后一批，包含重叠
+            if end < len(paragraphs_data):
+                batch = paragraphs_data[i:end + overlap_size]
             else:
-                para_type = "paragraph"
-                confidence = 0.80
-                reason = "正文段落特征"
+                batch = paragraphs_data[i:end]
             
-            analysis_result.append({
-                "paragraph_number": para_num,
-                "preview_text": preview,
-                "type": para_type,
-                "confidence": confidence,
-                "reason": reason
+            batches.append({
+                'data': batch,
+                'start_index': i,
+                'end_index': end,
+                'has_overlap': end < len(paragraphs_data)
             })
+            
+            i = end
         
-        return {
-            "analysis_result": analysis_result
-        }
+        print(f"📦 分成 {len(batches)} 批进行处理")
+        
+        # 处理每个批次
+        all_results = []
+        batch_errors = []
+        
+        for idx, batch_info in enumerate(batches):
+            print(f"🔄 处理第 {idx + 1}/{len(batches)} 批...")
+            try:
+                batch_result = await self.analyze(batch_info['data'])
+                
+                if batch_result.get("success"):
+                    analysis_results = batch_result.get("analysis_result", [])
+                    
+                    # 如果有重叠，去除重叠部分的分析结果
+                    if batch_info['has_overlap'] and idx < len(batches) - 1:
+                        # 只保留到原始批次大小的结果
+                        analysis_results = analysis_results[:batch_size]
+                    
+                    all_results.extend(analysis_results)
+                else:
+                    batch_errors.append(f"批次 {idx + 1} 失败: {batch_result.get('error', '未知错误')}")
+                    
+            except Exception as e:
+                batch_errors.append(f"批次 {idx + 1} 异常: {str(e)}")
+        
+        # 构建最终结果
+        if all_results:
+            final_result = {
+                "success": True,
+                "analysis_result": all_results,
+                "total_paragraphs": len(paragraphs_data),
+                "batch_info": {
+                    "total_batches": len(batches),
+                    "batch_size": batch_size,
+                    "overlap_size": overlap_size
+                }
+            }
+            
+            if batch_errors:
+                final_result["partial_errors"] = batch_errors
+            
+            # 保存分析结果
+            if self.save_results:
+                self._save_analysis_result(final_result, paragraphs_data)
+            
+            return final_result
+        else:
+            return {
+                "success": False,
+                "error": "所有批次处理失败",
+                "batch_errors": batch_errors,
+                "total_paragraphs": len(paragraphs_data)
+            }
     
     def _ensure_results_dir(self):
         """确保结果保存目录存在"""

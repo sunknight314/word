@@ -9,6 +9,7 @@ from datetime import datetime
 from typing import Dict, Any, Tuple
 from .ai_client_base import AIClientBase
 from .document_processor import DocumentProcessor
+from app.utils import UnitConverter
 
 
 class FormatConfigGenerator(AIClientBase):
@@ -189,9 +190,131 @@ class FormatConfigGenerator(AIClientBase):
     
     def validate_and_fix_config(self, config: Dict[str, Any]) -> Dict[str, Any]:
         """
-        验证和修正格式配置
+        验证和修正格式配置，包括单位转换
+        
+        Args:
+            config: AI生成的配置（包含原始单位）
+            
+        Returns:
+            验证、修正并转换单位后的配置
         """
-        return self._old_validate_and_fix_config(config)
+        # 使用默认配置作为基础
+        default_config = self._get_default_config()
+        
+        # 深度合并配置
+        final_config = self._deep_merge_config(default_config, config)
+        
+        # 转换所有单位为pt
+        final_config = self._convert_all_units(final_config)
+        
+        return final_config
+    
+    def _get_default_config(self) -> Dict[str, Any]:
+        """获取默认配置"""
+        return {
+            "document_info": {
+                "title": "AI生成的文档",
+                "author": "系统自动生成",
+                "description": "基于AI分析的文档格式配置"
+            },
+            "page_settings": {
+                "margins": {
+                    "top": "2.54cm",
+                    "bottom": "2.54cm",
+                    "left": "3.17cm",
+                    "right": "3.17cm"
+                },
+                "orientation": "portrait",
+                "size": "A4"
+            },
+            "styles": {
+                "title": self._get_default_style("title", "二号", True, "center"),
+                "heading1": self._get_default_style("heading1", "三号", True, "center"),
+                "heading2": self._get_default_style("heading2", "小三", True, "left"),
+                "heading3": self._get_default_style("heading3", "四号", True, "left"),
+                "heading4": self._get_default_style("heading4", "小四", True, "left"),
+                "paragraph": self._get_default_style("paragraph", "小四", False, "justify"),
+                "abstract_title_cn": self._get_default_style("abstract_title_cn", "三号", True, "center"),
+                "abstract_title_en": self._get_default_style("abstract_title_en", "三号", True, "center")
+            }
+        }
+    
+    def _get_default_style(self, style_name: str, font_size: str, bold: bool, alignment: str) -> Dict[str, Any]:
+        """获取默认样式配置"""
+        return {
+            "name": f"Custom{style_name.title()}",
+            "font": {
+                "chinese": "宋体",
+                "english": "Times New Roman",
+                "size": font_size,
+                "bold": bold,
+                "italic": False
+            },
+            "paragraph": {
+                "alignment": alignment,
+                "line_spacing": "20磅",
+                "space_before": "0磅",
+                "space_after": "0磅",
+                "first_line_indent": "2字符" if alignment == "justify" else "0磅",
+                "left_indent": "0磅",
+                "right_indent": "0磅",
+                "hanging_indent": "0磅"
+            },
+            "outline_level": None
+        }
+    
+    def _deep_merge_config(self, base: Dict, override: Dict) -> Dict:
+        """深度合并配置"""
+        result = base.copy()
+        
+        for key, value in override.items():
+            if key in result and isinstance(result[key], dict) and isinstance(value, dict):
+                result[key] = self._deep_merge_config(result[key], value)
+            else:
+                result[key] = value
+        
+        return result
+    
+    def _convert_all_units(self, config: Dict[str, Any]) -> Dict[str, Any]:
+        """转换配置中的所有单位为pt"""
+        # 转换页边距
+        if "page_settings" in config and "margins" in config["page_settings"]:
+            margins = config["page_settings"]["margins"]
+            for key in ["top", "bottom", "left", "right"]:
+                if key in margins:
+                    margins[key] = UnitConverter.convert_margin(margins[key])
+        
+        # 转换样式中的单位
+        if "styles" in config:
+            for style_name, style in config["styles"].items():
+                if isinstance(style, dict):
+                    # 转换字号
+                    if "font" in style and "size" in style["font"]:
+                        style["font"]["size"] = UnitConverter.convert_font_size(style["font"]["size"])
+                    
+                    # 转换段落格式
+                    if "paragraph" in style:
+                        para = style["paragraph"]
+                        # 获取基准字号用于计算相对单位
+                        base_size = 12  # 默认
+                        if "font" in style and "size" in style["font"]:
+                            size_str = style["font"]["size"]
+                            if size_str.endswith("pt"):
+                                try:
+                                    base_size = float(size_str[:-2])
+                                except:
+                                    pass
+                        
+                        # 转换各种间距和缩进
+                        for spacing_key in ["line_spacing", "space_before", "space_after"]:
+                            if spacing_key in para:
+                                para[spacing_key] = UnitConverter.convert_spacing(para[spacing_key], base_size)
+                        
+                        for indent_key in ["first_line_indent", "left_indent", "right_indent", "hanging_indent"]:
+                            if indent_key in para:
+                                para[indent_key] = UnitConverter.convert_indent(para[indent_key], base_size)
+        
+        return config
     
     def _old_validate_and_fix_config(self, config: Dict[str, Any]) -> Dict[str, Any]:
         """

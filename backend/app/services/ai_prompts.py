@@ -2,63 +2,6 @@
 大模型分析文档段落的预设Prompt模板
 """
 
-# 预设的段落分析prompt模板
-PARAGRAPH_ANALYSIS_PROMPT = """请分析以下Word文档中每个段落的类型和级别，并返回JSON格式的分析结果。
-
-段落内容（每段前20个字符）：
-{paragraphs_text}
-
-分类标准：
-- title: 文档标题（最高级别）
-- heading1: 一级标题（第一章、1.等）
-- heading2: 二级标题（1.1、1.2等）
-- heading3: 三级标题（1.1.1等）
-- heading4: 四级标题或更低级别
-- paragraph: 正文段落
-- list: 列表项
-- quote: 引用文本
-- other: 其他类型
-
-识别要点：
-- 注意数字编号规律（第一章、1.1、（一）等）
-- 标题通常较短
-- 中文标题格式：第X章、X.X、（X）等
-
-请返回包含analysis_result数组的JSON对象，每个元素包含paragraph_number、preview_text、type、confidence和reason字段。"""
-
-
-def format_paragraphs_for_analysis(paragraphs_data: list) -> str:
-    """
-    格式化段落数据用于大模型分析
-    
-    Args:
-        paragraphs_data: 段落数据列表，每个元素包含paragraph_number和preview_text
-    
-    Returns:
-        使用预设prompt模板格式化的完整prompt
-    """
-    # 构建段落列表文本（不包含编号，避免干扰分析）
-    paragraphs_text = ""
-    for para in paragraphs_data:
-        paragraphs_text += f"段落{para['paragraph_number']}: {para['preview_text']}\n"
-    
-    # 使用预设模板
-    return PARAGRAPH_ANALYSIS_PROMPT.format(paragraphs_text=paragraphs_text.strip())
-
-
-def get_analysis_prompt(paragraphs_data: list) -> str:
-    """
-    获取用于段落分析的完整prompt (旧版本，建议使用get_paragraph_analysis_prompt)
-    
-    Args:
-        paragraphs_data: 段落数据列表
-    
-    Returns:
-        格式化的prompt字符串
-    """
-    return format_paragraphs_for_analysis(paragraphs_data)
-
-
 def get_paragraph_analysis_prompt(paragraphs_data: list) -> tuple:
     """
     获取段落分析prompt (分为system和user两部分)
@@ -78,7 +21,10 @@ def get_paragraph_analysis_prompt(paragraphs_data: list) -> tuple:
 - heading3: 三级标题（1.1.1等）
 - heading4: 四级标题或更低级别
 - paragraph: 正文段落
-- list: 列表项
+- abstract_title_cn: 中文摘要标题（摘要、内容摘要等）
+- abstract_title_en: 英文摘要标题（Abstract、ABSTRACT等）
+- figure_caption: 图注（图1、图1-1、Figure 1等开头）
+- table_caption: 表注（表1、表1-1、Table 1等开头）
 - quote: 引用文本
 - other: 其他类型
 
@@ -86,15 +32,20 @@ def get_paragraph_analysis_prompt(paragraphs_data: list) -> tuple:
 1. 注意数字编号规律（第一章、1.1、（一）等）
 2. 标题通常较短，正文段落较长
 3. 中文标题格式：第X章、X.X、（X）等
-4. 根据段落长度和内容判断类型
-5. 标题通常包含章节编号或关键词
+4. 中文摘要标题识别：通常为"摘要"、"内容摘要"、"论文摘要"等，一般居中，无编号
+5. 英文摘要标题识别：通常为"Abstract"、"ABSTRACT"等，一般居中，无编号
+6. 图注识别：以"图"或"Figure"开头，后跟数字编号，如"图1-1 系统架构图"
+7. 表注识别：以"表"或"Table"开头，后跟数字编号，如"表2-3 实验数据"
+8. 摘要标题通常出现在文档前部，在标题之后、目录之前
+9. 图注和表注通常较短，且包含特定的编号格式
+10. 根据段落长度和内容判断类型
+11. 标题通常包含章节编号或关键词
 
 输出要求：
 - 返回完整的JSON对象
 - 包含analysis_result数组
-- 每个元素包含paragraph_number、preview_text、type、confidence、reason字段
-- confidence为0-1之间的数字，表示置信度
-- reason简要说明判断依据
+- 每个元素包含paragraph_number、type
+
 
 JSON格式：
 ```json
@@ -102,10 +53,7 @@ JSON格式：
   "analysis_result": [
     {
       "paragraph_number": 1,
-      "preview_text": "段落预览文本",
-      "type": "title/heading1/heading2/heading3/heading4/paragraph/list/quote/other",
-      "confidence": 0.95,
-      "reason": "判断依据"
+      "type": "title/heading1/heading2/heading3/heading4/paragraph/abstract_title_cn/abstract_title_en/figure_caption/table_caption/quote/other",
     }
   ]
 }
@@ -139,17 +87,29 @@ def get_format_config_generation_prompt(document_content: str) -> tuple:
 2. 识别页边距、页面方向、页面大小等页面设置
 3. 提取标题层级的格式要求（一级、二级、三级标题的字体大小、加粗、居中等）
 4. 识别正文段落的格式要求（首行缩进、行距、字体等）
-5. 分析页码格式要求（位置、样式、起始页等）
-6. 识别页眉页脚的要求
+5. 识别摘要标题的格式要求（中文摘要标题和英文摘要标题的字体、字号、对齐方式等）
+6. 特别注意悬挂缩进的要求（如参考文献、引用等可能使用悬挂缩进，第一行顶格，后续行缩进）
+7. 分析页码格式要求（位置、样式、起始页等）
+8. 识别页眉页脚的要求
 
 输出要求：
 - 返回完整的JSON配置，确保格式正确
 - 不要添加任何解释文字，只返回JSON
-- 使用pt（磅）作为基本单位，如"12pt"、"24pt"
+- 直接使用文档中的原始单位，不要进行单位转换
+- 保留原始表述，如"2.54厘米"、"1英寸"、"三号"、"16磅"等
 - 如果文档中没有明确说明某些格式要求，请使用合理的默认值
 
-常用字号参考：
-- 小四12pt、四号14pt、小三15pt、三号16pt、小二18pt、二号22pt、小一24pt、一号26pt
+单位示例（请保留原始单位）：
+- 页边距：如"2.54cm"、"1inch"、"72磅"
+- 字号：如"小四"、"三号"、"16pt"、"12磅"
+- 行距：如"20磅"、"1.5倍"、"固定值20pt"
+- 缩进：如"2字符"、"24pt"、"0.5英寸"
+
+缩进说明：
+- first_line_indent: 首行缩进（正值表示首行向右缩进）
+- left_indent: 左缩进（整个段落左边距）
+- right_indent: 右缩进（整个段落右边距）
+- hanging_indent: 悬挂缩进（正值表示除首行外的其他行向右缩进，常用于参考文献、编号列表等）
 
 JSON配置结构：
 ```json
@@ -194,6 +154,48 @@ JSON配置结构：
     "heading1": {{ /* 一级标题样式 */ }},
     "heading2": {{ /* 二级标题样式 */ }},
     "heading3": {{ /* 三级标题样式 */ }},
+    "abstract_title_cn": {{
+      "name": "ChineseAbstractTitle",
+      "font": {{
+        "chinese": "中文字体",
+        "english": "英文字体",
+        "size": "字号(如16pt)",
+        "bold": true/false,
+        "italic": false
+      }},
+      "paragraph": {{
+        "alignment": "center",
+        "line_spacing": "行距",
+        "space_before": "段前距",
+        "space_after": "段后距",
+        "first_line_indent": "0pt",
+        "left_indent": "0pt",
+        "right_indent": "0pt",
+        "hanging_indent": "0pt"
+      }},
+      "outline_level": null
+    }},
+    "abstract_title_en": {{
+      "name": "EnglishAbstractTitle",
+      "font": {{
+        "chinese": "中文字体",
+        "english": "英文字体",
+        "size": "字号(如16pt)",
+        "bold": true/false,
+        "italic": false
+      }},
+      "paragraph": {{
+        "alignment": "center",
+        "line_spacing": "行距",
+        "space_before": "段前距",
+        "space_after": "段后距",
+        "first_line_indent": "0pt",
+        "left_indent": "0pt",
+        "right_indent": "0pt",
+        "hanging_indent": "0pt"
+      }},
+      "outline_level": null
+    }},
     "paragraph": {{ /* 正文样式 */ }}
   }},
   "toc_settings": {{

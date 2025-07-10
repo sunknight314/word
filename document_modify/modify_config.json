@@ -1,0 +1,304 @@
+{
+  "modify_mode": "merge",
+  
+  "document_info": {
+    "title": "基于配置修改的文档",
+    "author": "文档修改器",
+    "subject": "演示基于配置的文档修改功能",
+    "keywords": "Word, 文档修改, 自动化",
+    "backup_original": true
+  },
+  
+  "page_settings": {
+    "page_size": "A4",
+    "orientation": "portrait",
+    "margins": {
+      "top": "2.54cm",
+      "bottom": "2.54cm",
+      "left": "3.18cm",
+      "right": "3.18cm"
+    },
+    "gutter": "0cm"
+  },
+  
+  "styles": {
+    "Heading 1": {
+      "type": "paragraph",
+      "font": {
+        "name": "微软雅黑",
+        "size": "16pt",
+        "bold": true,
+        "color": "#000080"
+      },
+      "paragraph": {
+        "alignment": "left",
+        "space_before": "24pt",
+        "space_after": "12pt",
+        "line_spacing": 1.5,
+        "keep_with_next": true
+      }
+    },
+    
+    "Heading 2": {
+      "type": "paragraph",
+      "font": {
+        "name": "微软雅黑",
+        "size": "14pt",
+        "bold": true,
+        "color": "#0070C0"
+      },
+      "paragraph": {
+        "alignment": "left",
+        "space_before": "18pt",
+        "space_after": "6pt",
+        "keep_with_next": true
+      }
+    },
+    
+    "Heading 3": {
+      "type": "paragraph",
+      "font": {
+        "name": "微软雅黑",
+        "size": "12pt",
+        "bold": true,
+        "color": "#4472C4"
+      },
+      "paragraph": {
+        "alignment": "left",
+        "space_before": "12pt",
+        "space_after": "6pt"
+      }
+    },
+    
+    "Normal": {
+      "type": "paragraph",
+      "font": {
+        "name": "宋体",
+        "size": "12pt",
+        "color": "#000000"
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "first_line_indent": "2em",
+        "line_spacing": 1.5,
+        "space_after": "6pt"
+      }
+    },
+    
+    "Quote": {
+      "type": "paragraph",
+      "base_style": "Normal",
+      "font": {
+        "name": "楷体",
+        "size": "11pt",
+        "italic": true,
+        "color": "#595959"
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "left_indent": "2em",
+        "right_indent": "2em",
+        "space_before": "6pt",
+        "space_after": "6pt"
+      }
+    },
+    
+    "Strong Text": {
+      "type": "character",
+      "font": {
+        "bold": true,
+        "color": "#C00000"
+      }
+    },
+    
+    "Emphasis Text": {
+      "type": "character",
+      "font": {
+        "italic": true,
+        "color": "#0070C0"
+      }
+    },
+    
+    "Code": {
+      "type": "character",
+      "font": {
+        "name": "Consolas",
+        "size": "10pt",
+        "color": "#C7254E"
+      }
+    }
+  },
+  
+  "style_mapping": {
+    "标题 1": "Heading 1",
+    "标题 2": "Heading 2",
+    "标题 3": "Heading 3",
+    "正文": "Normal"
+  },
+  
+  "section_breaks": {
+    "sections": [
+      {
+        "after_paragraph": 2,
+        "type": "new_page",
+        "comment": "在标题页后添加分页符"
+      },
+      {
+        "after_paragraph": 7,
+        "type": "odd_page",
+        "comment": "第一章后添加奇数页分节符"
+      }
+    ]
+  },
+  
+  "toc_settings": {
+    "operation": "add",
+    "position": "after_title",
+    "title": "目录",
+    "title_style": "TOC Heading",
+    "levels": 3,
+    "tab_leader": "dots"
+  },
+  
+  "page_numbering": {
+    "format": "decimal",
+    "start_number": 1,
+    "position": "footer_center",
+    "show_on_first_page": false,
+    "different_first_page": true,
+    "prefix": "",
+    "suffix": ""
+  },
+  
+  "headers_footers": {
+    "different_first_page": true,
+    "different_odd_even": false,
+    "header": {
+      "text": "{document_title}",
+      "style": "Header",
+      "alignment": "center"
+    },
+    "footer": {
+      "text": "第 {page} 页",
+      "style": "Footer",
+      "alignment": "center"
+    },
+    "first_page_header": {
+      "text": "",
+      "clear_existing": true
+    },
+    "first_page_footer": {
+      "text": "",
+      "clear_existing": true
+    }
+  },
+  
+  "document_structure": {
+    "heading_levels": {
+      "rules": [
+        {
+          "from_level": 1,
+          "text_pattern": "第[一二三四五六七八九十]+章",
+          "new_level": 1
+        },
+        {
+          "from_level": 2,
+          "text_pattern": "\\d+\\.\\d+",
+          "new_level": 2
+        }
+      ]
+    }
+  },
+  
+  "content_modifications": {
+    "replacements": [
+      {
+        "find": "旧版本",
+        "replace": "新版本",
+        "options": {
+          "case_sensitive": false,
+          "whole_word": true
+        }
+      },
+      {
+        "find": "\\{date\\}",
+        "replace": "2024年1月",
+        "options": {
+          "use_regex": true
+        }
+      }
+    ],
+    
+    "insertions": [
+      {
+        "position": "beginning",
+        "content": "文档修订说明：本文档已根据最新标准进行格式化。\n",
+        "style": "Normal"
+      }
+    ],
+    
+    "formatting": [
+      {
+        "criteria": {
+          "text_contains": "重要",
+          "style_name": "Normal"
+        },
+        "format": {
+          "font_bold": true,
+          "font_color": "#FF0000"
+        }
+      }
+    ]
+  },
+  
+  "batch_operations": [
+    {
+      "type": "apply_style_to_all",
+      "style_name": "Normal",
+      "condition": {
+        "style_name": "正文"
+      }
+    },
+    {
+      "type": "replace_style",
+      "old_style": "Body Text",
+      "new_style": "Normal"
+    }
+  ],
+  
+  "selective_modifications": {
+    "modifications": [
+      {
+        "target": "paragraphs",
+        "criteria": {
+          "style": "Normal",
+          "text_regex": "^\\d+\\."
+        },
+        "actions": {
+          "set_style": "List Number"
+        }
+      },
+      {
+        "target": "paragraphs",
+        "criteria": {
+          "text_contains": "注："
+        },
+        "actions": {
+          "set_style": "Quote",
+          "add_prefix": "【",
+          "add_suffix": "】"
+        }
+      }
+    ]
+  },
+  
+  "preserve_formatting": false,
+  
+  "processing_options": {
+    "update_fields": true,
+    "update_toc": true,
+    "clean_empty_paragraphs": true,
+    "normalize_spaces": true,
+    "fix_numbering": true
+  }
+}

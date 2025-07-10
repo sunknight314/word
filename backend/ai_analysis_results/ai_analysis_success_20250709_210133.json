@@ -1,0 +1,96 @@
+{
+  "timestamp": "2025-07-09T21:01:33.418966",
+  "model": "deepseek-ai/DeepSeek-V3",
+  "status": "success",
+  "input_data": {
+    "total_paragraphs": 8,
+    "paragraphs": [
+      {
+        "paragraph_number": 2,
+        "preview_text": "表 1恶趣味驱蚊器",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 4,
+        "preview_text": "1",
+        "full_length": 1
+      },
+      {
+        "paragraph_number": 5,
+        "preview_text": "2",
+        "full_length": 1
+      },
+      {
+        "paragraph_number": 6,
+        "preview_text": "3",
+        "full_length": 1
+      },
+      {
+        "paragraph_number": 12,
+        "preview_text": "文本文本",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 13,
+        "preview_text": "文本文本",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 15,
+        "preview_text": "文本文本",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 17,
+        "preview_text": "文本文本",
+        "full_length": 4
+      }
+    ]
+  },
+  "analysis_result": {
+    "success": true,
+    "analysis_result": [
+      {
+        "paragraph_number": 2,
+        "type": "table_caption"
+      },
+      {
+        "paragraph_number": 4,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 5,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 6,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 12,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 13,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 15,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 17,
+        "type": "paragraph"
+      }
+    ],
+    "raw_response": "```json\n{\n  \"analysis_result\": [\n    {\n      \"paragraph_number\": 2,\n      \"type\": \"table_caption\"\n    },\n    {\n      \"paragraph_number\": 4,\n      \"type\": \"other\"\n    },\n    {\n      \"paragraph_number\": 5,\n      \"type\": \"other\"\n    },\n    {\n      \"paragraph_number\": 6,\n      \"type\": \"other\"\n    },\n    {\n      \"paragraph_number\": 12,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 13,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 15,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 17,\n      \"type\": \"paragraph\"\n    }\n  ]\n}\n```",
+    "model_info": {
+      "model": "deepseek-ai/DeepSeek-V3",
+      "usage": {
+        "prompt_tokens": 480,
+        "completion_tokens": 168,
+        "total_tokens": 648
+      }
+    }
+  }
+}

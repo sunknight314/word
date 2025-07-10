@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import JsonDisplay from './JsonDisplay';
+import DocumentOutlineViewer from './DocumentOutlineViewer';
 import './SectionComponents.css';
 
 // 类型名称转换
@@ -11,11 +11,24 @@ const getTypeName = (type: string): string => {
     'heading3': '三级标题',
     'heading4': '四级标题',
     'paragraph': '正文段落',
+    'abstract_title_cn': '中文摘要标题',
+    'abstract_title_en': '英文摘要标题',
+    'figure_caption': '图片标题',
+    'table_caption': '表格标题',
     'list': '列表项',
     'quote': '引用',
     'other': '其他'
   };
   return typeNames[type] || type;
+};
+
+// 判断是否为标题类型
+const isTitleType = (type: string): boolean => {
+  const titleTypes = [
+    'title', 'heading1', 'heading2', 'heading3', 'heading4',
+    'abstract_title_cn', 'abstract_title_en'
+  ];
+  return titleTypes.includes(type);
 };
 
 interface AnalysisSummary {
@@ -25,8 +38,25 @@ interface AnalysisSummary {
   type_distribution: { [key: string]: number };
 }
 
+interface ParagraphAnalysis {
+  paragraph_number: number;
+  type: string;
+  preview_text?: string;
+}
+
 interface ParseData {
   analysis_summary?: AnalysisSummary;
+  analysis_result?: ParagraphAnalysis[];
+  document_info?: {
+    total_paragraphs: number;
+    preview_length: number;
+    [key: string]: any;
+  };
+  paragraphs?: Array<{
+    paragraph_number: number;
+    preview_text: string;
+    [key: string]: any;
+  }>;
   [key: string]: any;
 }
 
@@ -129,47 +159,32 @@ const SourceFileSection: React.FC<SourceFileSectionProps> = ({ onComplete }) => 
 
         {parseData && (
           <div className="result-area">
-            {/* 显示分析摘要 */}
-            {parseData.analysis_summary && (
-              <div className="analysis-summary">
-                <h4>📊 AI分析摘要</h4>
-                <div className="summary-grid">
-                  <div className="summary-item">
-                    <span className="label">总段落数：</span>
-                    <span className="value">{parseData.analysis_summary.total_paragraphs}</span>
-                  </div>
-                  <div className="summary-item">
-                    <span className="label">平均置信度：</span>
-                    <span className="value">{parseData.analysis_summary.average_confidence}</span>
-                  </div>
-                  <div className="summary-item">
-                    <span className="label">文档结构：</span>
-                    <span className="value">{parseData.analysis_summary.structure_detected}</span>
-                  </div>
+            {/* 处理状态 */}
+            <div className="parse-status">
+              {parseData.success ? (
+                <div className="success-indicator">
+                  ✅ 文档解析成功
+                  {parseData.processing_info?.model_config && (
+                    <span className="model-info">
+                      (模型: {parseData.processing_info.model_config})
+                    </span>
+                  )}
                 </div>
-                
-                {/* 段落类型分布 */}
-                <div className="type-distribution">
-                  <h5>段落类型分布：</h5>
-                  <div className="type-grid">
-                    {Object.entries(parseData.analysis_summary.type_distribution).map(([type, count]: [string, any]) => (
-                      <div key={type} className="type-item">
-                        <span className="type-name">{getTypeName(type)}</span>
-                        <span className="type-count">{count}个</span>
-                      </div>
-                    ))}
-                  </div>
+              ) : (
+                <div className="error-indicator">
+                  ❌ 文档解析失败: {parseData.error}
                 </div>
-              </div>
-            )}
-            
-            <JsonDisplay 
-              data={parseData} 
-              title="完整解析结果 (JSON)" 
-            />
-            <div className="completion-indicator">
-              ✅ AI源文件解析完成
+              )}
             </div>
+
+            {/* 使用DocumentOutlineViewer组件展示目录 */}
+            {parseData.analysis_result && parseData.paragraphs && (
+              <DocumentOutlineViewer
+                analysisResult={parseData.analysis_result}
+                paragraphs={parseData.paragraphs}
+                documentInfo={parseData.document_info}
+              />
+            )}
           </div>
         )}
       </div>

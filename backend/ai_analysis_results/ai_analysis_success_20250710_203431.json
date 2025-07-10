@@ -1,0 +1,2343 @@
+{
+  "timestamp": "2025-07-10T20:34:31.156291",
+  "model": "deepseek-ai/DeepSeek-V3",
+  "status": "success",
+  "input_data": {
+    "total_paragraphs": 258,
+    "paragraphs": [
+      {
+        "paragraph_number": 1,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 4,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 7,
+        "preview_text": "",
+        "full_length": 0
+      },
+      {
+        "paragraph_number": 10,
+        "preview_text": "西安电子科技大学",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 11,
+        "preview_text": "学位论文独创性（或创新性）声明",
+        "full_length": 15
+      },
+      {
+        "paragraph_number": 13,
+        "preview_text": "秉承学校严谨的学风和优良的科学道德，本人...",
+        "full_length": 181
+      },
+      {
+        "paragraph_number": 14,
+        "preview_text": "学位论文若有不实之处，本人承担一切法律责...",
+        "full_length": 22
+      },
+      {
+        "paragraph_number": 16,
+        "preview_text": "本人签名：               ...",
+        "full_length": 40
+      },
+      {
+        "paragraph_number": 25,
+        "preview_text": "西安电子科技大学",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 26,
+        "preview_text": "关于论文使用授权的说明",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 28,
+        "preview_text": "本人完全了解西安电子科技大学有关保留和使...",
+        "full_length": 170
+      },
+      {
+        "paragraph_number": 29,
+        "preview_text": "保密的学位论文在   年解密后适用本授权...",
+        "full_length": 22
+      },
+      {
+        "paragraph_number": 31,
+        "preview_text": "本人签名：               ...",
+        "full_length": 38
+      },
+      {
+        "paragraph_number": 33,
+        "preview_text": "日    期：             ...",
+        "full_length": 42
+      },
+      {
+        "paragraph_number": 37,
+        "preview_text": "摘要",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 38,
+        "preview_text": "摘要是学位论文的内容不加注释和评论的简短...",
+        "full_length": 201
+      },
+      {
+        "paragraph_number": 39,
+        "preview_text": "中文摘要格式要求为：宋体小四、两端对齐、...",
+        "full_length": 53
+      },
+      {
+        "paragraph_number": 40,
+        "preview_text": "英文摘要格式要求为：Times New ...",
+        "full_length": 74
+      },
+      {
+        "paragraph_number": 42,
+        "preview_text": "关 键 词：XXX， XXX， XXX，...",
+        "full_length": 29
+      },
+      {
+        "paragraph_number": 66,
+        "preview_text": "ABSTRACT",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 67,
+        "preview_text": "The Abstract is a br...",
+        "full_length": 737
+      },
+      {
+        "paragraph_number": 69,
+        "preview_text": "The format of the Ch...",
+        "full_length": 207
+      },
+      {
+        "paragraph_number": 71,
+        "preview_text": "The format of the En...",
+        "full_length": 243
+      },
+      {
+        "paragraph_number": 73,
+        "preview_text": "Keywords: XXX, XXX, ...",
+        "full_length": 33
+      },
+      {
+        "paragraph_number": 90,
+        "preview_text": "插图索引",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 91,
+        "preview_text": "图序号  插图示例\tX",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 123,
+        "preview_text": "表格索引",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 124,
+        "preview_text": "表格序号  表格示例\tX",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 164,
+        "preview_text": "符号对照表",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 165,
+        "preview_text": "符号                  ...",
+        "full_length": 30
+      },
+      {
+        "paragraph_number": 166,
+        "preview_text": "XXX                 ...",
+        "full_length": 31
+      },
+      {
+        "paragraph_number": 167,
+        "preview_text": "XXX                 ...",
+        "full_length": 31
+      },
+      {
+        "paragraph_number": 168,
+        "preview_text": "XXX                 ...",
+        "full_length": 31
+      },
+      {
+        "paragraph_number": 199,
+        "preview_text": "缩略语对照表",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 200,
+        "preview_text": "缩略语     英文全称        ...",
+        "full_length": 30
+      },
+      {
+        "paragraph_number": 201,
+        "preview_text": "XXX        XXX      ...",
+        "full_length": 35
+      },
+      {
+        "paragraph_number": 202,
+        "preview_text": "XXX        XXX      ...",
+        "full_length": 35
+      },
+      {
+        "paragraph_number": 203,
+        "preview_text": "XXX        XXX      ...",
+        "full_length": 35
+      },
+      {
+        "paragraph_number": 234,
+        "preview_text": "目录",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 235,
+        "preview_text": "摘要\tI",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 236,
+        "preview_text": "ABSTRACT\tIII",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 237,
+        "preview_text": "插图索引\tV",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 238,
+        "preview_text": "表格索引\tVII",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 239,
+        "preview_text": "符号对照表\tIX",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 240,
+        "preview_text": "缩略语对照表\tXI",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 241,
+        "preview_text": "第一章\t研究生学位论文撰写的总体要求\t1",
+        "full_length": 20
+      },
+      {
+        "paragraph_number": 242,
+        "preview_text": "第二章\t研究生学位论文撰写的内容要求\t3",
+        "full_length": 20
+      },
+      {
+        "paragraph_number": 243,
+        "preview_text": "2.1\t封面\t3",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 244,
+        "preview_text": "2.2\t题名页\t3",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 245,
+        "preview_text": "2.3\t声明\t5",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 246,
+        "preview_text": "2.4\t摘要\t5",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 247,
+        "preview_text": "2.5\t插图索引\t5",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 248,
+        "preview_text": "2.6\t表格索引\t6",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 249,
+        "preview_text": "2.7\t符号对照表\t6",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 250,
+        "preview_text": "2.8\t缩略语对照表\t6",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 251,
+        "preview_text": "2.9\t目录\t6",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 252,
+        "preview_text": "2.10\t正文\t6",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 253,
+        "preview_text": "2.10.1\t绪论\t7",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 254,
+        "preview_text": "2.10.2\t各章节\t7",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 255,
+        "preview_text": "2.10.3\t结论\t8",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 256,
+        "preview_text": "2.11\t参考文献\t8",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 257,
+        "preview_text": "2.12\t致谢\t9",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 258,
+        "preview_text": "2.13\t作者简介\t9",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 259,
+        "preview_text": "2.14\t其他\t10",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 260,
+        "preview_text": "第三章\t研究生学位论文的编辑、打印、装订...",
+        "full_length": 25
+      },
+      {
+        "paragraph_number": 261,
+        "preview_text": "3.1\t学位论文封面的编辑和打印要求\t1...",
+        "full_length": 21
+      },
+      {
+        "paragraph_number": 262,
+        "preview_text": "3.2\t学位论文的版面设置要求\t11",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 263,
+        "preview_text": "3.3\t学位论文的打印、装订要求\t11",
+        "full_length": 19
+      },
+      {
+        "paragraph_number": 264,
+        "preview_text": "3.4\t其他说明\t11",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 265,
+        "preview_text": "第四章\t图、表、公式示例\t13",
+        "full_length": 15
+      },
+      {
+        "paragraph_number": 266,
+        "preview_text": "参考文献\t15",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 267,
+        "preview_text": "致谢\t19",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 268,
+        "preview_text": "作者简介\t21",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 289,
+        "preview_text": "研究生学位论文撰写的总体要求",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 290,
+        "preview_text": "研究生学位论文必须是学位申请者本人在导师...",
+        "full_length": 128
+      },
+      {
+        "paragraph_number": 291,
+        "preview_text": "研究生学位论文中使用的术语、符号、代号必...",
+        "full_length": 76
+      },
+      {
+        "paragraph_number": 324,
+        "preview_text": "研究生学位论文撰写的内容要求",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 325,
+        "preview_text": "我校研究生学位论文包括以下几个部分：",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 326,
+        "preview_text": "封面",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 327,
+        "preview_text": "（1）题目：题目是以最恰当、最简明的词语...",
+        "full_length": 87
+      },
+      {
+        "paragraph_number": 328,
+        "preview_text": "题目位于确定位置的文本框中，文本框格式为...",
+        "full_length": 170
+      },
+      {
+        "paragraph_number": 329,
+        "preview_text": "（2）责任者姓名：包括论文作者姓名、指导...",
+        "full_length": 108
+      },
+      {
+        "paragraph_number": 330,
+        "preview_text": "（3）申请学位类别：按照学科门类和学位层...",
+        "full_length": 48
+      },
+      {
+        "paragraph_number": 331,
+        "preview_text": "作者姓名、指导教师姓名职称、申请学位类别...",
+        "full_length": 205
+      },
+      {
+        "paragraph_number": 332,
+        "preview_text": "题名页",
+        "full_length": 3
+      },
+      {
+        "paragraph_number": 333,
+        "preview_text": "题名页包括中文题名页和英文题名页，主要由...",
+        "full_length": 197
+      },
+      {
+        "paragraph_number": 334,
+        "preview_text": "（1）学校代码：指本单位编号，我校代码是...",
+        "full_length": 26
+      },
+      {
+        "paragraph_number": 335,
+        "preview_text": "（2）分类号：指在《中国图书资料分类法》...",
+        "full_length": 35
+      },
+      {
+        "paragraph_number": 336,
+        "preview_text": "（3）学号：按照入学时研究生院编制的统一...",
+        "full_length": 25
+      },
+      {
+        "paragraph_number": 337,
+        "preview_text": "（4）密级：密级由导师确定，分为公开和秘...",
+        "full_length": 24
+      },
+      {
+        "paragraph_number": 338,
+        "preview_text": "学校代码和分类号位于确定位置的文本框中，...",
+        "full_length": 292
+      },
+      {
+        "paragraph_number": 339,
+        "preview_text": "学位论文题目位于确定位置的文本框中，文本...",
+        "full_length": 151
+      },
+      {
+        "paragraph_number": 340,
+        "preview_text": "作者姓名、指导教师姓名职称、一级学科、二...",
+        "full_length": 207
+      },
+      {
+        "paragraph_number": 341,
+        "preview_text": "英文题名页中的学科填写一级学科（专业学位...",
+        "full_length": 445
+      },
+      {
+        "paragraph_number": 342,
+        "preview_text": "声明",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 343,
+        "preview_text": "声明是对学位论文创新性和使用授权的声明和...",
+        "full_length": 50
+      },
+      {
+        "paragraph_number": 344,
+        "preview_text": "声明部分标题字体为宋体，字号为四号加粗，...",
+        "full_length": 126
+      },
+      {
+        "paragraph_number": 345,
+        "preview_text": "摘要",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 346,
+        "preview_text": "摘要是学位论文的内容不加注释和评论的简短...",
+        "full_length": 201
+      },
+      {
+        "paragraph_number": 347,
+        "preview_text": "中文摘要标题字体为黑体，字号为三号，居中...",
+        "full_length": 50
+      },
+      {
+        "paragraph_number": 348,
+        "preview_text": "正文字体为宋体，字号为小四号，行距为固定...",
+        "full_length": 40
+      },
+      {
+        "paragraph_number": 349,
+        "preview_text": "关键词和正文之间空一行，关键词字体为宋体...",
+        "full_length": 32
+      },
+      {
+        "paragraph_number": 350,
+        "preview_text": "。英文摘要标题字体为Times New ...",
+        "full_length": 64
+      },
+      {
+        "paragraph_number": 351,
+        "preview_text": "正文的每一段落首行不空格，段落与段落之间...",
+        "full_length": 111
+      },
+      {
+        "paragraph_number": 352,
+        "preview_text": "插图索引",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 353,
+        "preview_text": "学位论文中插图的目录索引。插图索引标题字...",
+        "full_length": 105
+      },
+      {
+        "paragraph_number": 354,
+        "preview_text": "表格索引",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 355,
+        "preview_text": "学位论文中表格的目录索引。表格索引标题字...",
+        "full_length": 105
+      },
+      {
+        "paragraph_number": 356,
+        "preview_text": "符号对照表",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 357,
+        "preview_text": "学位论文中符号代表的意义及单位（或量纲）...",
+        "full_length": 102
+      },
+      {
+        "paragraph_number": 358,
+        "preview_text": "缩略语对照表",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 359,
+        "preview_text": "学位论文中缩略语代表意义的说明。缩略语按...",
+        "full_length": 139
+      },
+      {
+        "paragraph_number": 360,
+        "preview_text": "目录",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 361,
+        "preview_text": "目录是学位论文的提纲，是论文各组成部分的...",
+        "full_length": 174
+      },
+      {
+        "paragraph_number": 362,
+        "preview_text": "目录标题字体为黑体，字号为三号，居中排列...",
+        "full_length": 87
+      },
+      {
+        "paragraph_number": 363,
+        "preview_text": "正文",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 364,
+        "preview_text": "正文是学位论文的主体和核心部分。",
+        "full_length": 16
+      },
+      {
+        "paragraph_number": 365,
+        "preview_text": "正文的一级标题居中排列，字体为宋体，字号...",
+        "full_length": 51
+      },
+      {
+        "paragraph_number": 366,
+        "preview_text": "二级标题不缩进，字体为宋体加粗，字号为小...",
+        "full_length": 50
+      },
+      {
+        "paragraph_number": 367,
+        "preview_text": "三级标题缩进2字符，字体为宋体，字号为四...",
+        "full_length": 50
+      },
+      {
+        "paragraph_number": 368,
+        "preview_text": "正文内容字体为宋体，字号为小四号，行距为...",
+        "full_length": 55
+      },
+      {
+        "paragraph_number": 369,
+        "preview_text": "绪论",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 370,
+        "preview_text": "绪论是学位论文主体部分的开端，切忌与摘要...",
+        "full_length": 149
+      },
+      {
+        "paragraph_number": 371,
+        "preview_text": "各章节",
+        "full_length": 3
+      },
+      {
+        "paragraph_number": 372,
+        "preview_text": "各章节一般由标题、文字叙述、图、表、公式...",
+        "full_length": 120
+      },
+      {
+        "paragraph_number": 373,
+        "preview_text": "（1）图：包括曲线图、示意图、流程图、框...",
+        "full_length": 229
+      },
+      {
+        "paragraph_number": 374,
+        "preview_text": "（2）表：包括分类项目和数据，一般要求分...",
+        "full_length": 246
+      },
+      {
+        "paragraph_number": 375,
+        "preview_text": "（3）公式：正文中的公式、算式、方程式等...",
+        "full_length": 215
+      },
+      {
+        "paragraph_number": 376,
+        "preview_text": "（4）计量单位：学位论文中出现的计量单位...",
+        "full_length": 58
+      },
+      {
+        "paragraph_number": 377,
+        "preview_text": "结论",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 378,
+        "preview_text": "结论是学位论文最终和总体的结论，不是正文...",
+        "full_length": 92
+      },
+      {
+        "paragraph_number": 379,
+        "preview_text": "参考文献",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 380,
+        "preview_text": "参考文献是文中引用的有具体文字来源的文献...",
+        "full_length": 372
+      },
+      {
+        "paragraph_number": 381,
+        "preview_text": "（1）期刊(报纸)参考文献：[序号] 主...",
+        "full_length": 64
+      },
+      {
+        "paragraph_number": 382,
+        "preview_text": "（2）专著参考文献：[序号] 主要责任者...",
+        "full_length": 59
+      },
+      {
+        "paragraph_number": 383,
+        "preview_text": "（3）专利参考文献：[序号] 主要责任者...",
+        "full_length": 50
+      },
+      {
+        "paragraph_number": 384,
+        "preview_text": "（4）技术标准参考文献：[序号] 起草责...",
+        "full_length": 69
+      },
+      {
+        "paragraph_number": 385,
+        "preview_text": "（5）电子参考文献：[序号] 主要责任者...",
+        "full_length": 50
+      },
+      {
+        "paragraph_number": 386,
+        "preview_text": "（6）会议论文集参考文献：[序号] 编者...",
+        "full_length": 62
+      },
+      {
+        "paragraph_number": 387,
+        "preview_text": "（7）学位论文参考文献：[序号]  主要...",
+        "full_length": 53
+      },
+      {
+        "paragraph_number": 388,
+        "preview_text": "（8）国际、国家标准参考文献：[序号] ...",
+        "full_length": 54
+      },
+      {
+        "paragraph_number": 389,
+        "preview_text": "（9）报告类参考文献：[序号] 主要责任...",
+        "full_length": 54
+      },
+      {
+        "paragraph_number": 390,
+        "preview_text": "参考文献著录中的文献类别代码：",
+        "full_length": 15
+      },
+      {
+        "paragraph_number": 391,
+        "preview_text": "（1）普通图书：M",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 392,
+        "preview_text": "（2）会议录：C",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 393,
+        "preview_text": "（3）汇编：G",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 394,
+        "preview_text": "（4）报纸：N",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 395,
+        "preview_text": "（5）期刊：J",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 396,
+        "preview_text": "（6）学位论文：D",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 397,
+        "preview_text": "（7）报告：R",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 398,
+        "preview_text": "（8）标准：S",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 399,
+        "preview_text": "（9）专利：P",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 400,
+        "preview_text": "（10）数据库：DB",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 401,
+        "preview_text": "（11）计算机程序：CP",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 402,
+        "preview_text": "（12）电子公告：EB",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 403,
+        "preview_text": "载体类型：",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 404,
+        "preview_text": "网络：OL",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 405,
+        "preview_text": "磁带：MT",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 406,
+        "preview_text": "磁盘：MK",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 407,
+        "preview_text": "光盘：CD",
+        "full_length": 5
+      },
+      {
+        "paragraph_number": 408,
+        "preview_text": "致谢",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 409,
+        "preview_text": "作者对完成论文提供帮助和支持的组织和个人...",
+        "full_length": 120
+      },
+      {
+        "paragraph_number": 410,
+        "preview_text": "作者简介",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 411,
+        "preview_text": "对作者的简要介绍，主要包括个人基本情况、...",
+        "full_length": 253
+      },
+      {
+        "paragraph_number": 412,
+        "preview_text": "其他",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 413,
+        "preview_text": "学位论文中如果需要注释，可作为脚注在页下...",
+        "full_length": 101
+      },
+      {
+        "paragraph_number": 418,
+        "preview_text": "研究生学位论文的编辑、打印、装订要求",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 419,
+        "preview_text": "学位论文封面的编辑和打印要求",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 420,
+        "preview_text": "学位论文的封面由研究生院按国家规定统一制...",
+        "full_length": 38
+      },
+      {
+        "paragraph_number": 421,
+        "preview_text": "学位论文的版面设置要求",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 422,
+        "preview_text": "（1）行间距：固定值20磅（题名页除外）...",
+        "full_length": 21
+      },
+      {
+        "paragraph_number": 423,
+        "preview_text": "（2）字符间距：标准。",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 424,
+        "preview_text": "（3）页眉设置：单面页码页眉标题为章节题...",
+        "full_length": 130
+      },
+      {
+        "paragraph_number": 425,
+        "preview_text": "（4）页码设置：学位论文的前置部分和主体...",
+        "full_length": 119
+      },
+      {
+        "paragraph_number": 426,
+        "preview_text": "（5）页面设置：为了便于装订，要求每页纸...",
+        "full_length": 90
+      },
+      {
+        "paragraph_number": 427,
+        "preview_text": "学位论文的打印、装订要求",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 428,
+        "preview_text": "（1）打印：学位论文必须用A4纸页面排版...",
+        "full_length": 26
+      },
+      {
+        "paragraph_number": 429,
+        "preview_text": "（2）装订：依次按照中文题名页、英文题名...",
+        "full_length": 175
+      },
+      {
+        "paragraph_number": 430,
+        "preview_text": "其他说明",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 431,
+        "preview_text": "本规定由研究生院负责解释，从申请2015...",
+        "full_length": 72
+      },
+      {
+        "paragraph_number": 461,
+        "preview_text": "图、表、公式示例",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 462,
+        "preview_text": "图：包括曲线图、示意图、流程图、框图等。...",
+        "full_length": 51
+      },
+      {
+        "paragraph_number": 463,
+        "preview_text": "每一个图应有简短确切的图名，连同图序号置...",
+        "full_length": 175
+      },
+      {
+        "paragraph_number": 464,
+        "preview_text": "图与正文之间一般应空一行。",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 467,
+        "preview_text": "插图示例",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 469,
+        "preview_text": "公式：正文中的公式、算式、方程式等必须编...",
+        "full_length": 58
+      },
+      {
+        "paragraph_number": 470,
+        "preview_text": "对于较长的公式，另起行居中横排，只可在符...",
+        "full_length": 154
+      },
+      {
+        "paragraph_number": 471,
+        "preview_text": "公式与正文之间一般应空一行。",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 475,
+        "preview_text": "表：包括分类项目和数据，一般要求分类项目...",
+        "full_length": 36
+      },
+      {
+        "paragraph_number": 476,
+        "preview_text": "分类项目横排中必须标明符号或单位，竖列的...",
+        "full_length": 86
+      },
+      {
+        "paragraph_number": 477,
+        "preview_text": "每一个表格应有简短确切的题名，连同表序号...",
+        "full_length": 107
+      },
+      {
+        "paragraph_number": 478,
+        "preview_text": "表格与正文之间一般应空一行。",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 479,
+        "preview_text": "表格示例",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 482,
+        "preview_text": "计量单位：学位论文中出现的计量单位一律采...",
+        "full_length": 55
+      },
+      {
+        "paragraph_number": 489,
+        "preview_text": "参考文献",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 490,
+        "preview_text": "普通图书示例：",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 491,
+        "preview_text": "广西壮族自治区林业厅. 广西自然保护区[...",
+        "full_length": 42
+      },
+      {
+        "paragraph_number": 492,
+        "preview_text": "蒋有绪, 郭泉水, 马娟等. 中国森林群...",
+        "full_length": 51
+      },
+      {
+        "paragraph_number": 493,
+        "preview_text": "唐绪军. 报业经济与报业经营[M] .北...",
+        "full_length": 44
+      },
+      {
+        "paragraph_number": 494,
+        "preview_text": "赵凯华, 罗蔚茵. 新概念物理教程: 力...",
+        "full_length": 44
+      },
+      {
+        "paragraph_number": 495,
+        "preview_text": "汪昂. (增补)本草备要[M]. 石印本...",
+        "full_length": 38
+      },
+      {
+        "paragraph_number": 496,
+        "preview_text": "CRAWFPRD W, GORMAN M...",
+        "full_length": 115
+      },
+      {
+        "paragraph_number": 497,
+        "preview_text": "International Federa...",
+        "full_length": 184
+      },
+      {
+        "paragraph_number": 498,
+        "preview_text": "O’BRIEN J A. Introdu...",
+        "full_length": 91
+      },
+      {
+        "paragraph_number": 499,
+        "preview_text": "ROOD H J. Logic and ...",
+        "full_length": 121
+      },
+      {
+        "paragraph_number": 501,
+        "preview_text": "论文集、会议录示例：",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 502,
+        "preview_text": "中国力学学会. 第3届全国实验流体力学学...",
+        "full_length": 48
+      },
+      {
+        "paragraph_number": 503,
+        "preview_text": "ROSENTHALL E M. Proc...",
+        "full_length": 149
+      },
+      {
+        "paragraph_number": 504,
+        "preview_text": "GANZHA V G, MAYR E W...",
+        "full_length": 227
+      },
+      {
+        "paragraph_number": 506,
+        "preview_text": "科技报告示例：",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 507,
+        "preview_text": "U. S. Department of ...",
+        "full_length": 219
+      },
+      {
+        "paragraph_number": 508,
+        "preview_text": "World Health Organiz...",
+        "full_length": 120
+      },
+      {
+        "paragraph_number": 510,
+        "preview_text": "学位论文示例：",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 511,
+        "preview_text": "张志祥. 间断动力系统的随机扰动及其在守...",
+        "full_length": 52
+      },
+      {
+        "paragraph_number": 512,
+        "preview_text": "CALMS R B. Infrared ...",
+        "full_length": 98
+      },
+      {
+        "paragraph_number": 514,
+        "preview_text": "专利文献示例：",
+        "full_length": 7
+      },
+      {
+        "paragraph_number": 515,
+        "preview_text": "刘加林. 多功能一次性压舌板: 中国, ...",
+        "full_length": 47
+      },
+      {
+        "paragraph_number": 516,
+        "preview_text": "河北绿洲生态环境科技有限公司.一种荒漠化...",
+        "full_length": 158
+      },
+      {
+        "paragraph_number": 517,
+        "preview_text": "KOSEKI A, MOMOSE H, ...",
+        "full_length": 198
+      },
+      {
+        "paragraph_number": 519,
+        "preview_text": "专著中析出的文献示例：",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 520,
+        "preview_text": "国家标准局信息分类编码研究所. GB/T...",
+        "full_length": 100
+      },
+      {
+        "paragraph_number": 521,
+        "preview_text": "韩吉人. 论职工教育的特点[G]//中国...",
+        "full_length": 64
+      },
+      {
+        "paragraph_number": 522,
+        "preview_text": "BUSECK P R, NORD G L...",
+        "full_length": 172
+      },
+      {
+        "paragraph_number": 523,
+        "preview_text": "FOURNEY M E. Advance...",
+        "full_length": 293
+      },
+      {
+        "paragraph_number": 524,
+        "preview_text": "MARTIN G.. Control o...",
+        "full_length": 179
+      },
+      {
+        "paragraph_number": 526,
+        "preview_text": "期刊中析出的文献示例：",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 527,
+        "preview_text": "李炳穆. 理想的图书馆员和信息专家的素质...",
+        "full_length": 48
+      },
+      {
+        "paragraph_number": 528,
+        "preview_text": "陶仁骥. 密码学与数学[J]. 自然杂志...",
+        "full_length": 36
+      },
+      {
+        "paragraph_number": 529,
+        "preview_text": "习亚洲地质图编目组. 亚洲地层与地质历史...",
+        "full_length": 50
+      },
+      {
+        "paragraph_number": 530,
+        "preview_text": "DES MARAIS D J, STRA...",
+        "full_length": 161
+      },
+      {
+        "paragraph_number": 531,
+        "preview_text": "HEWITT J A. Technica...",
+        "full_length": 91
+      },
+      {
+        "paragraph_number": 533,
+        "preview_text": "报纸中析出的文献示例：",
+        "full_length": 11
+      },
+      {
+        "paragraph_number": 534,
+        "preview_text": "丁文祥. 数字革命与竞争国际化[N]. ...",
+        "full_length": 42
+      },
+      {
+        "paragraph_number": 535,
+        "preview_text": "张田勤. 罪犯DNA库与生命伦理学计划[...",
+        "full_length": 45
+      },
+      {
+        "paragraph_number": 537,
+        "preview_text": "电子文献(包括专著或连续出版物中析出的电...",
+        "full_length": 27
+      },
+      {
+        "paragraph_number": 538,
+        "preview_text": "江向东. 互联网环境下的信息处理与图书管...",
+        "full_length": 68
+      },
+      {
+        "paragraph_number": 539,
+        "preview_text": "萧钮. 出版业信息化迈人快车道[EB/O...",
+        "full_length": 49
+      },
+      {
+        "paragraph_number": 540,
+        "preview_text": "CHRISTINE M. Plant p...",
+        "full_length": 109
+      },
+      {
+        "paragraph_number": 541,
+        "preview_text": "METCALF S W. The Tor...",
+        "full_length": 215
+      },
+      {
+        "paragraph_number": 542,
+        "preview_text": "TURCOTTE D L. Fracta...",
+        "full_length": 121
+      },
+      {
+        "paragraph_number": 543,
+        "preview_text": "Scitor Corporation. ...",
+        "full_length": 92
+      },
+      {
+        "paragraph_number": 561,
+        "preview_text": "致谢",
+        "full_length": 2
+      },
+      {
+        "paragraph_number": 562,
+        "preview_text": "本论文是在导师的悉心指导下完成的，从论文...",
+        "full_length": 76
+      },
+      {
+        "paragraph_number": 595,
+        "preview_text": "作者简介",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 596,
+        "preview_text": "基本情况",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 597,
+        "preview_text": "张三，男，陕西西安人，1982年8月出生...",
+        "full_length": 48
+      },
+      {
+        "paragraph_number": 598,
+        "preview_text": "教育背景",
+        "full_length": 4
+      },
+      {
+        "paragraph_number": 599,
+        "preview_text": "2001.08～2005.07西安电子科...",
+        "full_length": 36
+      },
+      {
+        "paragraph_number": 600,
+        "preview_text": "2008.08～       西安电子科...",
+        "full_length": 41
+      },
+      {
+        "paragraph_number": 601,
+        "preview_text": "攻读硕士学位期间的研究成果",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 602,
+        "preview_text": "发表学术论文",
+        "full_length": 6
+      },
+      {
+        "paragraph_number": 603,
+        "preview_text": "XXX, XXX, XXX. Rapid...",
+        "full_length": 139
+      },
+      {
+        "paragraph_number": 604,
+        "preview_text": "XXX, XXX, XXX. 基于快速成...",
+        "full_length": 88
+      },
+      {
+        "paragraph_number": 605,
+        "preview_text": "申请（授权）专利",
+        "full_length": 8
+      },
+      {
+        "paragraph_number": 606,
+        "preview_text": "XXX, XXX, XXX等. 专利名称...",
+        "full_length": 38
+      },
+      {
+        "paragraph_number": 607,
+        "preview_text": "参与科研项目及获奖",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 608,
+        "preview_text": "XXX项目, 项目名称, 起止时间, 完...",
+        "full_length": 30
+      },
+      {
+        "paragraph_number": 609,
+        "preview_text": "XXX, XXX, XXX等. 科研项目...",
+        "full_length": 41
+      }
+    ]
+  },
+  "analysis_result": {
+    "success": true,
+    "analysis_result": [
+      {
+        "paragraph_number": 1,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 4,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 7,
+        "type": "other"
+      },
+      {
+        "paragraph_number": 10,
+        "type": "title"
+      },
+      {
+        "paragraph_number": 11,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 13,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 14,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 16,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 25,
+        "type": "title"
+      },
+      {
+        "paragraph_number": 26,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 28,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 29,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 31,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 33,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 37,
+        "type": "abstract_title_cn"
+      },
+      {
+        "paragraph_number": 38,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 39,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 40,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 42,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 66,
+        "type": "abstract_title_en"
+      },
+      {
+        "paragraph_number": 67,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 69,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 71,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 73,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 90,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 91,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 123,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 124,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 164,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 165,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 166,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 167,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 168,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 199,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 200,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 201,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 202,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 203,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 234,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 235,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 236,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 237,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 238,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 239,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 240,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 241,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 242,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 243,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 244,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 245,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 246,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 247,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 248,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 249,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 250,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 251,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 252,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 253,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 254,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 255,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 256,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 257,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 258,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 259,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 260,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 261,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 262,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 263,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 264,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 265,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 266,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 267,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 268,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 289,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 290,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 291,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 324,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 325,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 326,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 327,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 328,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 329,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 330,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 331,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 332,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 333,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 334,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 335,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 336,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 337,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 338,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 339,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 340,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 341,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 342,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 343,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 344,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 345,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 346,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 347,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 348,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 349,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 350,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 351,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 352,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 353,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 354,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 355,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 356,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 357,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 358,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 359,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 360,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 361,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 362,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 363,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 364,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 365,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 366,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 367,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 368,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 369,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 370,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 371,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 372,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 373,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 374,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 375,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 376,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 377,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 378,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 379,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 380,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 381,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 382,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 383,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 384,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 385,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 386,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 387,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 388,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 389,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 390,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 391,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 392,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 393,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 394,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 395,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 396,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 397,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 398,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 399,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 400,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 401,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 402,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 403,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 404,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 405,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 406,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 407,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 408,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 409,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 410,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 411,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 412,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 413,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 418,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 419,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 420,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 421,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 422,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 423,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 424,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 425,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 426,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 427,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 428,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 429,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 430,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 431,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 461,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 462,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 463,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 464,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 467,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 469,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 470,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 471,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 475,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 476,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 477,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 478,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 479,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 482,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 489,
+        "type": "heading1"
+      },
+      {
+        "paragraph_number": 490,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 491,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 492,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 493,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 494,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 495,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 496,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 497,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 498,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 499,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 501,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 502,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 503,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 504,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 506,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 507,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 508,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 510,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 511,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 512,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 514,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 515,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 516,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 517,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 519,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 520,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 521,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 522,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 523,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 524,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 526,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 527,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 528,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 529,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 530,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 531,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 533,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 534,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 535,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 537,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 538,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 539,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 540,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 541,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 542,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 543,
+        "type": "quote"
+      },
+      {
+        "paragraph_number": 561,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 562,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 595,
+        "type": "heading2"
+      },
+      {
+        "paragraph_number": 596,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 597,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 598,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 599,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 600,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 601,
+        "type": "heading3"
+      },
+      {
+        "paragraph_number": 602,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 603,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 604,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 605,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 606,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 607,
+        "type": "heading4"
+      },
+      {
+        "paragraph_number": 608,
+        "type": "paragraph"
+      },
+      {
+        "paragraph_number": 609,
+        "type": "paragraph"
+      }
+    ],
+    "total_paragraphs": 258,
+    "batch_info": {
+      "total_batches": 3,
+      "batch_size": 100,
+      "overlap_size": 10
+    }
+  }
+}

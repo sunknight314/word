@@ -1,7 +1,7 @@
 .upload-page {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 3rem;
   min-height: calc(100vh - 120px);
 }
 
@@ -30,18 +30,25 @@
 
 @media (min-width: 1200px) {
   .upload-page {
-    max-width: 1200px;
+    max-width: 1600px;
   }
   
   .sections-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    gap: 2rem;
+    gap: 2.5rem;
   }
   
   .sections-container > :nth-child(3) {
     grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1600px) {
+  .upload-page {
+    max-width: 1800px;
+    padding: 2rem 4rem;
   }
 }
 

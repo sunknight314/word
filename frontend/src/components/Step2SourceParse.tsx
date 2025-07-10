@@ -1,6 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import JsonDisplay from './JsonDisplay';
+import DocumentOutlineViewer from './DocumentOutlineViewer';
 import './StepComponents.css';
+
+interface ParseData {
+  success: boolean;
+  error?: string;
+  processing_info?: {
+    model_config?: string;
+    [key: string]: any;
+  };
+  analysis_result?: Array<{
+    paragraph_number: number;
+    type: string;
+  }>;
+  paragraphs?: Array<{
+    paragraph_number: number;
+    preview_text: string;
+  }>;
+  document_info?: {
+    total_paragraphs: number;
+    [key: string]: any;
+  };
+  [key: string]: any;
+}
 
 interface Step2Props {
   fileId: string;
@@ -9,7 +31,7 @@ interface Step2Props {
 }
 
 const Step2SourceParse: React.FC<Step2Props> = ({ fileId, filename, onParseSuccess }) => {
-  const [parseData, setParseData] = useState<any>(null);
+  const [parseData, setParseData] = useState<ParseData | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleParse = async () => {
@@ -43,9 +65,9 @@ const Step2SourceParse: React.FC<Step2Props> = ({ fileId, filename, onParseSucce
             {/* 显示处理状态 */}
             <div className="result-status">
               {parseData.success ? (
-                <span className="success-indicator">✅ 段落分析成功</span>
+                <span className="success-indicator">✅ 文档解析成功</span>
               ) : (
-                <span className="error-indicator">❌ 段落分析失败: {parseData.error}</span>
+                <span className="error-indicator">❌ 文档解析失败: {parseData.error}</span>
               )}
               {parseData.processing_info?.model_config && (
                 <span className="model-info">
@@ -54,19 +76,14 @@ const Step2SourceParse: React.FC<Step2Props> = ({ fileId, filename, onParseSucce
               )}
             </div>
             
-            {/* 显示段落分析JSON */}
-            {parseData.paragraph_analysis_json && (
-              <JsonDisplay 
-                data={parseData.paragraph_analysis_json} 
-                title="📋 段落类型分析结果 (JSON)" 
+            {/* 使用DocumentOutlineViewer展示文档目录 */}
+            {parseData.analysis_result && parseData.paragraphs && (
+              <DocumentOutlineViewer
+                analysisResult={parseData.analysis_result}
+                paragraphs={parseData.paragraphs}
+                documentInfo={parseData.document_info}
               />
             )}
-            
-            {/* 显示完整解析结果 */}
-            <JsonDisplay 
-              data={parseData} 
-              title="📄 完整源文件解析结果" 
-            />
           </div>
         )}
       </div>
