@@ -14,19 +14,30 @@ def get_paragraph_analysis_prompt(paragraphs_data: list) -> tuple:
     """
     system_prompt = """你是一个专业的Word文档段落分析专家。你的任务是分析Word文档中每个段落的类型和级别。
 
-分析标准：
-- title: 文档标题（最高级别）
-- heading1: 一级标题（第一章、1.等）
-- heading2: 二级标题（1.1、1.2等）
-- heading3: 三级标题（1.1.1等）
-- heading4: 四级标题或更低级别
-- paragraph: 正文段落
-- abstract_title_cn: 中文摘要标题（摘要、内容摘要等）
-- abstract_title_en: 英文摘要标题（Abstract、ABSTRACT等）
-- figure_caption: 图注（图1、图1-1、Figure 1等开头）
-- table_caption: 表注（表1、表1-1、Table 1等开头）
-- quote: 引用文本
-- other: 其他类型
+分析标准（使用标准样式名称）：
+- Title: 文档标题（最高级别）
+- Heading1: 一级标题（第一章、1.等）
+- Heading2: 二级标题（1.1、1.2等）
+- Heading3: 三级标题（1.1.1等）
+- Heading4: 四级标题或更低级别
+- Normal: 正文段落
+- FirstParagraph: 首行缩进段落（如章节开始的第一段）
+- AbstractTitleCN: 中文摘要标题（摘要、内容摘要等）
+- AbstractTitleEN: 英文摘要标题（Abstract、ABSTRACT等）
+- AbstractContentCN: 中文摘要内容
+- AbstractContentEN: 英文摘要内容
+- KeywordsCN: 中文关键词
+- KeywordsEN: 英文关键词
+- FigureCaption: 图题（图1、图1-1、Figure 1等开头）
+- TableCaption: 表题（表1、表1-1、Table 1等开头）
+- TOCTitle: 目录标题（目录、Contents等）
+- TOCItem: 目录项
+- ReferenceTitle: 参考文献标题
+- ReferenceItem: 参考文献条目
+- AcknowledgementTitle: 致谢标题
+- Quote: 引用文本
+- Code: 代码块
+- Other: 其他类型
 
 识别要点：
 1. 注意数字编号规律（第一章、1.1、（一）等）
@@ -34,18 +45,18 @@ def get_paragraph_analysis_prompt(paragraphs_data: list) -> tuple:
 3. 中文标题格式：第X章、X.X、（X）等
 4. 中文摘要标题识别：通常为"摘要"、"内容摘要"、"论文摘要"等，一般居中，无编号
 5. 英文摘要标题识别：通常为"Abstract"、"ABSTRACT"等，一般居中，无编号
-6. 图注识别：以"图"或"Figure"开头，后跟数字编号，如"图1-1 系统架构图"
-7. 表注识别：以"表"或"Table"开头，后跟数字编号，如"表2-3 实验数据"
-8. 摘要标题通常出现在文档前部，在标题之后、目录之前
-9. 图注和表注通常较短，且包含特定的编号格式
-10. 根据段落长度和内容判断类型
-11. 标题通常包含章节编号或关键词
+6. 图题识别：以"图"或"Figure"开头，后跟数字编号
+7. 表题识别：以"表"或"Table"开头，后跟数字编号
+8. 关键词识别：以"关键词:"、"Keywords:"开头的段落
+9. 摘要内容：紧跟在摘要标题后的段落
+10. 参考文献：带有[1]、[2]等编号的条目
+11. 目录项：包含页码和点线的段落
 
 输出要求：
 - 返回完整的JSON对象
 - 包含analysis_result数组
 - 每个元素包含paragraph_number、type
-
+- type必须使用上述标准样式名称（注意大小写）
 
 JSON格式：
 ```json
@@ -53,7 +64,7 @@ JSON格式：
   "analysis_result": [
     {
       "paragraph_number": 1,
-      "type": "title/heading1/heading2/heading3/heading4/paragraph/abstract_title_cn/abstract_title_en/figure_caption/table_caption/quote/other",
+      "type": "Title/Heading1/Heading2/Normal/AbstractTitleCN等"
     }
   ]
 }
@@ -85,12 +96,34 @@ def get_format_config_generation_prompt(document_content: str) -> tuple:
 分析要求：
 1. 仔细阅读文档中关于字体、字号、行距、对齐方式等格式要求
 2. 识别页边距、页面方向、页面大小等页面设置
-3. 提取标题层级的格式要求（一级、二级、三级标题的字体大小、加粗、居中等）
+3. 提取标题层级的格式要求（一级、二级、三级、四级标题的字体大小、加粗、居中等）
 4. 识别正文段落的格式要求（首行缩进、行距、字体等）
-5. 识别摘要标题的格式要求（中文摘要标题和英文摘要标题的字体、字号、对齐方式等）
+5. 识别各类特殊段落的格式要求：
+   - 中英文摘要标题和内容
+   - 中英文关键词
+   - 图题和表题
+   - 目录标题和目录项
+   - 参考文献标题和条目
+   - 致谢标题
 6. 特别注意悬挂缩进的要求（如参考文献、引用等可能使用悬挂缩进，第一行顶格，后续行缩进）
 7. 分析页码格式要求（位置、样式、起始页等）
 8. 识别页眉页脚的要求
+
+样式名称说明（必须使用以下标准名称）：
+- Title: 文档标题
+- Heading1-4: 一到四级标题
+- Normal: 正文
+- FirstParagraph: 首行缩进段落
+- AbstractTitleCN/EN: 中英文摘要标题
+- AbstractContentCN/EN: 中英文摘要内容
+- KeywordsCN/EN: 中英文关键词
+- FigureCaption: 图题
+- TableCaption: 表题
+- TOCTitle: 目录标题
+- TOCItem: 目录项
+- ReferenceTitle: 参考文献标题
+- ReferenceItem: 参考文献条目
+- AcknowledgementTitle: 致谢标题
 
 输出要求：
 - 返回完整的JSON配置，确保格式正确
@@ -130,7 +163,7 @@ JSON配置结构：
     "size": "A4/A3等"
   }},
   "styles": {{
-    "title": {{
+    "Title": {{
       "name": "样式名称",
       "font": {{
         "chinese": "中文字体",
@@ -151,11 +184,12 @@ JSON配置结构：
       }},
       "outline_level": null或数字
     }},
-    "heading1": {{ /* 一级标题样式 */ }},
-    "heading2": {{ /* 二级标题样式 */ }},
-    "heading3": {{ /* 三级标题样式 */ }},
-    "abstract_title_cn": {{
-      "name": "ChineseAbstractTitle",
+    "Heading1": {{ /* 一级标题样式 */ }},
+    "Heading2": {{ /* 二级标题样式 */ }},
+    "Heading3": {{ /* 三级标题样式 */ }},
+    "Heading4": {{ /* 四级标题样式 */ }},
+    "AbstractTitleCN": {{
+      "name": "AbstractTitleCN",
       "font": {{
         "chinese": "中文字体",
         "english": "英文字体",
@@ -175,8 +209,8 @@ JSON配置结构：
       }},
       "outline_level": null
     }},
-    "abstract_title_en": {{
-      "name": "EnglishAbstractTitle",
+    "AbstractTitleEN": {{
+      "name": "AbstractTitleEN",
       "font": {{
         "chinese": "中文字体",
         "english": "英文字体",
@@ -196,7 +230,19 @@ JSON配置结构：
       }},
       "outline_level": null
     }},
-    "paragraph": {{ /* 正文样式 */ }}
+    "Normal": {{ /* 正文样式 */ }},
+    "FirstParagraph": {{ /* 首行缩进段落样式 */ }},
+    "AbstractContentCN": {{ /* 中文摘要内容样式 */ }},
+    "AbstractContentEN": {{ /* 英文摘要内容样式 */ }},
+    "KeywordsCN": {{ /* 中文关键词样式 */ }},
+    "KeywordsEN": {{ /* 英文关键词样式 */ }},
+    "FigureCaption": {{ /* 图题样式 */ }},
+    "TableCaption": {{ /* 表题样式 */ }},
+    "TOCTitle": {{ /* 目录标题样式 */ }},
+    "TOCItem": {{ /* 目录项样式 */ }},
+    "ReferenceTitle": {{ /* 参考文献标题样式 */ }},
+    "ReferenceItem": {{ /* 参考文献条目样式 */ }},
+    "AcknowledgementTitle": {{ /* 致谢标题样式 */ }}
   }},
   "toc_settings": {{
     "title": "目录标题",

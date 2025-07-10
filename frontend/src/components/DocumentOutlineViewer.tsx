@@ -33,15 +33,26 @@ const DocumentOutlineViewer: React.FC<DocumentOutlineViewerProps> = ({
   // 类型名称映射
   const getTypeName = (type: string): string => {
     const typeNames: { [key: string]: string } = {
-      'title': '文档标题',
-      'heading1': '一级标题',
-      'heading2': '二级标题',
-      'heading3': '三级标题',
-      'heading4': '四级标题',
-      'abstract_title_cn': '中文摘要',
-      'abstract_title_en': '英文摘要',
-      'figure_caption': '图片标题',
-      'table_caption': '表格标题'
+      'Title': '文档标题',
+      'Heading1': '一级标题',
+      'Heading2': '二级标题',
+      'Heading3': '三级标题',
+      'Heading4': '四级标题',
+      'Normal': '正文',
+      'FirstParagraph': '首行缩进段落',
+      'AbstractTitleCN': '中文摘要标题',
+      'AbstractTitleEN': '英文摘要标题',
+      'AbstractContentCN': '中文摘要内容',
+      'AbstractContentEN': '英文摘要内容',
+      'KeywordsCN': '中文关键词',
+      'KeywordsEN': '英文关键词',
+      'FigureCaption': '图题',
+      'TableCaption': '表题',
+      'TOCTitle': '目录标题',
+      'TOCItem': '目录项',
+      'ReferenceTitle': '参考文献标题',
+      'ReferenceItem': '参考文献条目',
+      'AcknowledgementTitle': '致谢标题'
     };
     return typeNames[type] || type;
   };
@@ -49,8 +60,9 @@ const DocumentOutlineViewer: React.FC<DocumentOutlineViewerProps> = ({
   // 判断是否为标题类型
   const isTitleType = (type: string): boolean => {
     const titleTypes = [
-      'title', 'heading1', 'heading2', 'heading3', 'heading4',
-      'abstract_title_cn', 'abstract_title_en'
+      'Title', 'Heading1', 'Heading2', 'Heading3', 'Heading4',
+      'AbstractTitleCN', 'AbstractTitleEN', 'TOCTitle', 
+      'ReferenceTitle', 'AcknowledgementTitle'
     ];
     return titleTypes.includes(type);
   };
@@ -58,13 +70,16 @@ const DocumentOutlineViewer: React.FC<DocumentOutlineViewerProps> = ({
   // 获取标题层级
   const getTitleLevel = (type: string): number => {
     const levelMap: { [key: string]: number } = {
-      'title': 0,
-      'heading1': 1,
-      'heading2': 2,
-      'heading3': 3,
-      'heading4': 4,
-      'abstract_title_cn': 1,
-      'abstract_title_en': 1
+      'Title': 0,
+      'Heading1': 1,
+      'Heading2': 2,
+      'Heading3': 3,
+      'Heading4': 4,
+      'AbstractTitleCN': 1,
+      'AbstractTitleEN': 1,
+      'TOCTitle': 1,
+      'ReferenceTitle': 1,
+      'AcknowledgementTitle': 1
     };
     return levelMap[type] || 0;
   };
