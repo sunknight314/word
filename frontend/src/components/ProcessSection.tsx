@@ -74,29 +74,29 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({
       <h3 className="section-title">格式转换</h3>
       
       <div className="section-content">
-        {!canProcess && (
-          <div className="requirement-notice">
-            <p>⚠️ 请先完成源文件和格式要求文件的解析</p>
-          </div>
-        )}
-
-        {canProcess && (
-          <div className="process-area">
+        <div className="process-status">
+          {!canProcess ? (
+            <div className="requirement-notice">
+              <p>⚠️ 请先完成源文件和格式要求文件的解析</p>
+            </div>
+          ) : (
             <div className="ready-info">
               <p>✅ 源文件已解析</p>
               <p>✅ 格式要求文件已解析</p>
               <p>可以开始格式转换</p>
             </div>
+          )}
+        </div>
 
-            <button
-              onClick={handleProcess}
-              disabled={processing}
-              className="action-button process-button"
-            >
-              {processing ? '转换中...' : '开始格式转换'}
-            </button>
-          </div>
-        )}
+        <div className="process-button-area">
+          <button
+            onClick={handleProcess}
+            disabled={!canProcess || processing}
+            className={`action-button process-button ${canProcess ? 'ready' : 'disabled'}`}
+          >
+            {processing ? '转换中...' : '开始格式转换'}
+          </button>
+        </div>
 
         {error && (
           <div className="error-message">

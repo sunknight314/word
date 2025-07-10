@@ -300,6 +300,73 @@
   margin: 0.25rem 0;
 }
 
+/* 格式转换按钮特殊样式 */
+.process-button-area {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.process-button.disabled {
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.process-button.ready {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.process-button.ready:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+}
+
+.process-status {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.requirement-notice {
+  background: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.requirement-notice p {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+}
+
+.ready-info {
+  background: #d1fae5;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.ready-info p {
+  color: #065f46;
+  font-size: 14px;
+  margin: 0.25rem 0;
+  font-weight: 500;
+}
+
+/* 错误消息样式 */
+.error-message {
+  background: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
 .type-distribution h5 {
   margin: 0 0 1rem 0;
   color: #0c4a6e;
