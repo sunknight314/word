@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-10T20:22:50.832599",
+  "timestamp": "2025-07-10T21:23:01.051248",
   "model": "deepseek-ai/DeepSeek-V3",
   "status": "success",
   "input_data": {
@@ -132,108 +132,108 @@
     "analysis_result": [
       {
         "paragraph_number": 1,
-        "type": "title"
+        "type": "Title"
       },
       {
         "paragraph_number": 2,
-        "type": "heading1"
+        "type": "Heading1"
       },
       {
         "paragraph_number": 3,
-        "type": "heading2"
+        "type": "Heading2"
       },
       {
         "paragraph_number": 4,
-        "type": "paragraph"
+        "type": "FirstParagraph"
       },
       {
         "paragraph_number": 5,
-        "type": "paragraph"
+        "type": "Normal"
       },
       {
         "paragraph_number": 7,
-        "type": "heading2"
+        "type": "Heading2"
       },
       {
         "paragraph_number": 8,
-        "type": "paragraph"
+        "type": "FirstParagraph"
       },
       {
         "paragraph_number": 9,
-        "type": "paragraph"
+        "type": "Normal"
       },
       {
         "paragraph_number": 10,
-        "type": "heading3"
+        "type": "Heading3"
       },
       {
         "paragraph_number": 11,
-        "type": "paragraph"
+        "type": "FirstParagraph"
       },
       {
         "paragraph_number": 12,
-        "type": "paragraph"
+        "type": "Normal"
       },
       {
         "paragraph_number": 13,
-        "type": "heading1"
+        "type": "Heading1"
       },
       {
         "paragraph_number": 14,
-        "type": "heading2"
+        "type": "Heading2"
       },
       {
         "paragraph_number": 15,
-        "type": "paragraph"
+        "type": "FirstParagraph"
       },
       {
         "paragraph_number": 16,
-        "type": "paragraph"
+        "type": "Normal"
       },
       {
         "paragraph_number": 17,
-        "type": "heading2"
+        "type": "Heading2"
       },
       {
         "paragraph_number": 18,
-        "type": "paragraph"
+        "type": "FirstParagraph"
       },
       {
         "paragraph_number": 19,
-        "type": "paragraph"
+        "type": "Normal"
       },
       {
         "paragraph_number": 20,
-        "type": "heading3"
+        "type": "Heading3"
       },
       {
         "paragraph_number": 21,
-        "type": "paragraph"
+        "type": "FirstParagraph"
       },
       {
         "paragraph_number": 22,
-        "type": "paragraph"
+        "type": "Normal"
       },
       {
         "paragraph_number": 23,
-        "type": "heading3"
+        "type": "Heading3"
       },
       {
         "paragraph_number": 24,
-        "type": "paragraph"
+        "type": "FirstParagraph"
       },
       {
         "paragraph_number": 25,
-        "type": "paragraph"
+        "type": "Normal"
       }
     ],
-    "raw_response": "```json\n{\n  \"analysis_result\": [\n    {\n      \"paragraph_number\": 1,\n      \"type\": \"title\"\n    },\n    {\n      \"paragraph_number\": 2,\n      \"type\": \"heading1\"\n    },\n    {\n      \"paragraph_number\": 3,\n      \"type\": \"heading2\"\n    },\n    {\n      \"paragraph_number\": 4,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 5,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 7,\n      \"type\": \"heading2\"\n    },\n    {\n      \"paragraph_number\": 8,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 9,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 10,\n      \"type\": \"heading3\"\n    },\n    {\n      \"paragraph_number\": 11,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 12,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 13,\n      \"type\": \"heading1\"\n    },\n    {\n      \"paragraph_number\": 14,\n      \"type\": \"heading2\"\n    },\n    {\n      \"paragraph_number\": 15,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 16,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 17,\n      \"type\": \"heading2\"\n    },\n    {\n      \"paragraph_number\": 18,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 19,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 20,\n      \"type\": \"heading3\"\n    },\n    {\n      \"paragraph_number\": 21,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 22,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 23,\n      \"type\": \"heading3\"\n    },\n    {\n      \"paragraph_number\": 24,\n      \"type\": \"paragraph\"\n    },\n    {\n      \"paragraph_number\": 25,\n      \"type\": \"paragraph\"\n    }\n  ]\n}\n```",
+    "raw_response": "```json\n{\n  \"analysis_result\": [\n    {\n      \"paragraph_number\": 1,\n      \"type\": \"Title\"\n    },\n    {\n      \"paragraph_number\": 2,\n      \"type\": \"Heading1\"\n    },\n    {\n      \"paragraph_number\": 3,\n      \"type\": \"Heading2\"\n    },\n    {\n      \"paragraph_number\": 4,\n      \"type\": \"FirstParagraph\"\n    },\n    {\n      \"paragraph_number\": 5,\n      \"type\": \"Normal\"\n    },\n    {\n      \"paragraph_number\": 7,\n      \"type\": \"Heading2\"\n    },\n    {\n      \"paragraph_number\": 8,\n      \"type\": \"FirstParagraph\"\n    },\n    {\n      \"paragraph_number\": 9,\n      \"type\": \"Normal\"\n    },\n    {\n      \"paragraph_number\": 10,\n      \"type\": \"Heading3\"\n    },\n    {\n      \"paragraph_number\": 11,\n      \"type\": \"FirstParagraph\"\n    },\n    {\n      \"paragraph_number\": 12,\n      \"type\": \"Normal\"\n    },\n    {\n      \"paragraph_number\": 13,\n      \"type\": \"Heading1\"\n    },\n    {\n      \"paragraph_number\": 14,\n      \"type\": \"Heading2\"\n    },\n    {\n      \"paragraph_number\": 15,\n      \"type\": \"FirstParagraph\"\n    },\n    {\n      \"paragraph_number\": 16,\n      \"type\": \"Normal\"\n    },\n    {\n      \"paragraph_number\": 17,\n      \"type\": \"Heading2\"\n    },\n    {\n      \"paragraph_number\": 18,\n      \"type\": \"FirstParagraph\"\n    },\n    {\n      \"paragraph_number\": 19,\n      \"type\": \"Normal\"\n    },\n    {\n      \"paragraph_number\": 20,\n      \"type\": \"Heading3\"\n    },\n    {\n      \"paragraph_number\": 21,\n      \"type\": \"FirstParagraph\"\n    },\n    {\n      \"paragraph_number\": 22,\n      \"type\": \"Normal\"\n    },\n    {\n      \"paragraph_number\": 23,\n      \"type\": \"Heading3\"\n    },\n    {\n      \"paragraph_number\": 24,\n      \"type\": \"FirstParagraph\"\n    },\n    {\n      \"paragraph_number\": 25,\n      \"type\": \"Normal\"\n    }\n  ]\n}\n```",
     "model_info": {
       "model": "deepseek-ai/DeepSeek-V3",
       "usage": {
-        "prompt_tokens": 875,
-        "completion_tokens": 479,
-        "total_tokens": 1354
+        "prompt_tokens": 960,
+        "completion_tokens": 486,
+        "total_tokens": 1446
       }
     }
   }
