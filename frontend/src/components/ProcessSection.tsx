@@ -7,15 +7,27 @@ interface ProcessSectionProps {
   canProcess: boolean;
 }
 
+interface ProcessResult {
+  task_id: string;
+  status: string;
+  message: string;
+  output_path?: string;
+  report?: {
+    total_paragraphs: number;
+    styled_paragraphs: number;
+    type_distribution: Record<string, number>;
+    undefined_styles: string[];
+  };
+}
+
 const ProcessSection: React.FC<ProcessSectionProps> = ({ 
   sourceFileId, 
   formatFileId, 
   canProcess 
 }) => {
   const [processing, setProcessing] = useState(false);
-  const [taskId, setTaskId] = useState<string | null>(null);
-  const [status, setStatus] = useState<string>('');
-  const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
+  const [result, setResult] = useState<ProcessResult | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleProcess = async () => {
     if (!canProcess) return;
@@ -34,36 +46,25 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({
         }),
       });
 
-      const processResult = await processResponse.json();
-      setTaskId(processResult.task_id);
-      setStatus(processResult.status);
+      if (!processResponse.ok) {
+        const errorData = await processResponse.json();
+        throw new Error(errorData.detail || '格式转换失败');
+      }
 
-      // 轮询状态
-      const pollStatus = async () => {
-        const statusResponse = await fetch(`/api/status/${processResult.task_id}`);
-        const statusResult = await statusResponse.json();
-        
-        setStatus(statusResult.status);
-        
-        if (statusResult.status === 'completed') {
-          setDownloadUrl(statusResult.download_url);
-          setProcessing(false);
-        } else if (statusResult.status === 'failed') {
-          setProcessing(false);
-        } else {
-          setTimeout(pollStatus, 2000);
-        }
-      };
-
-      setTimeout(pollStatus, 1000);
-    } catch (error) {
-      console.error('处理失败:', error);
+      const processResult: ProcessResult = await processResponse.json();
+      setResult(processResult);
+      setProcessing(false);
+    } catch (err) {
+      console.error('处理失败:', err);
+      setError(err instanceof Error ? err.message : '格式转换失败');
       setProcessing(false);
     }
   };
 
   const handleDownload = () => {
-    if (downloadUrl) {
+    if (result?.output_path) {
+      // 创建下载链接
+      const downloadUrl = `/api/download/${encodeURIComponent(result.output_path)}`;
       window.open(downloadUrl, '_blank');
     }
   };
@@ -97,26 +98,51 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({
           </div>
         )}
 
-        {status && (
-          <div className="status-area">
-            <div className="status-info">
-              <p>状态: {status}</p>
-              {taskId && <p>任务ID: {taskId}</p>}
-            </div>
+        {error && (
+          <div className="error-message">
+            ❌ {error}
           </div>
         )}
 
-        {downloadUrl && (
-          <div className="download-area">
+        {result && (
+          <div className="result-area">
             <div className="completion-indicator">
-              ✅ 格式转换完成
+              ✅ {result.message}
             </div>
-            <button
-              onClick={handleDownload}
-              className="action-button download-button"
-            >
-              下载处理结果
-            </button>
+            
+            {/* 处理报告 */}
+            {result.report && (
+              <div className="process-report">
+                <h4>处理报告</h4>
+                <div className="report-stats">
+                  <p>总段落数: {result.report.total_paragraphs}</p>
+                  <p>已格式化: {result.report.styled_paragraphs}</p>
+                  <p>格式化率: {Math.round((result.report.styled_paragraphs / result.report.total_paragraphs) * 100)}%</p>
+                </div>
+                
+                {result.report.undefined_styles && result.report.undefined_styles.length > 0 && (
+                  <div className="warning-info">
+                    <p>⚠️ 以下样式未定义:</p>
+                    <ul>
+                      {result.report.undefined_styles.map(style => (
+                        <li key={style}>{style}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+            
+            {result.output_path && (
+              <div className="download-area">
+                <button
+                  onClick={handleDownload}
+                  className="action-button download-button"
+                >
+                  下载处理结果
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>

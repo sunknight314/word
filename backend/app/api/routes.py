@@ -314,9 +314,35 @@ async def get_processing_status(task_id: str):
     }
 
 # 下载处理结果
-@router.get("/download/{task_id}")
-async def download_result(task_id: str):
-    return {"message": f"文件下载功能待实现 - {task_id}"}
+@router.get("/download/{file_path:path}")
+async def download_result(file_path: str):
+    """
+    下载处理后的文档
+    
+    Args:
+        file_path: 文件路径
+    """
+    from fastapi.responses import FileResponse
+    import os
+    
+    try:
+        # 安全检查：确保文件路径是绝对路径且存在
+        if not os.path.isabs(file_path):
+            raise HTTPException(status_code=400, detail="文件路径必须是绝对路径")
+        
+        if not os.path.exists(file_path):
+            raise HTTPException(status_code=404, detail="文件不存在")
+        
+        # 获取文件名
+        filename = os.path.basename(file_path)
+        
+        return FileResponse(
+            path=file_path,
+            filename=filename,
+            media_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"下载失败: {str(e)}")
 
 # 更新格式配置
 @router.put("/format-config/{file_id}")

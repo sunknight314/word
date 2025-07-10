@@ -248,6 +248,58 @@
   font-weight: 700;
 }
 
+/* 格式转换结果样式 */
+.result-area {
+  margin-top: 1.5rem;
+}
+
+.process-report {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid #e0e0e0;
+}
+
+.process-report h4 {
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.report-stats {
+  margin-bottom: 1rem;
+}
+
+.report-stats p {
+  margin: 0.5rem 0;
+  color: #495057;
+}
+
+.warning-info {
+  background: #fff4e5;
+  border: 1px solid #ffab00;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.warning-info p {
+  margin: 0 0 0.5rem 0;
+  color: #663c00;
+  font-weight: 600;
+}
+
+.warning-info ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.warning-info li {
+  color: #663c00;
+  margin: 0.25rem 0;
+}
+
 .type-distribution h5 {
   margin: 0 0 1rem 0;
   color: #0c4a6e;
