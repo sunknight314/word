@@ -394,18 +394,6 @@ async def get_analysis_results(file_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"获取分析结果失败: {str(e)}")
 
-@router.get("/analysis/list/all")
-async def list_all_analyses():
-    """列出所有保存的分析结果"""
-    try:
-        results = analysis_storage.list_all_analyses()
-        return {
-            "success": True,
-            "analyses": results
-        }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"获取分析列表失败: {str(e)}")
-
 # 模型管理接口
 @router.get("/models/available")
 async def get_available_models():
