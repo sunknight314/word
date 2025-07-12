@@ -177,7 +177,9 @@ class DocumentFormatterV2:
         
         for style_key, style_config in styles_config.items():
             try:
-                style_name = style_config.get("name", style_key)
+                # 为样式名称添加 custom 前缀以区别默认样式
+                original_style_name = style_config.get("name", style_key)
+                style_name = f"custom{original_style_name}"
                 
                 # 检查样式是否已存在
                 existing_style = None
@@ -236,7 +238,9 @@ class DocumentFormatterV2:
             para_type = para_type_map.get(i)
             if para_type and para_type in styles_config:
                 try:
-                    style_name = styles_config[para_type].get("name", para_type)
+                    # 使用带 custom 前缀的样式名
+                    original_style_name = styles_config[para_type].get("name", para_type)
+                    style_name = f"custom{original_style_name}"
                     paragraph.style = style_name
                     result["applied"] += 1
                     logger.debug(f"段落 {i} 应用样式: {style_name} (类型: {para_type})")
