@@ -1,0 +1,404 @@
+{
+  "styles": {
+    "Heading1": {
+      "name": "Heading1",
+      "font": {
+        "size": "22pt",
+        "bold": true
+      }
+    },
+    "ReferenceTitle": {
+      "name": "ReferenceTitle",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "三号",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "ReferenceItem": {
+      "name": "ReferenceItem",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "五号",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "2字符"
+      },
+      "outline_level": null
+    },
+    "Heading3": {
+      "name": "Heading3",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "四号",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "left",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": 2
+    },
+    "TOCTitle": {
+      "name": "TOCTitle",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "三号",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "AbstractTitleCN": {
+      "name": "AbstractTitleCN",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "三号",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "Heading2": {
+      "name": "Heading2",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "小三",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "left",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": 1
+    },
+    "TOCItem": {
+      "name": "TOCItem",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "小四",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "AbstractTitleEN": {
+      "name": "AbstractTitleEN",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "三号",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "AbstractContentCN": {
+      "name": "AbstractContentCN",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "小四",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "FigureCaption": {
+      "name": "FigureCaption",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "五号",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "20磅",
+        "space_before": "6磅",
+        "space_after": "6磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "KeywordsEN": {
+      "name": "KeywordsEN",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "小四",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "AbstractContentEN": {
+      "name": "AbstractContentEN",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "小四",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "AcknowledgementTitle": {
+      "name": "AcknowledgementTitle",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "三号",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "Normal": {
+      "name": "Normal",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "小四",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "2字符",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "Heading4": {
+      "name": "Heading4",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "小四",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "left",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": 3
+    },
+    "KeywordsCN": {
+      "name": "KeywordsCN",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "小四",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "TableCaption": {
+      "name": "TableCaption",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "五号",
+        "bold": false,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "20磅",
+        "space_before": "6磅",
+        "space_after": "6磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    },
+    "Title": {
+      "name": "Title",
+      "font": {
+        "chinese": "宋体",
+        "english": "Times New Roman",
+        "size": "三号",
+        "bold": true,
+        "italic": false
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "20磅",
+        "space_before": "0磅",
+        "space_after": "0磅",
+        "first_line_indent": "0磅",
+        "left_indent": "0磅",
+        "right_indent": "0磅",
+        "hanging_indent": "0磅"
+      },
+      "outline_level": null
+    }
+  },
+  "document_info": {
+    "title": "系统自动生成",
+    "author": "系统自动生成",
+    "description": "基于AI分析的文档格式配置"
+  },
+  "page_settings": {
+    "margins": {
+      "top": "2.54cm",
+      "bottom": "2.54cm",
+      "left": "3.17cm",
+      "right": "3.17cm"
+    },
+    "orientation": "portrait",
+    "size": "A4"
+  }
+}

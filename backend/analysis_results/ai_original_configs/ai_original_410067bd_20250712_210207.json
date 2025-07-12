@@ -1,0 +1,11 @@
+{
+  "styles": {
+    "Heading1": {
+      "name": "Heading1",
+      "font": {
+        "size": "22pt",
+        "bold": "__NOT_SPECIFIED__"
+      }
+    }
+  }
+}

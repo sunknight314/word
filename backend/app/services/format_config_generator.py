@@ -280,10 +280,31 @@ class FormatConfigGenerator(AIClientBase):
             return datetime.now().strftime("%H%M%S")
     
     def _get_default_config(self) -> Dict[str, Any]:
-        """获取默认配置"""
+        """从JSON文件获取默认配置"""
+        try:
+            config_path = os.path.join(os.path.dirname(__file__), '..', '..', 'config', 'default_format_config.json')
+            config_path = os.path.abspath(config_path)
+            
+            if not os.path.exists(config_path):
+                logger.error(f"默认配置文件不存在: {config_path}")
+                return self._get_fallback_config()
+            
+            with open(config_path, 'r', encoding='utf-8') as f:
+                config = json.load(f)
+            
+            logger.info(f"已加载默认配置: {config_path}")
+            return config
+            
+        except Exception as e:
+            logger.error(f"加载默认配置失败: {str(e)}")
+            print(f"❌ 加载默认配置失败: {str(e)}")
+            return self._get_fallback_config()
+    
+    def _get_fallback_config(self) -> Dict[str, Any]:
+        """获取降级默认配置（当JSON文件加载失败时使用）"""
         return {
             "document_info": {
-                "title": "AI生成的文档",
+                "title": "系统自动生成",
                 "author": "系统自动生成",
                 "description": "基于AI分析的文档格式配置"
             },
