@@ -348,8 +348,12 @@ class FormatConfigGenerator(AIClientBase):
     def _smart_merge_config(self, default_config: Dict, ai_config: Dict) -> Dict:
         """
         智能合并配置：优先使用AI配置，只在AI未识别某种样式时才添加默认样式
+        处理AI返回的__NOT_SPECIFIED__标志，用默认值替换
         """
         result = ai_config.copy()
+        
+        # 处理AI配置中的__NOT_SPECIFIED__标志
+        result = self._replace_not_specified_values(result, default_config)
         
         # 确保基础结构存在
         if "document_info" not in result:
@@ -378,6 +382,55 @@ class FormatConfigGenerator(AIClientBase):
             logger.info(f"添加默认样式 {style_name}，因为AI未识别此样式")
         
         return result
+    
+    def _replace_not_specified_values(self, ai_config: Dict, default_config: Dict) -> Dict:
+        """
+        递归替换AI配置中的__NOT_SPECIFIED__标志为默认值
+        
+        Args:
+            ai_config: AI返回的配置（可能包含__NOT_SPECIFIED__标志）
+            default_config: 默认配置
+            
+        Returns:
+            替换后的配置
+        """
+        def replace_recursive(obj, default_obj=None):
+            if isinstance(obj, dict):
+                result = {}
+                for key, value in obj.items():
+                    default_value = default_obj.get(key) if isinstance(default_obj, dict) else None
+                    result[key] = replace_recursive(value, default_value)
+                return result
+            elif isinstance(obj, list):
+                return [replace_recursive(item) for item in obj]
+            elif obj == "__NOT_SPECIFIED__":
+                if default_obj is not None:
+                    logger.info(f"将__NOT_SPECIFIED__替换为默认值: {default_obj}")
+                    print(f"🔄 将__NOT_SPECIFIED__替换为默认值: {default_obj}")
+                    return default_obj
+                else:
+                    # 如果没有默认值，移除该字段（返回None，稍后过滤）
+                    logger.info(f"移除__NOT_SPECIFIED__字段，无对应默认值")
+                    print(f"🗑️ 移除__NOT_SPECIFIED__字段，无对应默认值")
+                    return None
+            else:
+                return obj
+        
+        result = replace_recursive(ai_config, default_config)
+        
+        # 清理None值（移除__NOT_SPECIFIED__且无默认值的字段）
+        result = self._clean_none_values(result)
+        
+        return result
+    
+    def _clean_none_values(self, obj):
+        """递归清理配置中的None值"""
+        if isinstance(obj, dict):
+            return {k: self._clean_none_values(v) for k, v in obj.items() if v is not None}
+        elif isinstance(obj, list):
+            return [self._clean_none_values(item) for item in obj if item is not None]
+        else:
+            return obj
     
     def _convert_all_units(self, config: Dict[str, Any]) -> Dict[str, Any]:
         """转换配置中的所有单位为pt"""

@@ -1,0 +1,45 @@
+{
+  "document_info": {
+    "title": "测试文档",
+    "author": "__NOT_SPECIFIED__",
+    "description": "__NOT_SPECIFIED__"
+  },
+  "page_settings": {
+    "margins": {
+      "top": "2.54cm",
+      "bottom": "__NOT_SPECIFIED__",
+      "left": "3cm",
+      "right": "__NOT_SPECIFIED__"
+    },
+    "orientation": "portrait",
+    "size": "__NOT_SPECIFIED__"
+  },
+  "styles": {
+    "Heading1": {
+      "name": "Heading1",
+      "font": {
+        "chinese": "__NOT_SPECIFIED__",
+        "english": "__NOT_SPECIFIED__",
+        "size": "22pt",
+        "bold": true,
+        "italic": "__NOT_SPECIFIED__"
+      },
+      "paragraph": {
+        "alignment": "center",
+        "line_spacing": "__NOT_SPECIFIED__",
+        "space_before": "12pt",
+        "space_after": "__NOT_SPECIFIED__"
+      }
+    },
+    "Normal": {
+      "name": "Normal",
+      "font": {
+        "size": "__NOT_SPECIFIED__"
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "first_line_indent": "__NOT_SPECIFIED__"
+      }
+    }
+  }
+}
