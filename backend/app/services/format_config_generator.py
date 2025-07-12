@@ -201,16 +201,83 @@ class FormatConfigGenerator(AIClientBase):
         Returns:
             验证、修正并转换单位后的配置
         """
+        # 保存AI原始配置（如果不为空）
+        if config:
+            self._save_ai_original_config(config)
+        
         # 使用默认配置作为基础
         default_config = self._get_default_config()
         
         # 智能合并配置：只添加AI未识别的样式
         final_config = self._smart_merge_config(default_config, config)
         
+        # 保存智能合并后的配置
+        if config:  # 只在有AI配置时保存合并结果
+            self._save_merged_config(final_config)
+        
         # 转换所有单位为pt
         final_config = self._convert_all_units(final_config)
         
         return final_config
+    
+    def _save_ai_original_config(self, config: Dict[str, Any]) -> None:
+        """保存AI返回的原始配置JSON"""
+        try:
+            # 生成唯一文件名
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            file_id = self._generate_config_id(config)
+            filename = f"ai_original_{file_id}_{timestamp}.json"
+            
+            # 创建保存目录
+            save_dir = "backend/analysis_results/ai_original_configs"
+            os.makedirs(save_dir, exist_ok=True)
+            
+            # 保存文件
+            file_path = os.path.join(save_dir, filename)
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(config, f, ensure_ascii=False, indent=2)
+            
+            logger.info(f"AI原始配置已保存: {file_path}")
+            print(f"💾 AI原始配置已保存: {filename}")
+            
+        except Exception as e:
+            logger.error(f"保存AI原始配置失败: {str(e)}")
+            print(f"❌ 保存AI原始配置失败: {str(e)}")
+    
+    def _save_merged_config(self, config: Dict[str, Any]) -> None:
+        """保存智能合并后的配置JSON"""
+        try:
+            # 生成唯一文件名
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            file_id = self._generate_config_id(config)
+            filename = f"merged_config_{file_id}_{timestamp}.json"
+            
+            # 创建保存目录
+            save_dir = "backend/analysis_results/merged_configs"
+            os.makedirs(save_dir, exist_ok=True)
+            
+            # 保存文件
+            file_path = os.path.join(save_dir, filename)
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(config, f, ensure_ascii=False, indent=2)
+            
+            logger.info(f"智能合并配置已保存: {file_path}")
+            print(f"💾 智能合并配置已保存: {filename}")
+            
+        except Exception as e:
+            logger.error(f"保存智能合并配置失败: {str(e)}")
+            print(f"❌ 保存智能合并配置失败: {str(e)}")
+    
+    def _generate_config_id(self, config: Dict[str, Any]) -> str:
+        """生成配置的唯一标识符"""
+        try:
+            import hashlib
+            # 使用配置内容生成hash作为ID
+            config_str = json.dumps(config, sort_keys=True, ensure_ascii=False)
+            return hashlib.md5(config_str.encode()).hexdigest()[:8]
+        except:
+            # 如果hash生成失败，使用时间戳
+            return datetime.now().strftime("%H%M%S")
     
     def _get_default_config(self) -> Dict[str, Any]:
         """获取默认配置"""

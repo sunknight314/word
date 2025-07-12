@@ -1,0 +1,28 @@
+{
+  "document_info": {
+    "title": "测试文档",
+    "total_paragraphs": 5
+  },
+  "styles": {
+    "Heading1": {
+      "name": "Heading1",
+      "font": {
+        "size": 22,
+        "bold": true
+      },
+      "paragraph": {
+        "space_before": 12,
+        "space_after": 6
+      }
+    },
+    "Normal": {
+      "name": "Normal",
+      "font": {
+        "size": 12
+      },
+      "paragraph": {
+        "alignment": "justify"
+      }
+    }
+  }
+}
