@@ -313,7 +313,6 @@ class DocumentProcessor:
         """
         try:
             p_element = paragraph._element
-            print("11111111111111111111111111")
             # 匹配公式（跨命名空间）
             if p_element.xpath('.//*[local-name()="oMath" or local-name()="oMathPara"]'):
                 return "Word公式"

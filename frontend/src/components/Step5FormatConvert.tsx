@@ -162,7 +162,20 @@ const Step5FormatConvert: React.FC<Step5Props> = ({
               <div className="download-section">
                 <h4>下载格式化后的文档</h4>
                 <p className="output-path">输出路径: {result.output_path}</p>
-                <button className="download-button">
+                <button 
+                  className="download-button"
+                  onClick={() => {
+                    if (result.output_path) {
+                      const downloadUrl = `/api/download/${encodeURIComponent(result.output_path)}`;
+                      const link = document.createElement('a');
+                      link.href = downloadUrl;
+                      link.download = '';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }
+                  }}
+                >
                   📥 下载文档
                 </button>
               </div>

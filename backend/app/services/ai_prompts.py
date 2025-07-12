@@ -21,7 +21,6 @@ def get_paragraph_analysis_prompt(paragraphs_data: list) -> tuple:
 - Heading3: 三级标题（1.1.1等）
 - Heading4: 四级标题或更低级别
 - Normal: 正文段落
-- FirstParagraph: 首行缩进段落（如章节开始的第一段）
 - AbstractTitleCN: 中文摘要标题（摘要、内容摘要等）
 - AbstractTitleEN: 英文摘要标题（Abstract、ABSTRACT等）
 - AbstractContentCN: 中文摘要内容
@@ -113,7 +112,6 @@ def get_format_config_generation_prompt(document_content: str) -> tuple:
 - Title: 文档标题
 - Heading1-4: 一到四级标题
 - Normal: 正文
-- FirstParagraph: 首行缩进段落
 - AbstractTitleCN/EN: 中英文摘要标题
 - AbstractContentCN/EN: 中英文摘要内容
 - KeywordsCN/EN: 中英文关键词
@@ -231,7 +229,6 @@ JSON配置结构：
       "outline_level": null
     }},
     "Normal": {{ /* 正文样式 */ }},
-    "FirstParagraph": {{ /* 首行缩进段落样式 */ }},
     "AbstractContentCN": {{ /* 中文摘要内容样式 */ }},
     "AbstractContentEN": {{ /* 英文摘要内容样式 */ }},
     "KeywordsCN": {{ /* 中文关键词样式 */ }},

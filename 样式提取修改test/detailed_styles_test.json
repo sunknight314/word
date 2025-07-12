@@ -1,0 +1,143 @@
+{
+  "document_info": {
+    "file_name": "test.docx",
+    "total_styles": 7,
+    "style_type_count": {
+      "段落样式": 4,
+      "字符样式": 2,
+      "表格样式": 1
+    }
+  },
+  "styles": {
+    "Normal": {
+      "name": "Normal",
+      "type": "段落样式",
+      "builtin": true,
+      "hidden": false,
+      "locked": false,
+      "priority": 0,
+      "unhide_when_used": false,
+      "quick_style": true,
+      "font": {
+        "size": "10.5pt",
+        "size_raw": "133350"
+      },
+      "paragraph": {
+        "alignment": "JUSTIFY (3)",
+        "alignment_value": "JUSTIFY (3)",
+        "widow_control": false
+      }
+    },
+    "Heading 1": {
+      "name": "Heading 1",
+      "type": "段落样式",
+      "builtin": true,
+      "hidden": false,
+      "locked": false,
+      "priority": 0,
+      "unhide_when_used": false,
+      "quick_style": true,
+      "font": {
+        "size": "22.0pt",
+        "size_raw": "279400",
+        "bold": true
+      },
+      "paragraph": {
+        "line_spacing": "0.12pt",
+        "line_spacing_raw": 2.4,
+        "line_spacing_rule": "MULTIPLE (5)",
+        "line_spacing_rule_value": "MULTIPLE (5)",
+        "space_before": "17.0pt",
+        "space_before_raw": "215900",
+        "space_after": "16.5pt",
+        "space_after_raw": "209550",
+        "keep_together": true,
+        "keep_with_next": true
+      },
+      "outline_level": 0
+    },
+    "Default Paragraph Font": {
+      "name": "Default Paragraph Font",
+      "type": "字符样式",
+      "builtin": true,
+      "hidden": true,
+      "locked": false,
+      "priority": 1,
+      "unhide_when_used": true,
+      "quick_style": true,
+      "font": {}
+    },
+    "Normal Table": {
+      "name": "Normal Table",
+      "type": "表格样式",
+      "builtin": true,
+      "hidden": true,
+      "locked": false,
+      "priority": 0,
+      "unhide_when_used": false,
+      "quick_style": true
+    },
+    "Title": {
+      "name": "Title",
+      "type": "段落样式",
+      "builtin": true,
+      "hidden": false,
+      "locked": false,
+      "priority": 0,
+      "unhide_when_used": false,
+      "quick_style": true,
+      "font": {
+        "size": "26.0pt",
+        "size_raw": "330200",
+        "color_rgb": "333F50",
+        "color_theme": "TEXT_2 (15)",
+        "color_type": "THEME (2)"
+      },
+      "paragraph": {
+        "line_spacing": "0.05pt",
+        "line_spacing_raw": 1.0,
+        "line_spacing_rule": "SINGLE (0)",
+        "line_spacing_rule_value": "SINGLE (0)",
+        "space_after": "15.0pt",
+        "space_after_raw": "190500",
+        "borders": {
+          "bottom": {
+            "style": "single",
+            "size": "8",
+            "space": "4",
+            "color": "4874CB"
+          }
+        }
+      }
+    },
+    "Title Char": {
+      "name": "Title Char",
+      "type": "字符样式",
+      "builtin": false,
+      "hidden": false,
+      "locked": false,
+      "priority": 10,
+      "unhide_when_used": false,
+      "quick_style": true,
+      "font": {
+        "size": "26.0pt",
+        "size_raw": "330200",
+        "color_rgb": "333F50",
+        "color_theme": "TEXT_2 (15)",
+        "color_type": "THEME (2)"
+      }
+    },
+    "我的样式": {
+      "name": "我的样式",
+      "type": "段落样式",
+      "builtin": false,
+      "hidden": false,
+      "locked": false,
+      "priority": 0,
+      "unhide_when_used": false,
+      "quick_style": false,
+      "font": {},
+      "paragraph": {}
+    }
+  }
+}

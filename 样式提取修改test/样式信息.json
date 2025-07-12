@@ -1,0 +1,745 @@
+[
+  {
+    "name": "Normal",
+    "type": "段落",
+    "font": {
+      "name": "Times New Roman",
+      "east_asia_name": "宋体",
+      "size": "12.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": "JUSTIFY (3)",
+      "left_indent": null,
+      "first_line_indent": "10.0磅",
+      "line_spacing": "254000.0倍"
+    }
+  },
+  {
+    "name": "Heading 1",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": "黑体",
+      "size": "16.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": "CENTER (1)",
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Heading 2",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": "宋体",
+      "size": "15.0磅",
+      "bold": true,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": "JUSTIFY (3)",
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Heading 3",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "14.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": "25.5磅",
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Heading 4",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "12.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Heading 5",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Heading 6",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "14.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": "19.85磅",
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Heading 7",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Heading 8",
+    "type": "段落",
+    "font": {
+      "name": "Arial",
+      "east_asia_name": "黑体",
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": "1.3倍"
+    }
+  },
+  {
+    "name": "Heading 9",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Normal Indent",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": "21.0磅",
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Caption",
+    "type": "段落",
+    "font": {
+      "name": "Arial",
+      "east_asia_name": "黑体",
+      "size": "10.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "toc 3",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": "22.5磅",
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Date",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "10.5磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Footer",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "9.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Header",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "10.5磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": "CENTER (1)",
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "toc 1",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": "黑体",
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "toc 2",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": "9.5磅",
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Title",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": "黑体",
+      "size": "16.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": "CENTER (1)",
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "Table Grid",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "Emphasis",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": "#CC0033"
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "Hyperlink",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": "#0000FF"
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "HTML Cite",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": "#008000"
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "参考文献",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "标题 Char",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": "黑体",
+      "size": "16.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "标题-无编号",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "标题-表格",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "10.5磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": "CENTER (1)",
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": "1.5倍"
+    }
+  },
+  {
+    "name": "摘要",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": "24.0磅",
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "标题-图",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "10.5磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": "CENTER (1)",
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": "1.5倍"
+    }
+  },
+  {
+    "name": "MTDisplayEquation",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": "24.0磅",
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "MTDisplayEquation Char",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "12.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "CONTENTS",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "MTEquationSection",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": "#FF0000"
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "脚注文本 Char",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": "宋体",
+      "size": "9.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "标题 1 Char",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": "黑体",
+      "size": "16.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "标题 2 Char",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "15.0磅",
+      "bold": true,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "标题 3 Char",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "14.0磅",
+      "bold": true,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "摘要 Char",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "12.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "页脚 Char",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "9.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "日期 Char",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "10.5磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "List Paragraph",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": "21.0磅",
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "References",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "8.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": null,
+      "line_spacing": "1.0倍"
+    }
+  },
+  {
+    "name": "high-light-bg4",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "ordinary-span-edit2",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  },
+  {
+    "name": "我的正文",
+    "type": "段落",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": null,
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {
+      "alignment": null,
+      "left_indent": null,
+      "first_line_indent": "24.0磅",
+      "line_spacing": null
+    }
+  },
+  {
+    "name": "我的正文 Char",
+    "type": "字符",
+    "font": {
+      "name": null,
+      "east_asia_name": null,
+      "size": "12.0磅",
+      "bold": null,
+      "italic": null,
+      "color": null
+    },
+    "paragraph": {}
+  }
+]

@@ -170,35 +170,56 @@ class DocumentFormatterV2:
         return result
     
     def _step2_create_styles(self) -> Dict[str, Any]:
-        """步骤2：创建或更新样式"""
-        result = {"success": True, "created": [], "updated": [], "failed": []}
+        """步骤2：创建或更新样式（参考create_styles_from_config方法）"""
+        result = {"success": True, "created": [], "updated": [], "failed": [], "styles_mapping": {}}
         
         styles_config = self.format_config.get("styles", {})
-        for style_name, style_config in styles_config.items():
+        
+        for style_key, style_config in styles_config.items():
             try:
-                # 获取或创建样式
-                style = self._get_or_create_style(style_name, style_config.get("name", style_name))
+                style_name = style_config.get("name", style_key)
                 
-                # 应用字体设置
+                # 检查样式是否已存在
+                existing_style = None
+                try:
+                    existing_style = self.doc.styles[style_name]
+                    logger.info(f"样式 {style_name} 已存在，将更新配置")
+                    result["updated"].append(style_name)
+                except KeyError:
+                    # 样式不存在，创建新样式
+                    existing_style = self.doc.styles.add_style(style_name, WD_STYLE_TYPE.PARAGRAPH)
+                    result["created"].append(style_name)
+                    logger.info(f"创建新样式: {style_name}")
+                
+                # 应用字体设置（增强版，支持中英文混合字体）
                 font_config = style_config.get("font", {})
                 if font_config:
-                    self._apply_font_settings(style, font_config)
+                    success = self._apply_enhanced_font_settings(existing_style, font_config)
+                    if not success:
+                        logger.warning(f"样式 {style_name} 字体设置部分失败")
                 
-                # 应用段落设置
+                # 应用段落设置（增强版，支持悬挂缩进）
                 para_config = style_config.get("paragraph", {})
                 if para_config:
-                    self._apply_paragraph_settings(style, para_config)
+                    success = self._apply_enhanced_paragraph_settings(existing_style, para_config)
+                    if not success:
+                        logger.warning(f"样式 {style_name} 段落设置部分失败")
                 
                 # 设置大纲级别
-                if "outline_level" in style_config:
-                    style.paragraph_format.outline_level = style_config["outline_level"]
+                outline_level = style_config.get("outline_level")
+                if outline_level is not None:
+                    try:
+                        self._set_outline_level(existing_style, outline_level)
+                        logger.debug(f"样式 {style_name} 设置大纲级别: {outline_level}")
+                    except Exception as e:
+                        logger.warning(f"设置样式 {style_name} 的大纲级别失败: {str(e)}")
                 
-                result["created" if style_name not in self.doc.styles else "updated"].append(style_name)
-                logger.info(f"成功创建/更新样式: {style_name}")
+                # 记录样式映射
+                result["styles_mapping"][style_key] = style_name
                 
             except Exception as e:
-                result["failed"].append({"style": style_name, "error": str(e)})
-                logger.warning(f"创建/更新样式 {style_name} 失败: {str(e)}")
+                result["failed"].append({"style": style_key, "error": str(e)})
+                logger.error(f"创建/更新样式 {style_key} 失败: {str(e)}")
         
         return result
     
@@ -277,6 +298,7 @@ class DocumentFormatterV2:
         """步骤6：保存文档"""
         base_path = Path(source_path)
         output_path = base_path.parent / f"{base_path.stem}_formatted{base_path.suffix}"
+        print(f"保存到{output_path}")
         self.doc.save(str(output_path))
         return str(output_path)
     
@@ -288,7 +310,7 @@ class DocumentFormatterV2:
             return self.doc.styles.add_style(style_name, WD_STYLE_TYPE.PARAGRAPH)
     
     def _apply_font_settings(self, style, font_config: Dict[str, Any]):
-        """应用字体设置"""
+        """应用字体设置（旧版方法，保留兼容性）"""
         font = style.font
         
         if font_config.get("size"):
@@ -303,6 +325,39 @@ class DocumentFormatterV2:
         
         if "italic" in font_config:
             font.italic = font_config["italic"]
+    
+    def _apply_enhanced_font_settings(self, style, font_config: Dict[str, Any]) -> bool:
+        """应用增强版字体设置（支持中英文混合字体）"""
+        try:
+            font = style.font
+            
+            # 基本字体设置
+            chinese_font = font_config.get("chinese", "宋体")
+            english_font = font_config.get("english", "Times New Roman")
+            font_size = font_config.get("size", "12pt")
+            
+            # 设置英文字体为基础字体
+            font.name = english_font
+            
+            # 设置字体大小
+            if font_size:
+                size_pt = self.unit_converter.convert_to_pt(font_size)
+                if size_pt:
+                    font.size = Pt(size_pt)
+            
+            # 设置粗体和斜体
+            if "bold" in font_config:
+                font.bold = font_config["bold"]
+            if "italic" in font_config:
+                font.italic = font_config["italic"]
+            
+            # 设置中英文混合字体
+            self._set_mixed_font_for_style(style, chinese_font, english_font)
+            
+            return True
+        except Exception as e:
+            logger.error(f"应用增强字体设置失败: {str(e)}")
+            return False
     
     def _apply_paragraph_settings(self, style, para_config: Dict[str, Any]):
         """应用段落设置"""
@@ -337,6 +392,76 @@ class DocumentFormatterV2:
             para_format.left_indent = self._convert_to_docx_length(para_config["left_indent"])
         if para_config.get("right_indent"):
             para_format.right_indent = self._convert_to_docx_length(para_config["right_indent"])
+    
+    def _apply_enhanced_paragraph_settings(self, style, para_config: Dict[str, Any]) -> bool:
+        """应用增强版段落设置（支持悬挂缩进等高级功能）"""
+        try:
+            para_format = style.paragraph_format
+            
+            # 对齐方式
+            alignment = para_config.get("alignment", "left")
+            alignment_map = {
+                "left": WD_ALIGN_PARAGRAPH.LEFT,
+                "center": WD_ALIGN_PARAGRAPH.CENTER,
+                "right": WD_ALIGN_PARAGRAPH.RIGHT,
+                "justify": WD_ALIGN_PARAGRAPH.JUSTIFY
+            }
+            para_format.alignment = alignment_map.get(alignment, WD_ALIGN_PARAGRAPH.LEFT)
+            
+            # 行距
+            line_spacing = para_config.get("line_spacing")
+            if line_spacing:
+                line_spacing_pt = self.unit_converter.convert_to_pt(line_spacing)
+                if line_spacing_pt:
+                    para_format.line_spacing = Pt(line_spacing_pt)
+            
+            # 段前距
+            space_before = para_config.get("space_before")
+            if space_before and space_before != "0pt":
+                space_before_pt = self.unit_converter.convert_to_pt(space_before)
+                if space_before_pt:
+                    para_format.space_before = Pt(space_before_pt)
+            
+            # 段后距
+            space_after = para_config.get("space_after")
+            if space_after and space_after != "0pt":
+                space_after_pt = self.unit_converter.convert_to_pt(space_after)
+                if space_after_pt:
+                    para_format.space_after = Pt(space_after_pt)
+            
+            # 首行缩进
+            first_line_indent = para_config.get("first_line_indent")
+            if first_line_indent and first_line_indent != "0pt":
+                first_line_pt = self.unit_converter.convert_to_pt(first_line_indent)
+                if first_line_pt:
+                    para_format.first_line_indent = Pt(first_line_pt)
+            
+            # 左缩进
+            left_indent = para_config.get("left_indent")
+            if left_indent and left_indent != "0pt":
+                left_indent_pt = self.unit_converter.convert_to_pt(left_indent)
+                if left_indent_pt:
+                    para_format.left_indent = Pt(left_indent_pt)
+            
+            # 右缩进
+            right_indent = para_config.get("right_indent")
+            if right_indent and right_indent != "0pt":
+                right_indent_pt = self.unit_converter.convert_to_pt(right_indent)
+                if right_indent_pt:
+                    para_format.right_indent = Pt(right_indent_pt)
+            
+            # 悬挂缩进（新功能）
+            hanging_indent = para_config.get("hanging_indent")
+            if hanging_indent and hanging_indent != "0pt":
+                hanging_pt = self.unit_converter.convert_to_pt(hanging_indent)
+                if hanging_pt:
+                    # 悬挂缩进实现为负的首行缩进
+                    para_format.first_line_indent = Pt(-hanging_pt)
+            
+            return True
+        except Exception as e:
+            logger.error(f"应用增强段落设置失败: {str(e)}")
+            return False
     
     def _add_page_numbers(self, page_numbering: Dict[str, Any]):
         """添加页码"""
@@ -385,3 +510,57 @@ class DocumentFormatterV2:
             }
         }
         return report
+    
+    def _set_outline_level(self, style, outline_level: int):
+        """设置样式的大纲级别"""
+        try:
+            # 获取样式的XML元素
+            style_element = style._element
+            
+            # 查找或创建pPr元素
+            pPr = style_element.find(qn('w:pPr'))
+            if pPr is None:
+                pPr = OxmlElement('w:pPr')
+                style_element.append(pPr)
+            
+            # 查找或创建outlineLvl元素
+            outline_elem = pPr.find(qn('w:outlineLvl'))
+            if outline_elem is None:
+                outline_elem = OxmlElement('w:outlineLvl')
+                pPr.append(outline_elem)
+            
+            # 设置大纲级别值
+            outline_elem.set(qn('w:val'), str(outline_level))
+            
+        except Exception as e:
+            logger.warning(f"设置大纲级别失败: {str(e)}")
+            raise
+    
+    def _set_mixed_font_for_style(self, style, chinese_font='宋体', english_font='Times New Roman'):
+        """为样式设置中英文混合字体"""
+        try:
+            # 设置基础字体（英文）
+            style.font.name = english_font
+            
+            # 设置东亚字体（中文）
+            style_element = style._element
+            rpr = style_element.find(qn('w:rPr'))
+            if rpr is None:
+                rpr = OxmlElement('w:rPr')
+                style_element.append(rpr)
+            
+            # 查找或创建rFonts元素
+            rfonts = rpr.find(qn('w:rFonts'))
+            if rfonts is None:
+                rfonts = OxmlElement('w:rFonts')
+                rpr.append(rfonts)
+            
+            # 设置各种字体类型
+            rfonts.set(qn('w:eastAsia'), chinese_font)    # 东亚字体（中文）
+            rfonts.set(qn('w:ascii'), english_font)       # ASCII字体（英文）
+            rfonts.set(qn('w:hAnsi'), english_font)       # 高ANSI字体（英文）
+            
+            return True
+        except Exception as e:
+            logger.error(f"设置混合字体失败: {str(e)}")
+            return False

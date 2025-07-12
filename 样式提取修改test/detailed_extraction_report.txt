@@ -1,0 +1,98 @@
+Word文档样式详细提取报告
+==================================================
+
+文档名称: test.docx
+样式总数: 7
+生成时间: Unknown
+
+详细样式信息:
+------------------------------
+
+样式名称: Normal
+样式类型: 段落样式
+内置样式: 是
+字体设置:
+  size: 10.5pt
+  size_raw: 133350
+段落设置:
+  alignment: JUSTIFY (3)
+  alignment_value: JUSTIFY (3)
+  widow_control: False
+
+----------------------------------------
+
+样式名称: Heading 1
+样式类型: 段落样式
+内置样式: 是
+字体设置:
+  size: 22.0pt
+  size_raw: 279400
+  bold: True
+段落设置:
+  line_spacing: 0.12pt
+  line_spacing_raw: 2.4
+  line_spacing_rule: MULTIPLE (5)
+  line_spacing_rule_value: MULTIPLE (5)
+  space_before: 17.0pt
+  space_before_raw: 215900
+  space_after: 16.5pt
+  space_after_raw: 209550
+  keep_together: True
+  keep_with_next: True
+大纲级别: 0
+
+----------------------------------------
+
+样式名称: Default Paragraph Font
+样式类型: 字符样式
+内置样式: 是
+字体设置:
+
+----------------------------------------
+
+样式名称: Normal Table
+样式类型: 表格样式
+内置样式: 是
+
+----------------------------------------
+
+样式名称: Title
+样式类型: 段落样式
+内置样式: 是
+字体设置:
+  size: 26.0pt
+  size_raw: 330200
+  color_rgb: 333F50
+  color_theme: TEXT_2 (15)
+  color_type: THEME (2)
+段落设置:
+  line_spacing: 0.05pt
+  line_spacing_raw: 1.0
+  line_spacing_rule: SINGLE (0)
+  line_spacing_rule_value: SINGLE (0)
+  space_after: 15.0pt
+  space_after_raw: 190500
+  borders: {'bottom': {'style': 'single', 'size': '8', 'space': '4', 'color': '4874CB'}}
+
+----------------------------------------
+
+样式名称: Title Char
+样式类型: 字符样式
+内置样式: 否
+字体设置:
+  size: 26.0pt
+  size_raw: 330200
+  color_rgb: 333F50
+  color_theme: TEXT_2 (15)
+  color_type: THEME (2)
+
+----------------------------------------
+
+样式名称: 我的样式
+样式类型: 段落样式
+内置样式: 否
+字体设置:
+段落设置:
+
+----------------------------------------
+

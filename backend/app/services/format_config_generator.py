@@ -5,11 +5,14 @@
 import os
 import json
 import re
+import logging
 from datetime import datetime
 from typing import Dict, Any, Tuple
 from .ai_client_base import AIClientBase
 from .document_processor import DocumentProcessor
 from app.utils import UnitConverter
+
+logger = logging.getLogger(__name__)
 
 
 class FormatConfigGenerator(AIClientBase):
@@ -201,8 +204,8 @@ class FormatConfigGenerator(AIClientBase):
         # 使用默认配置作为基础
         default_config = self._get_default_config()
         
-        # 深度合并配置
-        final_config = self._deep_merge_config(default_config, config)
+        # 智能合并配置：只添加AI未识别的样式
+        final_config = self._smart_merge_config(default_config, config)
         
         # 转换所有单位为pt
         final_config = self._convert_all_units(final_config)
@@ -228,21 +231,21 @@ class FormatConfigGenerator(AIClientBase):
                 "size": "A4"
             },
             "styles": {
-                "title": self._get_default_style("title", "二号", True, "center"),
-                "heading1": self._get_default_style("heading1", "三号", True, "center"),
-                "heading2": self._get_default_style("heading2", "小三", True, "left"),
-                "heading3": self._get_default_style("heading3", "四号", True, "left"),
-                "heading4": self._get_default_style("heading4", "小四", True, "left"),
-                "paragraph": self._get_default_style("paragraph", "小四", False, "justify"),
-                "abstract_title_cn": self._get_default_style("abstract_title_cn", "三号", True, "center"),
-                "abstract_title_en": self._get_default_style("abstract_title_en", "三号", True, "center")
+                "Title": self._get_default_style("Title", "二号", True, "center"),
+                "Heading1": self._get_default_style("Heading1", "三号", True, "center"),
+                "Heading2": self._get_default_style("Heading2", "小三", True, "left"),
+                "Heading3": self._get_default_style("Heading3", "四号", True, "left"),
+                "Heading4": self._get_default_style("Heading4", "小四", True, "left"),
+                "Normal": self._get_default_style("Normal", "小四", False, "justify"),
+                "AbstractTitleCN": self._get_default_style("AbstractTitleCN", "三号", True, "center"),
+                "AbstractTitleEN": self._get_default_style("AbstractTitleEN", "三号", True, "center")
             }
         }
     
     def _get_default_style(self, style_name: str, font_size: str, bold: bool, alignment: str) -> Dict[str, Any]:
         """获取默认样式配置"""
         return {
-            "name": f"Custom{style_name.title()}",
+            "name": style_name,
             "font": {
                 "chinese": "宋体",
                 "english": "Times New Roman",
@@ -272,6 +275,40 @@ class FormatConfigGenerator(AIClientBase):
                 result[key] = self._deep_merge_config(result[key], value)
             else:
                 result[key] = value
+        
+        return result
+    
+    def _smart_merge_config(self, default_config: Dict, ai_config: Dict) -> Dict:
+        """
+        智能合并配置：优先使用AI配置，只在AI未识别某种样式时才添加默认样式
+        """
+        result = ai_config.copy()
+        
+        # 确保基础结构存在
+        if "document_info" not in result:
+            result["document_info"] = default_config.get("document_info", {})
+        
+        if "page_settings" not in result:
+            result["page_settings"] = default_config.get("page_settings", {})
+        else:
+            # 深度合并页面设置
+            result["page_settings"] = self._deep_merge_config(
+                default_config.get("page_settings", {}), 
+                result["page_settings"]
+            )
+        
+        # 智能合并样式：只添加AI未识别的样式
+        if "styles" not in result:
+            result["styles"] = {}
+        
+        ai_styles = set(result["styles"].keys())
+        default_styles = set(default_config.get("styles", {}).keys())
+        
+        # 只添加AI未识别的默认样式
+        missing_styles = default_styles - ai_styles
+        for style_name in missing_styles:
+            result["styles"][style_name] = default_config["styles"][style_name]
+            logger.info(f"添加默认样式 {style_name}，因为AI未识别此样式")
         
         return result
     

@@ -13,7 +13,6 @@ class StyleNames:
     HEADING3 = "Heading3"                    # 三级标题
     HEADING4 = "Heading4"                    # 四级标题
     NORMAL = "Normal"                        # 正文
-    FIRST_PARAGRAPH = "FirstParagraph"       # 首行缩进段落
     
     # 摘要相关
     ABSTRACT_TITLE_CN = "AbstractTitleCN"    # 中文摘要标题
@@ -78,7 +77,6 @@ STYLE_DESCRIPTIONS = {
     StyleNames.HEADING3: "三级标题",
     StyleNames.HEADING4: "四级标题",
     StyleNames.NORMAL: "正文",
-    StyleNames.FIRST_PARAGRAPH: "首行缩进段落",
     
     StyleNames.ABSTRACT_TITLE_CN: "中文摘要标题",
     StyleNames.ABSTRACT_TITLE_EN: "英文摘要标题",
@@ -134,7 +132,6 @@ STYLE_CATEGORIES = {
         StyleNames.HEADING3,
         StyleNames.HEADING4,
         StyleNames.NORMAL,
-        StyleNames.FIRST_PARAGRAPH,
     ],
     "摘要相关": [
         StyleNames.ABSTRACT_TITLE_CN,

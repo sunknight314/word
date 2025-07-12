@@ -69,6 +69,27 @@ class FormatDisplayHelper:
     def _format_styles(self, styles: Dict[str, Any]) -> List[Dict[str, Any]]:
         """格式化样式设置"""
         style_names = {
+            # 新的标准大写样式名称
+            "Title": "文档标题",
+            "Heading1": "一级标题",
+            "Heading2": "二级标题", 
+            "Heading3": "三级标题",
+            "Heading4": "四级标题",
+            "Normal": "正文段落",
+            "AbstractTitleCN": "中文摘要标题",
+            "AbstractTitleEN": "英文摘要标题",
+            "AbstractContentCN": "中文摘要内容",
+            "AbstractContentEN": "英文摘要内容",
+            "KeywordsCN": "中文关键词",
+            "KeywordsEN": "英文关键词",
+            "FigureCaption": "图注",
+            "TableCaption": "表注",
+            "TOCTitle": "目录标题",
+            "TOCItem": "目录项",
+            "ReferenceTitle": "参考文献标题",
+            "ReferenceItem": "参考文献条目",
+            "AcknowledgementTitle": "致谢标题",
+            # 兼容旧的小写样式名称（逐步废弃）
             "title": "文档标题",
             "heading1": "一级标题",
             "heading2": "二级标题",

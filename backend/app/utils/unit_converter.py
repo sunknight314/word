@@ -62,9 +62,15 @@ class UnitConverter:
             
         value = value.strip()
         
-        # 检查是否为中文字号
+        # 检查是否为中文字号（支持带"号"字的格式）
         if value in cls.CHINESE_FONT_SIZE_MAP:
             return cls.CHINESE_FONT_SIZE_MAP[value]
+        
+        # 处理带"号"字的中文字号（如"小四号"）
+        if value.endswith("号"):
+            base_size = value[:-1]  # 去掉"号"字
+            if base_size in cls.CHINESE_FONT_SIZE_MAP:
+                return cls.CHINESE_FONT_SIZE_MAP[base_size]
         
         # 处理倍行距（如"1.5倍"）
         multiple_match = re.match(r'^([\d.]+)\s*倍$', value)

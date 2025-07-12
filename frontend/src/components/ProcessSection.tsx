@@ -83,7 +83,13 @@ const ProcessSection: React.FC<ProcessSectionProps> = ({
     if (result?.output_path) {
       // 创建下载链接
       const downloadUrl = `/api/download/${encodeURIComponent(result.output_path)}`;
-      window.open(downloadUrl, '_blank');
+      // 使用临时 a 标签直接下载文件，而不是打开新页面
+      const link = document.createElement('a');
+      link.href = downloadUrl;
+      link.download = '';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
   };
 
