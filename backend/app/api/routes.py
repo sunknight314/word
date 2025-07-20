@@ -249,11 +249,27 @@ async def process_documents(request: ProcessRequest):
         source_id: 源文档ID
         format_id: 格式文档ID
     """
+    import logging
+    import uuid
+    
+    # 设置日志
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger(__name__)
+    
     try:
+        logger.info("🚀 开始执行文档格式转换")
+        
         # 获取源文件路径
         source_path = file_storage.get_file_path(request.source_id)
         if not source_path:
             raise HTTPException(status_code=404, detail="源文件不存在")
+        
+        format_path = file_storage.get_file_path(request.format_id)
+        if not format_path:
+            raise HTTPException(status_code=404, detail="格式文件不存在")
+        
+        logger.info(f"📄 源文件: {request.source_id} -> {source_path.split('/')[-1]}")
+        logger.info(f"📋 格式文件: {request.format_id} -> {format_path.split('/')[-1]}")
         
         # 初始化格式转换服务
         from app.services.document_formatter_v2 import DocumentFormatterV2
@@ -263,14 +279,25 @@ async def process_documents(request: ProcessRequest):
         result = formatter.format_document(source_path, request.source_id, request.format_id)
         
         if result["success"]:
+            logger.info("✅ 格式转换成功完成!")
+            
             # 生成任务ID
-            import uuid
             task_id = str(uuid.uuid4())
             
-            # 保存结果信息（实际应用中应该使用数据库或缓存）
+            # 保存结果信息
             result["task_id"] = task_id
             result["source_id"] = request.source_id
             result["format_id"] = request.format_id
+            
+            # 展示处理结果
+            logger.info(f"📊 输出文件: {result.get('output_path', 'N/A')}")
+            if result.get("report"):
+                report = result["report"]
+                for step, status in report.items():
+                    if isinstance(status, dict):
+                        success = status.get("success", False)
+                        status_icon = "✅" if success else "❌"
+                        logger.info(f"   {status_icon} {step}")
             
             return {
                 "task_id": task_id,
@@ -280,11 +307,13 @@ async def process_documents(request: ProcessRequest):
                 "report": result["report"]
             }
         else:
+            logger.error(f"❌ 格式转换失败: {result.get('error', '未知错误')}")
             raise HTTPException(status_code=500, detail=result.get("error", "格式转换失败"))
             
     except HTTPException:
         raise
     except Exception as e:
+        logger.error(f"❌ 格式转换异常: {str(e)}")
         raise HTTPException(status_code=500, detail=f"格式转换失败: {str(e)}")
 
 # 查询处理状态

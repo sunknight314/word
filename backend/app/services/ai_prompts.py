@@ -105,7 +105,15 @@ def get_format_config_generation_prompt(document_content: str) -> tuple:
    - 参考文献标题和条目
    - 致谢标题
 6. 特别注意悬挂缩进的要求（如参考文献、引用等可能使用悬挂缩进，第一行顶格，后续行缩进）
-7. 分析页码格式要求（位置、样式、起始页等）
+7. 详细分析页码格式要求：
+   - 页码位置：页眉/页脚
+   - 页码对齐：居中/居左/居右
+   - 页码字体：中英文字体、字号、加粗、斜体
+   - 页码格式：阿拉伯数字(decimal)/大写罗马数字(upperRoman)/小写罗马数字(lowerRoman)
+   - 页码模板：如"第 X 页"、"- X -"、"X"等
+   - 起始页码：从第几页开始编号
+   - 重新编号：是否在章节开始时重新编号
+   - 目录和正文：不同部分可能有不同的页码格式
 8. 识别页眉页脚的要求
 
 样式名称说明（必须使用以下标准名称）：
@@ -134,7 +142,7 @@ def get_format_config_generation_prompt(document_content: str) -> tuple:
 单位示例（请保留原始单位）：
 - 页边距：如"2.54cm"、"1inch"、"72磅"
 - 字号：如"小四"、"三号"、"16pt"、"12磅"
-- 行距：如"20磅"、"1.5倍"、"固定值20pt"
+- 行距：如"20磅"、"1.5倍"、"20pt"
 - 缩进：如"2字符"、"24pt"、"0.5英寸"
 
 缩进说明：
@@ -259,14 +267,34 @@ JSON配置结构：
       "format": "upperRoman/lowerRoman/decimal",
       "start": 起始页码,
       "restart": true/false,
-      "template": "页码模板如{{page}}"
+      "template": "页码模板如{{page}}",
+      "position": "center/left/right",
+      "font": {{
+        "chinese": "中文字体",
+        "english": "英文字体", 
+        "size": "字号(如12pt)",
+        "bold": true/false,
+        "italic": false
+      }},
+      "location": "footer/header",
+      "alignment": "center/left/right"
     }},
     "content_sections": {{
       "format": "decimal",
       "start": 起始页码,
       "restart_first_chapter": true/false,
       "continue_others": true/false,
-      "template": "页码模板如第 {{page}} 页"
+      "template": "页码模板如第 {{page}} 页",
+      "position": "center/left/right",
+      "font": {{
+        "chinese": "中文字体",
+        "english": "英文字体",
+        "size": "字号(如12pt)", 
+        "bold": true/false,
+        "italic": false
+      }},
+      "location": "footer/header",
+      "alignment": "center/left/right"
     }}
   }},
   "headers_footers": {{

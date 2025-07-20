@@ -1,0 +1,731 @@
+{
+  "file_id": "source_b848bc56",
+  "timestamp": "2025-07-13T14:05:39.255788",
+  "analysis_type": "paragraph_analysis",
+  "result": {
+    "file_id": "source_b848bc56",
+    "document_info": {
+      "total_paragraphs": 52,
+      "file_path": "/opt/word/backend/uploads/source_b848bc56.docx",
+      "extracted_at": "2025-07-13T14:05:10.247001",
+      "preview_length": 20
+    },
+    "analysis_result": [
+      {
+        "paragraph_number": 1,
+        "type": "Title"
+      },
+      {
+        "paragraph_number": 2,
+        "type": "Heading1"
+      },
+      {
+        "paragraph_number": 3,
+        "type": "Heading2"
+      },
+      {
+        "paragraph_number": 4,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 5,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 6,
+        "type": "图片"
+      },
+      {
+        "paragraph_number": 7,
+        "type": "Heading2"
+      },
+      {
+        "paragraph_number": 8,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 9,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 10,
+        "type": "Heading3"
+      },
+      {
+        "paragraph_number": 11,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 12,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 13,
+        "type": "Heading1"
+      },
+      {
+        "paragraph_number": 14,
+        "type": "Heading2"
+      },
+      {
+        "paragraph_number": 15,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 16,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 17,
+        "type": "Heading2"
+      },
+      {
+        "paragraph_number": 18,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 19,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 20,
+        "type": "Heading3"
+      },
+      {
+        "paragraph_number": 21,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 22,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 23,
+        "type": "Heading3"
+      },
+      {
+        "paragraph_number": 24,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 25,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 26,
+        "type": "Heading1"
+      },
+      {
+        "paragraph_number": 27,
+        "type": "Heading2"
+      },
+      {
+        "paragraph_number": 28,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 29,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 30,
+        "type": "图片"
+      },
+      {
+        "paragraph_number": 31,
+        "type": "Heading2"
+      },
+      {
+        "paragraph_number": 32,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 33,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 34,
+        "type": "Heading3"
+      },
+      {
+        "paragraph_number": 35,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 36,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 37,
+        "type": "空段落"
+      },
+      {
+        "paragraph_number": 38,
+        "type": "Heading1"
+      },
+      {
+        "paragraph_number": 39,
+        "type": "Heading2"
+      },
+      {
+        "paragraph_number": 40,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 41,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 42,
+        "type": "图片"
+      },
+      {
+        "paragraph_number": 43,
+        "type": "Heading2"
+      },
+      {
+        "paragraph_number": 44,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 45,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 46,
+        "type": "Heading3"
+      },
+      {
+        "paragraph_number": 47,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 48,
+        "type": "Normal"
+      },
+      {
+        "paragraph_number": 49,
+        "type": "空段落"
+      },
+      {
+        "paragraph_number": 50,
+        "type": "空段落"
+      },
+      {
+        "paragraph_number": 51,
+        "type": "空段落"
+      },
+      {
+        "paragraph_number": 52,
+        "type": "空段落"
+      }
+    ],
+    "paragraphs": [
+      {
+        "paragraph_number": 1,
+        "preview_text": "Afdsadsad",
+        "full_length": 9
+      },
+      {
+        "paragraph_number": 2,
+        "preview_text": "一、12312313",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 3,
+        "preview_text": "1.1dadasdasd",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 4,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 5,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 6,
+        "preview_text": "[图片]",
+        "full_length": 0,
+        "_is_empty": true,
+        "_local_type": "图片"
+      },
+      {
+        "paragraph_number": 7,
+        "preview_text": "1.2dasdasdasd",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 8,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 9,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 10,
+        "preview_text": "1.2.1大三大四12312",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 11,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 12,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 13,
+        "preview_text": "二、12312313",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 14,
+        "preview_text": "2.1dadasdasd",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 15,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 16,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 17,
+        "preview_text": "2.2dasdasdasd",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 18,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 19,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 20,
+        "preview_text": "2.2.1大三大四12312",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 21,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 22,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 23,
+        "preview_text": "2.2.2大三大四12312",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 24,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 25,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 26,
+        "preview_text": "三、12312313",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 27,
+        "preview_text": "3.1dadasdasd",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 28,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 29,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 30,
+        "preview_text": "[图片]",
+        "full_length": 0,
+        "_is_empty": true,
+        "_local_type": "图片"
+      },
+      {
+        "paragraph_number": 31,
+        "preview_text": "3.2dasdasdasd",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 32,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 33,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 34,
+        "preview_text": "3.2.1大三大四12312",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 35,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 36,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 37,
+        "preview_text": "[空段落]",
+        "full_length": 0,
+        "_is_empty": true,
+        "_local_type": "空段落"
+      },
+      {
+        "paragraph_number": 38,
+        "preview_text": "四、12312313",
+        "full_length": 10
+      },
+      {
+        "paragraph_number": 39,
+        "preview_text": "4.1dadasdasd",
+        "full_length": 12
+      },
+      {
+        "paragraph_number": 40,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 41,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 42,
+        "preview_text": "[图片]",
+        "full_length": 0,
+        "_is_empty": true,
+        "_local_type": "图片"
+      },
+      {
+        "paragraph_number": 43,
+        "preview_text": "4.2dasdasdasd",
+        "full_length": 13
+      },
+      {
+        "paragraph_number": 44,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 45,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 46,
+        "preview_text": "4.2.1大三大四12312",
+        "full_length": 14
+      },
+      {
+        "paragraph_number": 47,
+        "preview_text": "这是第一段正文。我们期待它的格式被模板所...",
+        "full_length": 23
+      },
+      {
+        "paragraph_number": 48,
+        "preview_text": "这是第二段正文。它也应该被统一修改。",
+        "full_length": 18
+      },
+      {
+        "paragraph_number": 49,
+        "preview_text": "[空段落]",
+        "full_length": 0,
+        "_is_empty": true,
+        "_local_type": "空段落"
+      },
+      {
+        "paragraph_number": 50,
+        "preview_text": "[空段落]",
+        "full_length": 0,
+        "_is_empty": true,
+        "_local_type": "空段落"
+      },
+      {
+        "paragraph_number": 51,
+        "preview_text": "[空段落]",
+        "full_length": 0,
+        "_is_empty": true,
+        "_local_type": "空段落"
+      },
+      {
+        "paragraph_number": 52,
+        "preview_text": "[空段落]",
+        "full_length": 0,
+        "_is_empty": true,
+        "_local_type": "空段落"
+      }
+    ],
+    "success": true,
+    "processing_info": {
+      "preview_length": 20,
+      "total_paragraphs": 52,
+      "model_config": "deepseek_v3"
+    },
+    "paragraph_analysis_json": {
+      "analysis_result": [
+        {
+          "paragraph_number": 1,
+          "type": "Title"
+        },
+        {
+          "paragraph_number": 2,
+          "type": "Heading1"
+        },
+        {
+          "paragraph_number": 3,
+          "type": "Heading2"
+        },
+        {
+          "paragraph_number": 4,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 5,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 6,
+          "type": "图片"
+        },
+        {
+          "paragraph_number": 7,
+          "type": "Heading2"
+        },
+        {
+          "paragraph_number": 8,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 9,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 10,
+          "type": "Heading3"
+        },
+        {
+          "paragraph_number": 11,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 12,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 13,
+          "type": "Heading1"
+        },
+        {
+          "paragraph_number": 14,
+          "type": "Heading2"
+        },
+        {
+          "paragraph_number": 15,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 16,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 17,
+          "type": "Heading2"
+        },
+        {
+          "paragraph_number": 18,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 19,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 20,
+          "type": "Heading3"
+        },
+        {
+          "paragraph_number": 21,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 22,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 23,
+          "type": "Heading3"
+        },
+        {
+          "paragraph_number": 24,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 25,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 26,
+          "type": "Heading1"
+        },
+        {
+          "paragraph_number": 27,
+          "type": "Heading2"
+        },
+        {
+          "paragraph_number": 28,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 29,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 30,
+          "type": "图片"
+        },
+        {
+          "paragraph_number": 31,
+          "type": "Heading2"
+        },
+        {
+          "paragraph_number": 32,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 33,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 34,
+          "type": "Heading3"
+        },
+        {
+          "paragraph_number": 35,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 36,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 37,
+          "type": "空段落"
+        },
+        {
+          "paragraph_number": 38,
+          "type": "Heading1"
+        },
+        {
+          "paragraph_number": 39,
+          "type": "Heading2"
+        },
+        {
+          "paragraph_number": 40,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 41,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 42,
+          "type": "图片"
+        },
+        {
+          "paragraph_number": 43,
+          "type": "Heading2"
+        },
+        {
+          "paragraph_number": 44,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 45,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 46,
+          "type": "Heading3"
+        },
+        {
+          "paragraph_number": 47,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 48,
+          "type": "Normal"
+        },
+        {
+          "paragraph_number": 49,
+          "type": "空段落"
+        },
+        {
+          "paragraph_number": 50,
+          "type": "空段落"
+        },
+        {
+          "paragraph_number": 51,
+          "type": "空段落"
+        },
+        {
+          "paragraph_number": 52,
+          "type": "空段落"
+        }
+      ],
+      "success": true,
+      "total_paragraphs": 52,
+      "model_used": "deepseek_v3"
+    },
+    "model_info": {
+      "model": "deepseek-ai/DeepSeek-V3",
+      "usage": {
+        "prompt_tokens": 1233,
+        "completion_tokens": 867,
+        "total_tokens": 2100
+      }
+    }
+  }
+}

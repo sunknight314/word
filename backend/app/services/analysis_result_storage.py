@@ -7,6 +7,12 @@ import os
 from datetime import datetime
 from typing import Dict, Any, Optional
 from pathlib import Path
+import logging
+
+# 设置日志
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 
 
 class AnalysisResultStorage:
@@ -109,6 +115,8 @@ class AnalysisResultStorage:
         # 按修改时间排序，获取最新的
         latest_file = max(files, key=lambda f: f.stat().st_mtime)
         
+        logger.info(f"段落分析json路径: {latest_file}")
+
         with open(latest_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
             
@@ -133,6 +141,8 @@ class AnalysisResultStorage:
         
         # 按修改时间排序，获取最新的
         latest_file = max(files, key=lambda f: f.stat().st_mtime)
+
+        logger.info(f"格式配置json路径: {latest_file}")
         
         with open(latest_file, 'r', encoding='utf-8') as f:
             data = json.load(f)

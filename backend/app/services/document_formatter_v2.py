@@ -121,6 +121,14 @@ class DocumentFormatterV2:
                 "error": "未找到格式配置，请先生成格式配置"
             }
         
+        # 输出数据路径
+        logger.info(f"📄 源文档: {source_file_path}")
+        if paragraph_analysis.get("file_path"):
+            logger.info(f"📊 段落分析: {paragraph_analysis['file_path']}")
+        if format_config_data.get("file_path"):
+            logger.info(f"🎨 格式配置: {format_config_data['file_path']}")
+        
+        # 保存到实例变量
         self.format_config = format_config_data.get("format_config", {})
         self.analysis_result = paragraph_analysis.get("result", {}).get("analysis_result", [])
         
@@ -259,8 +267,12 @@ class DocumentFormatterV2:
         # 处理分节符
         section_breaks = self.format_config.get("section_breaks", {})
         if section_breaks:
-            # TODO: 实现分节符处理
-            pass
+            try:
+                sections_result = self._add_section_breaks(section_breaks)
+                result["sections_created"] = sections_result.get("sections_created", 0)
+                logger.info(f"分节符处理完成，创建了 {result['sections_created']} 个分节")
+            except Exception as e:
+                logger.warning(f"添加分节符失败: {str(e)}")
         
         # 处理页码
         page_numbering = self.format_config.get("page_numbering", {})
@@ -468,10 +480,85 @@ class DocumentFormatterV2:
             return False
     
     def _add_page_numbers(self, page_numbering: Dict[str, Any]):
-        """添加页码"""
-        # TODO: 实现页码添加
-        # 这需要操作XML来实现
-        pass
+        """为所有节添加页码"""
+        try:
+            logger.info("开始设置页码...")
+            
+            # 获取目录和正文的配置
+            toc_config = page_numbering.get("toc_section", {})
+            content_config = page_numbering.get("content_sections", {})
+            
+            # 对齐方式映射
+            alignment_map = {
+                "left": WD_ALIGN_PARAGRAPH.LEFT,
+                "center": WD_ALIGN_PARAGRAPH.CENTER,
+                "right": WD_ALIGN_PARAGRAPH.RIGHT
+            }
+            
+            sections_processed = 0
+            for section_idx, section in enumerate(self.doc.sections):
+                logger.info(f"处理第{section_idx + 1}个分节的页码...")
+                
+                # 根据分节类型选择配置
+                if section_idx == 0:  # 第一节通常是目录
+                    config = toc_config
+                    section_type = "目录"
+                else:  # 后续节为正文
+                    config = content_config  
+                    section_type = "正文"
+                
+                logger.info(f"  分节类型: {section_type}")
+                
+                # 如果配置为空，跳过该分节
+                if not config:
+                    logger.info(f"  跳过分节{section_idx + 1}，无页码配置")
+                    continue
+                
+                # 获取该分节的配置
+                format_type = config.get("format", "decimal")
+                start_number = config.get("start", 1)
+                alignment = config.get("alignment", "center")
+                template = config.get("template", "{page}")
+                location = config.get("location", "footer")
+                font_config = config.get("font", {})
+                
+                logger.info(f"  格式: {format_type}, 起始: {start_number}, 模板: {template}")
+                
+                # 选择页眉或页脚
+                if location == "header":
+                    container = section.header
+                    logger.info("  位置: 页眉")
+                else:
+                    container = section.footer
+                    logger.info("  位置: 页脚")
+                
+                container.is_linked_to_previous = False
+                
+                # 清空现有内容并创建新段落
+                if container.paragraphs:
+                    container_para = container.paragraphs[0]
+                    container_para.clear()
+                else:
+                    container_para = container.add_paragraph()
+                
+                # 设置段落对齐
+                para_alignment = alignment_map.get(alignment, WD_ALIGN_PARAGRAPH.CENTER)
+                container_para.alignment = para_alignment
+                
+                # 设置页码编号规则
+                self._set_page_number_format_by_section(section, section_idx, config)
+                
+                # 添加页码内容（支持中英文字体）
+                self._add_page_number_content_with_font(container_para, template, font_config)
+                
+                sections_processed += 1
+                logger.info(f"第{section_idx + 1}个分节页码设置完成")
+            
+            logger.info(f"页码设置完成，处理了 {sections_processed} 个分节")
+            
+        except Exception as e:
+            logger.error(f"设置页码失败: {str(e)}")
+            raise
     
     def _add_headers_footers(self, headers_footers: Dict[str, Any]):
         """添加页眉页脚"""
@@ -568,3 +655,374 @@ class DocumentFormatterV2:
         except Exception as e:
             logger.error(f"设置混合字体失败: {str(e)}")
             return False
+    
+    def _add_section_breaks(self, section_breaks_config: Dict[str, Any]) -> Dict[str, Any]:
+        """添加分节符，在每个一级标题内容结束时添加分节符"""
+        try:
+            # 获取一级标题的段落位置
+            heading1_paragraphs = []
+            for item in self.analysis_result:
+                if item.get("type") == "Heading1":
+                    heading1_paragraphs.append(item["paragraph_number"] - 1)  # 转为0索引
+            
+            if not heading1_paragraphs:
+                logger.info("未找到一级标题，无需添加分节符")
+                return {"success": True, "sections_created": 0}
+            
+            # 计算每个一级标题内容的结束段落
+            section_end_paragraphs = self._calculate_section_end_paragraphs(heading1_paragraphs)
+            
+            # 获取分节符类型配置
+            section_type = section_breaks_config.get("type", "oddPage")
+            
+            # 添加分节符
+            sections_created = self._insert_section_breaks(section_end_paragraphs, section_type)
+            
+            logger.info(f"成功添加 {sections_created} 个分节符")
+            return {"success": True, "sections_created": sections_created}
+            
+        except Exception as e:
+            logger.error(f"添加分节符失败: {str(e)}")
+            return {"success": False, "error": str(e)}
+    
+    def _calculate_section_end_paragraphs(self, heading1_paragraphs: List[int]) -> List[int]:
+        """计算每个一级标题内容的结束段落位置"""
+        section_end_paragraphs = []
+        total_paragraphs = len(self.doc.paragraphs)
+        
+        for i, start_para in enumerate(heading1_paragraphs):
+            if i < len(heading1_paragraphs) - 1:
+                # 不是最后一个一级标题：结束位置是下一个一级标题的前一段
+                end_para = heading1_paragraphs[i + 1] - 1
+                section_end_paragraphs.append(end_para)
+            else:
+                # 最后一个一级标题：结束位置是文档末尾的前一段
+                section_end_paragraphs.append(total_paragraphs - 1)
+        
+        return section_end_paragraphs
+    
+    def _insert_section_breaks(self, section_end_paragraphs: List[int], section_type: str) -> int:
+        """在指定段落后插入分节符"""
+        sections_created = 0
+        body = self.doc._body._element
+        
+        # 从后往前处理，避免段落索引变化的影响
+        for end_para_index in reversed(section_end_paragraphs[:-1]):  # 排除最后一节
+            try:
+                if end_para_index < len(self.doc.paragraphs):
+                    # 在指定段落后添加新段落并插入分节符
+                    last_para = self.doc.paragraphs[end_para_index]
+                    
+                    # 创建新段落
+                    new_p = OxmlElement('w:p')
+                    
+                    # 在最后一段后插入新段落
+                    last_para._p.addnext(new_p)
+                    
+                    # 创建分节符
+                    sectPr = self._create_sectPr_element(section_type)
+                    
+                    # 将分节符添加到新段落
+                    pPr = new_p.get_or_add_pPr()
+                    pPr.append(sectPr)
+                    
+                    sections_created += 1
+                    logger.debug(f"在段落 {end_para_index + 1} 后添加分节符")
+                    
+            except Exception as e:
+                logger.warning(f"在段落 {end_para_index + 1} 后添加分节符失败: {str(e)}")
+        
+        # 处理最后一节：在文档末尾body层添加分节符
+        try:
+            existing_sectPr = body.find(qn('w:sectPr'))
+            if existing_sectPr is not None:
+                body.remove(existing_sectPr)
+            
+            sectPr = self._create_sectPr_element(section_type, is_last_section=True)
+            body.append(sectPr)
+            sections_created += 1
+            logger.debug("在文档末尾添加分节符")
+            
+        except Exception as e:
+            logger.warning(f"在文档末尾添加分节符失败: {str(e)}")
+        
+        return sections_created
+    
+    def _create_sectPr_element(self, section_type: str = "oddPage", is_last_section: bool = False):
+        """创建分节符元素"""
+        sectPr = OxmlElement('w:sectPr')
+        
+        # 添加分节符类型
+        if section_type:
+            type_elem = OxmlElement('w:type')
+            type_elem.set(qn('w:val'), section_type)
+            sectPr.append(type_elem)
+        
+        # 添加页面大小 (A4)
+        pg_sz = OxmlElement('w:pgSz')
+        pg_sz.set(qn('w:w'), '11906')  # 8.27英寸 * 1440
+        pg_sz.set(qn('w:h'), '16838')  # 11.69英寸 * 1440
+        sectPr.append(pg_sz)
+        
+        # 添加页边距
+        pg_mar = OxmlElement('w:pgMar')
+        pg_mar.set(qn('w:top'), '1440')     # 1英寸
+        pg_mar.set(qn('w:right'), '1800')   # 1.25英寸
+        pg_mar.set(qn('w:bottom'), '1440')  # 1英寸
+        pg_mar.set(qn('w:left'), '1800')    # 1.25英寸
+        pg_mar.set(qn('w:header'), '851')   # 页眉距离
+        pg_mar.set(qn('w:footer'), '992')   # 页脚距离
+        pg_mar.set(qn('w:gutter'), '0')     # 装订线
+        sectPr.append(pg_mar)
+        
+        # 添加列设置
+        cols = OxmlElement('w:cols')
+        cols.set(qn('w:space'), '425')  # 列间距
+        cols.set(qn('w:num'), '1')      # 单列
+        sectPr.append(cols)
+        
+        # 添加文档网格
+        doc_grid = OxmlElement('w:docGrid')
+        doc_grid.set(qn('w:type'), 'lines')
+        doc_grid.set(qn('w:linePitch'), '312')
+        doc_grid.set(qn('w:charSpace'), '0')
+        sectPr.append(doc_grid)
+        
+        return sectPr
+    
+    def _set_page_number_format_by_section(self, section, section_idx: int, config: Dict[str, Any]):
+        """根据分节配置设置页码格式"""
+        try:
+            format_type = config.get("format", "decimal")
+            start_number = config.get("start", 1)
+            restart = config.get("restart", False)
+            restart_first_chapter = config.get("restart_first_chapter", False)
+            
+            sectPr = section._sectPr
+            
+            # 创建或获取页码设置元素
+            pgNumType = sectPr.find(qn('w:pgNumType'))
+            if pgNumType is None:
+                pgNumType = OxmlElement('w:pgNumType')
+                sectPr.append(pgNumType)
+            
+            # 设置页码格式
+            pgNumType.set(qn('w:fmt'), format_type)
+            
+            # 设置起始页码
+            if section_idx == 0:
+                # 第一节总是从指定数字开始
+                pgNumType.set(qn('w:start'), str(start_number))
+                logger.info(f"  第{section_idx + 1}节：{format_type}格式，从{start_number}开始")
+            elif section_idx == 1 and restart_first_chapter:
+                # 第二节如果设置了重新开始，则重新编号
+                pgNumType.set(qn('w:start'), str(start_number))
+                logger.info(f"  第{section_idx + 1}节：{format_type}格式，重新从{start_number}开始")
+            elif restart:
+                # 如果设置了重新开始，则重新编号
+                pgNumType.set(qn('w:start'), str(start_number))
+                logger.info(f"  第{section_idx + 1}节：{format_type}格式，重新从{start_number}开始")
+            else:
+                # 继续编号，不设置start属性
+                logger.info(f"  第{section_idx + 1}节：{format_type}格式，继续编号")
+                
+        except Exception as e:
+            logger.warning(f"设置第{section_idx + 1}节页码格式失败: {str(e)}")
+    
+    def _add_page_number_content_with_font(self, container_para, template: str, font_config: Dict[str, Any]):
+        """添加页码内容并应用字体设置"""
+        try:
+            # 解析模板，查找{page}占位符
+            parts = template.split('{page}')
+            
+            if len(parts) == 1:
+                # 没有{page}占位符，直接添加文本
+                run = container_para.add_run(template)
+                self._apply_page_number_font(run, font_config)
+            elif len(parts) == 2:
+                # 有{page}占位符，分别添加前缀、页码字段、后缀
+                if parts[0]:  # 前缀
+                    prefix_run = container_para.add_run(parts[0])
+                    self._apply_page_number_font(prefix_run, font_config)
+                
+                # 页码字段
+                page_run = container_para.add_run()
+                self._add_page_number_field(page_run)
+                self._apply_page_number_font(page_run, font_config)
+                
+                if parts[1]:  # 后缀
+                    suffix_run = container_para.add_run(parts[1])
+                    self._apply_page_number_font(suffix_run, font_config)
+            else:
+                # 多个{page}占位符，只处理第一个
+                logger.warning("页码模板包含多个{page}占位符，只处理第一个")
+                if parts[0]:
+                    prefix_run = container_para.add_run(parts[0])
+                    self._apply_page_number_font(prefix_run, font_config)
+                
+                page_run = container_para.add_run()
+                self._add_page_number_field(page_run)
+                self._apply_page_number_font(page_run, font_config)
+                
+                remaining = '{page}'.join(parts[1:])
+                if remaining:
+                    suffix_run = container_para.add_run(remaining)
+                    self._apply_page_number_font(suffix_run, font_config)
+                    
+        except Exception as e:
+            logger.warning(f"添加页码内容失败: {str(e)}")
+            # 回退到简单的页码显示
+            page_run = container_para.add_run()
+            self._add_page_number_field(page_run)
+            self._apply_page_number_font(page_run, font_config)
+    
+    def _apply_page_number_font(self, run, font_config: Dict[str, Any]):
+        """应用页码字体设置"""
+        try:
+            if not font_config:
+                return
+            
+            font = run.font
+            
+            # 设置字体
+            chinese_font = font_config.get("chinese")
+            english_font = font_config.get("english")
+            if english_font:
+                font.name = english_font
+            
+            # 设置字号
+            font_size = font_config.get("size")
+            if font_size:
+                size_pt = self.unit_converter.convert_to_pt(font_size)
+                if size_pt:
+                    font.size = Pt(size_pt)
+            
+            # 设置粗体和斜体
+            if "bold" in font_config:
+                font.bold = font_config["bold"]
+            if "italic" in font_config:
+                font.italic = font_config["italic"]
+            
+            # 设置中英文混合字体
+            if chinese_font and english_font:
+                self._set_mixed_font_for_run(run, chinese_font, english_font)
+                
+        except Exception as e:
+            logger.warning(f"应用页码字体设置失败: {str(e)}")
+    
+    def _set_mixed_font_for_run(self, run, chinese_font: str, english_font: str):
+        """为运行设置中英文混合字体"""
+        try:
+            # 设置基础字体（英文）
+            run.font.name = english_font
+            
+            # 设置东亚字体（中文）
+            run_element = run._r
+            rpr = run_element.find(qn('w:rPr'))
+            if rpr is None:
+                rpr = OxmlElement('w:rPr')
+                run_element.append(rpr)
+            
+            # 查找或创建rFonts元素
+            rfonts = rpr.find(qn('w:rFonts'))
+            if rfonts is None:
+                rfonts = OxmlElement('w:rFonts')
+                rpr.append(rfonts)
+            
+            # 设置各种字体类型
+            rfonts.set(qn('w:eastAsia'), chinese_font)    # 东亚字体（中文）
+            rfonts.set(qn('w:ascii'), english_font)       # ASCII字体（英文）
+            rfonts.set(qn('w:hAnsi'), english_font)       # 高ANSI字体（英文）
+            
+        except Exception as e:
+            logger.warning(f"设置运行混合字体失败: {str(e)}")
+    
+    def _set_page_number_format(self, section, section_idx: int, format_type: str, start_number: int):
+        """设置页码格式和起始编号"""
+        try:
+            sectPr = section._sectPr
+            
+            # 创建或获取页码设置元素
+            pgNumType = sectPr.find(qn('w:pgNumType'))
+            if pgNumType is None:
+                pgNumType = OxmlElement('w:pgNumType')
+                sectPr.append(pgNumType)
+            
+            # 根据配置或默认规则设置页码格式
+            if section_idx == 0:
+                # 第一节（通常是目录）：使用罗马数字
+                pgNumType.set(qn('w:start'), str(start_number))
+                pgNumType.set(qn('w:fmt'), 'upperRoman')
+                logger.info(f"第{section_idx + 1}节：罗马数字页码从{start_number}开始")
+            elif section_idx == 1:
+                # 第二节（通常是正文第一章）：阿拉伯数字重新从1开始
+                pgNumType.set(qn('w:start'), '1')
+                pgNumType.set(qn('w:fmt'), 'decimal')
+                logger.info(f"第{section_idx + 1}节：阿拉伯数字页码重新从1开始")
+            else:
+                # 后续章节：延续阿拉伯数字页码
+                pgNumType.set(qn('w:fmt'), format_type)
+                logger.info(f"第{section_idx + 1}节：页码延续编号")
+                
+        except Exception as e:
+            logger.warning(f"设置第{section_idx + 1}节页码格式失败: {str(e)}")
+    
+    def _add_page_number_content(self, footer_para, template: str):
+        """添加页码内容到页脚段落"""
+        try:
+            # 解析模板，查找{PAGE}占位符
+            parts = template.split('{PAGE}')
+            
+            if len(parts) == 1:
+                # 没有{PAGE}占位符，直接添加文本
+                footer_para.add_run(template)
+            elif len(parts) == 2:
+                # 有{PAGE}占位符，分别添加前缀、页码字段、后缀
+                if parts[0]:  # 前缀
+                    footer_para.add_run(parts[0])
+                
+                # 页码字段
+                page_run = footer_para.add_run()
+                self._add_page_number_field(page_run)
+                
+                if parts[1]:  # 后缀
+                    footer_para.add_run(parts[1])
+            else:
+                # 多个{PAGE}占位符，只处理第一个
+                logger.warning("页码模板包含多个{PAGE}占位符，只处理第一个")
+                if parts[0]:
+                    footer_para.add_run(parts[0])
+                page_run = footer_para.add_run()
+                self._add_page_number_field(page_run)
+                remaining = '{PAGE}'.join(parts[1:])
+                if remaining:
+                    footer_para.add_run(remaining)
+                    
+        except Exception as e:
+            logger.warning(f"添加页码内容失败: {str(e)}")
+            # 回退到简单的页码显示
+            page_run = footer_para.add_run()
+            self._add_page_number_field(page_run)
+    
+    def _add_page_number_field(self, footer_run):
+        """添加页码字段到运行中"""
+        try:
+            # 创建页码字段元素
+            fld_char1 = OxmlElement('w:fldChar')
+            fld_char1.set(qn('w:fldCharType'), 'begin')
+            
+            instr_text = OxmlElement('w:instrText')
+            instr_text.set(qn('xml:space'), 'preserve')
+            instr_text.text = "PAGE"
+            
+            fld_char2 = OxmlElement('w:fldChar')
+            fld_char2.set(qn('w:fldCharType'), 'end')
+            
+            # 添加到运行元素
+            footer_run._r.append(fld_char1)
+            footer_run._r.append(instr_text)
+            footer_run._r.append(fld_char2)
+            
+        except Exception as e:
+            logger.error(f"添加页码字段失败: {str(e)}")
+            raise
